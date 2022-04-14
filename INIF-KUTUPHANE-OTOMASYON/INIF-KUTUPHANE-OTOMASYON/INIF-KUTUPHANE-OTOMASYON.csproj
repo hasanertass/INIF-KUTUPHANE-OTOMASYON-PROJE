@@ -35,9 +35,13 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,10 +61,73 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmEmanetListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetListesi.Designer.cs">
+      <DependentUpon>frmEmanetListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmKitapListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmKitapListesi.Designer.cs">
+      <DependentUpon>FrmKitapListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmOgrencilistesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmOgrencilistesi.Designer.cs">
+      <DependentUpon>frmOgrencilistesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmPersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmPersonelListesi.Designer.cs">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmyenikitap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmyenikitap.Designer.cs">
+      <DependentUpon>frmyenikitap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmYeniogrenciListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYeniogrenciListesi.Designer.cs">
+      <DependentUpon>frmYeniogrenciListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmYeniPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYeniPersonelEkle.Designer.cs">
+      <DependentUpon>frmYeniPersonelEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmEmanetListesi.resx">
+      <DependentUpon>frmEmanetListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmKitapListesi.resx">
+      <DependentUpon>FrmKitapListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmOgrencilistesi.resx">
+      <DependentUpon>frmOgrencilistesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmPersonelListesi.resx">
+      <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmyenikitap.resx">
+      <DependentUpon>frmyenikitap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYeniogrenciListesi.resx">
+      <DependentUpon>frmYeniogrenciListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYeniPersonelEkle.resx">
+      <DependentUpon>frmYeniPersonelEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
