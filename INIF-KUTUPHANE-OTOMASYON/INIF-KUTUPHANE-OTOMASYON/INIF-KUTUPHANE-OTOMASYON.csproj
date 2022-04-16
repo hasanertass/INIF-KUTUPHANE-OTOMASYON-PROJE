@@ -61,17 +61,71 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmBölümIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmBölümIstatistikleri.Designer.cs">
+      <DependentUpon>frmBölümIstatistikleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmBölümListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmBölümListesi.Designer.cs">
+      <DependentUpon>frmBölümListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetAl.Designer.cs">
+      <DependentUpon>frmEmanetAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetIstatistikleri.Designer.cs">
+      <DependentUpon>frmEmanetIstatistikleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmEmanetVer.Designer.cs">
+      <DependentUpon>frmEmanetVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmKategoriIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmKategoriIstatistikleri.Designer.cs">
+      <DependentUpon>frmKategoriIstatistikleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmKitapIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmKitapIstatistikleri.Designer.cs">
+      <DependentUpon>frmKitapIstatistikleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\frmEmanetListesi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\frmEmanetListesi.Designer.cs">
       <DependentUpon>frmEmanetListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmKategoriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmKategoriListesi.Designer.cs">
+      <DependentUpon>frmKategoriListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmKitapListesi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\FrmKitapListesi.Designer.cs">
       <DependentUpon>FrmKitapListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmOgrenciIstatistikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmOgrenciIstatistikleri.Designer.cs">
+      <DependentUpon>frmOgrenciIstatistikleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmOgrencilistesi.cs">
       <SubType>Form</SubType>
@@ -84,6 +138,30 @@
     </Compile>
     <Compile Include="Formlar\frmPersonelListesi.Designer.cs">
       <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmYazarCevirmenListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYazarCevirmenListesi.Designer.cs">
+      <DependentUpon>frmYazarCevirmenListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmYenibölümEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYenibölümEkle.Designer.cs">
+      <DependentUpon>frmYenibölümEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmYeniCevirmenEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYeniCevirmenEkle.Designer.cs">
+      <DependentUpon>frmYeniCevirmenEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmYeniKategoriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYeniKategoriEkle.Designer.cs">
+      <DependentUpon>frmYeniKategoriEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmyenikitap.cs">
       <SubType>Form</SubType>
@@ -103,22 +181,67 @@
     <Compile Include="Formlar\frmYeniPersonelEkle.Designer.cs">
       <DependentUpon>frmYeniPersonelEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmYeniYazarEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmYeniYazarEkle.Designer.cs">
+      <DependentUpon>frmYeniYazarEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmBölümIstatistikleri.resx">
+      <DependentUpon>frmBölümIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmBölümListesi.resx">
+      <DependentUpon>frmBölümListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmEmanetAl.resx">
+      <DependentUpon>frmEmanetAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmEmanetIstatistikleri.resx">
+      <DependentUpon>frmEmanetIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmEmanetListesi.resx">
       <DependentUpon>frmEmanetListesi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmEmanetVer.resx">
+      <DependentUpon>frmEmanetVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmKategoriIstatistikleri.resx">
+      <DependentUpon>frmKategoriIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmKategoriListesi.resx">
+      <DependentUpon>frmKategoriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmKitapIstatistikleri.resx">
+      <DependentUpon>frmKitapIstatistikleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmKitapListesi.resx">
       <DependentUpon>FrmKitapListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmOgrenciIstatistikleri.resx">
+      <DependentUpon>frmOgrenciIstatistikleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmOgrencilistesi.resx">
       <DependentUpon>frmOgrencilistesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmPersonelListesi.resx">
       <DependentUpon>frmPersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYazarCevirmenListesi.resx">
+      <DependentUpon>frmYazarCevirmenListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYenibölümEkle.resx">
+      <DependentUpon>frmYenibölümEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYeniCevirmenEkle.resx">
+      <DependentUpon>frmYeniCevirmenEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYeniKategoriEkle.resx">
+      <DependentUpon>frmYeniKategoriEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmyenikitap.resx">
       <DependentUpon>frmyenikitap.cs</DependentUpon>
@@ -128,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmYeniPersonelEkle.resx">
       <DependentUpon>frmYeniPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmYeniYazarEkle.resx">
+      <DependentUpon>frmYeniYazarEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
