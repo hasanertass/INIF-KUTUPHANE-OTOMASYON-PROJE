@@ -15,6 +15,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         public FrmKitapListesi()
         {
             InitializeComponent();
+
         }
+
+        private void FrmKitapListesi_Load(object sender, EventArgs e)
+        {
+           
+        }
+
     }
 }

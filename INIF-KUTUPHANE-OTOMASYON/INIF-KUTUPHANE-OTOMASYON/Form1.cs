@@ -186,5 +186,10 @@ namespace INIF_KUTUPHANE_OTOMASYON
             Formlar.frmYenibölümEkle fr = new Formlar.frmYenibölümEkle();
             fr.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
