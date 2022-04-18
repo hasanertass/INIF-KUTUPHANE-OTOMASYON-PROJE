@@ -23,5 +23,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
            
         }
 
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
