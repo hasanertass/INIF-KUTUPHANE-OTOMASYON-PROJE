@@ -167,13 +167,6 @@ namespace INIF_KUTUPHANE_OTOMASYON
             fr.Show();
         }
 
-        private void btnBölümIstatistikleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Formlar.frmBölümIstatistikleri fr = new Formlar.frmBölümIstatistikleri();
-            fr.MdiParent = this;
-            fr.Show();
-        }
-
         private void btnBölümListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmBölümListesi fr = new Formlar.frmBölümListesi();

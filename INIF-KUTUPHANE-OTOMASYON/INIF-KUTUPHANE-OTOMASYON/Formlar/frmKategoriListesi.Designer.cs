@@ -81,7 +81,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(1, 224);
+            this.gridControl1.Location = new System.Drawing.Point(471, 220);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1454, 607);
@@ -104,7 +104,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Controls.Add(this.txtISBN);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Location = new System.Drawing.Point(1461, 224);
+            this.groupControl1.Location = new System.Drawing.Point(2, 219);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(471, 627);
             this.groupControl1.TabIndex = 9;
@@ -387,7 +387,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel5.Controls.Add(this.pictureEdit5);
             this.panel5.Controls.Add(this.labelControl21);
             this.panel5.Controls.Add(this.labelControl22);
-            this.panel5.Location = new System.Drawing.Point(1522, 1);
+            this.panel5.Location = new System.Drawing.Point(1520, 1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(401, 217);
             this.panel5.TabIndex = 13;
@@ -437,9 +437,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmKategoriListesi";
             this.Text = "frmKategoriListesi";
