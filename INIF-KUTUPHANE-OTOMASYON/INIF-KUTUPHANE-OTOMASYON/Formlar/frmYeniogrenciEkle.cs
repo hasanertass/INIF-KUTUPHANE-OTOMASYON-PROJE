@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 {
-    public partial class frmYeniogrenciListesi : Form
+    public partial class frmYeniogrenciEkle : Form
     {
-        public frmYeniogrenciListesi()
+        public frmYeniogrenciEkle()
         {
             InitializeComponent();
         }

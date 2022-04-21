@@ -16,5 +16,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             InitializeComponent();
         }
+
+        private void frmYenibölümEkle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

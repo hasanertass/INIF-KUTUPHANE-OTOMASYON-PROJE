@@ -39,7 +39,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
 
         private void BarBtnYeniOgrenciEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Formlar.frmYeniogrenciListesi fr = new Formlar.frmYeniogrenciListesi();
+            Formlar.frmYeniogrenciEkle fr = new Formlar.frmYeniogrenciEkle();
             fr.Show();
         }
 
