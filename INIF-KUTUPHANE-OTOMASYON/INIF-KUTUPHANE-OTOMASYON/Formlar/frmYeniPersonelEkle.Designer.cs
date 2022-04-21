@@ -214,7 +214,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(112, 172);
+            this.txtAd.Location = new System.Drawing.Point(114, 166);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(198, 20);
             this.txtAd.TabIndex = 175;

@@ -1,7 +1,7 @@
 ﻿
 namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 {
-    partial class frmBölümListesi
+    partial class frmBölümIstatistikleri
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             this.SuspendLayout();
             // 
-            // frmBölümListesi
+            // frmBölümIstatistikleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 832);
-            this.Name = "frmBölümListesi";
-            this.Text = "frmBölümListesi";
+            this.Name = "frmBölümIstatistikleri";
+            this.Text = "frmBölümIstatistikleri";
             this.ResumeLayout(false);
 
         }

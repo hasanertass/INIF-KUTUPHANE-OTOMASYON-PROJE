@@ -189,7 +189,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
             // 
             // btnBölümListesi
             // 
-            this.btnBölümListesi.Caption = "Bölüm Listesi Ve İstatistikleri";
+            this.btnBölümListesi.Caption = "Bölüm Listesi";
             this.btnBölümListesi.Id = 7;
             this.btnBölümListesi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBölümListesi.ImageOptions.SvgImage")));
             this.btnBölümListesi.Name = "btnBölümListesi";
@@ -390,7 +390,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.btnBölümIstatistikleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBölümIstatistikleri.ImageOptions.Image")));
             this.btnBölümIstatistikleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBölümIstatistikleri.ImageOptions.LargeImage")));
             this.btnBölümIstatistikleri.Name = "btnBölümIstatistikleri";
-       //     this.btnBölümIstatistikleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBölümIstatistikleri_ItemClick);
+            this.btnBölümIstatistikleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBölümIstatistikleri_ItemClick);
             // 
             // btnYeniCevirmen
             // 
@@ -464,6 +464,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.btnBölümListesi);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnYeniBölümEkle);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnBölümIstatistikleri);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Bölüm İşlemleri";
             // 
