@@ -134,8 +134,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
 
         private void btnEmanetVer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Formlar.frmEmanetVer fr = new Formlar.frmEmanetVer();
-            fr.MdiParent = this;
+            Formlar.frmEmanetKitapVer fr = new Formlar.frmEmanetKitapVer();
             fr.Show();
         }
 

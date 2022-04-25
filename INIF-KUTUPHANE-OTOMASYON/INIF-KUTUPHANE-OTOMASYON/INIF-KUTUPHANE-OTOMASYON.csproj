@@ -33,11 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -80,11 +85,11 @@
     <Compile Include="Formlar\frmEmanetIstatistikleri.Designer.cs">
       <DependentUpon>frmEmanetIstatistikleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\frmEmanetVer.cs">
+    <Compile Include="Formlar\frmEmanetKitapVer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\frmEmanetVer.Designer.cs">
-      <DependentUpon>frmEmanetVer.cs</DependentUpon>
+    <Compile Include="Formlar\frmEmanetKitapVer.Designer.cs">
+      <DependentUpon>frmEmanetKitapVer.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmKategoriIstatistikleri.cs">
       <SubType>Form</SubType>
@@ -196,11 +201,11 @@
     <EmbeddedResource Include="Formlar\frmEmanetIstatistikleri.resx">
       <DependentUpon>frmEmanetIstatistikleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmEmanetKitapVer.resx">
+      <DependentUpon>frmEmanetKitapVer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmEmanetListesi.resx">
       <DependentUpon>frmEmanetListesi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\frmEmanetVer.resx">
-      <DependentUpon>frmEmanetVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmKategoriIstatistikleri.resx">
       <DependentUpon>frmKategoriIstatistikleri.cs</DependentUpon>

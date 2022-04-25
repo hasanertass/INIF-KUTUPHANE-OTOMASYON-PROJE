@@ -80,6 +80,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -120,9 +121,10 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.barButtonItem10,
             this.barButtonItem11,
             this.btnBölümIstatistikleri,
-            this.btnYeniCevirmen});
+            this.btnYeniCevirmen,
+            this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 32;
+            this.ribbonControl1.MaxItemId = 33;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -390,7 +392,6 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.btnBölümIstatistikleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBölümIstatistikleri.ImageOptions.Image")));
             this.btnBölümIstatistikleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBölümIstatistikleri.ImageOptions.LargeImage")));
             this.btnBölümIstatistikleri.Name = "btnBölümIstatistikleri";
-       //     this.btnBölümIstatistikleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBölümIstatistikleri_ItemClick);
             // 
             // btnYeniCevirmen
             // 
@@ -424,7 +425,6 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.ribbonPageGroup3.ItemLinks.Add(this.BarButonEmanetListesi);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnEmanetVer);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnEmanetAl);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnEmanetIstatistikleri);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Emanet İşlemleri";
             // 
@@ -531,6 +531,12 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.barButtonItem25.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem25.ImageOptions.LargeImage")));
             this.barButtonItem25.Name = "barButtonItem25";
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 32;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,6 +605,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private DevExpress.XtraBars.BarButtonItem btnYeniCevirmen;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
 

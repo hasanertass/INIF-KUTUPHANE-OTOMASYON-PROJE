@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 {
-    public partial class frmEmanetVer : Form
+    public partial class frmEmanetKitapVer : Form
     {
-        public frmEmanetVer()
+        public frmEmanetKitapVer()
         {
             InitializeComponent();
+        }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
