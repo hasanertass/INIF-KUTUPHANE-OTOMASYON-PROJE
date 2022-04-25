@@ -122,11 +122,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(70, 161);
+            this.labelControl7.Location = new System.Drawing.Point(48, 161);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(55, 16);
+            this.labelControl7.Size = new System.Drawing.Size(84, 16);
             this.labelControl7.TabIndex = 16;
-            this.labelControl7.Text = "KİTAP İD:";
+            this.labelControl7.Text = "KATEGORİ İD :";
             // 
             // btnListele
             // 
@@ -183,11 +183,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(89, 186);
+            this.labelControl2.Location = new System.Drawing.Point(36, 186);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(36, 16);
+            this.labelControl2.Size = new System.Drawing.Size(100, 16);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "ISBN :";
+            this.labelControl2.Text = "KATEGORİ ADI  : ";
             // 
             // panel1
             // 
@@ -442,7 +442,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmKategoriListesi";
-            this.Text = "frmKategoriListesi";
+            this.Text = "Kategori Listesi";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

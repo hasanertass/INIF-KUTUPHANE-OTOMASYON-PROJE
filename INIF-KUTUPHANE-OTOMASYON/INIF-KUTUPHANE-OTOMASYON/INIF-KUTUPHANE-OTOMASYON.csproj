@@ -39,6 +39,7 @@
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -48,7 +49,12 @@
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -90,12 +96,6 @@
     </Compile>
     <Compile Include="Formlar\frmEmanetKitapVer.Designer.cs">
       <DependentUpon>frmEmanetKitapVer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formlar\frmKategoriIstatistikleri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\frmKategoriIstatistikleri.Designer.cs">
-      <DependentUpon>frmKategoriIstatistikleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmKitapIstatistikleri.cs">
       <SubType>Form</SubType>
@@ -206,9 +206,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmEmanetListesi.resx">
       <DependentUpon>frmEmanetListesi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\frmKategoriIstatistikleri.resx">
-      <DependentUpon>frmKategoriIstatistikleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmKategoriListesi.resx">
       <DependentUpon>frmKategoriListesi.cs</DependentUpon>

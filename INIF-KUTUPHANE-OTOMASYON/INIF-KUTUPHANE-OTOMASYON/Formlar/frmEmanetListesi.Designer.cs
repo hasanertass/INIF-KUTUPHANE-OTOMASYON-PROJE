@@ -57,7 +57,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.ClientSize = new System.Drawing.Size(1924, 832);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmEmanetListesi";
-            this.Text = "frmEmanetListesi";
+            this.Text = "Emanet Listesi";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
