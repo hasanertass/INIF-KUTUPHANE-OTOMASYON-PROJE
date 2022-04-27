@@ -87,7 +87,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Location = new System.Drawing.Point(2, 1);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(378, 412);
-            this.groupControl1.TabIndex = 11;
+            this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Yazar İşlemleri";
             // 
             // txtKitapid
@@ -96,7 +96,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKitapid.Location = new System.Drawing.Point(111, 72);
             this.txtKitapid.Name = "txtKitapid";
             this.txtKitapid.Size = new System.Drawing.Size(198, 20);
-            this.txtKitapid.TabIndex = 17;
+            this.txtKitapid.TabIndex = 0;
             // 
             // btnListele
             // 
@@ -106,7 +106,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnListele.Location = new System.Drawing.Point(81, 309);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(198, 40);
-            this.btnListele.TabIndex = 15;
+            this.btnListele.TabIndex = 6;
             this.btnListele.Text = "Listele";
             // 
             // btnGüncelle
@@ -117,7 +117,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnGüncelle.Location = new System.Drawing.Point(81, 263);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(198, 40);
-            this.btnGüncelle.TabIndex = 14;
+            this.btnGüncelle.TabIndex = 5;
             this.btnGüncelle.Text = "GÜNCELLE";
             // 
             // textEdit1
@@ -125,7 +125,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit1.Location = new System.Drawing.Point(111, 123);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 21;
+            this.textEdit1.TabIndex = 2;
             // 
             // labelControl7
             // 
@@ -145,7 +145,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnSil.Location = new System.Drawing.Point(81, 217);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(198, 40);
-            this.btnSil.TabIndex = 13;
+            this.btnSil.TabIndex = 4;
             this.btnSil.Text = "SİL";
             // 
             // labelControl1
@@ -166,7 +166,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Location = new System.Drawing.Point(81, 171);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(198, 40);
-            this.btnKaydet.TabIndex = 12;
+            this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "KAYDET";
             // 
             // labelControl2
@@ -184,7 +184,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtISBN.Location = new System.Drawing.Point(111, 97);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 3;
+            this.txtISBN.TabIndex = 1;
             // 
             // gridControl1
             // 
@@ -216,7 +216,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl2.Location = new System.Drawing.Point(2, 413);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(378, 419);
-            this.groupControl2.TabIndex = 13;
+            this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Çevirmen İşlemleri";
             // 
             // textEdit3
@@ -224,7 +224,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit3.Location = new System.Drawing.Point(111, 117);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(198, 20);
-            this.textEdit3.TabIndex = 21;
+            this.textEdit3.TabIndex = 2;
             // 
             // labelControl4
             // 
@@ -242,7 +242,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit5.Location = new System.Drawing.Point(111, 66);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(198, 20);
-            this.textEdit5.TabIndex = 17;
+            this.textEdit5.TabIndex = 0;
             // 
             // labelControl6
             // 
@@ -262,7 +262,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Location = new System.Drawing.Point(81, 319);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(198, 40);
-            this.simpleButton1.TabIndex = 15;
+            this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Listele";
             // 
             // simpleButton2
@@ -273,7 +273,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton2.Location = new System.Drawing.Point(81, 273);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(198, 40);
-            this.simpleButton2.TabIndex = 14;
+            this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "GÜNCELLE";
             // 
             // simpleButton3
@@ -284,7 +284,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton3.Location = new System.Drawing.Point(81, 227);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(198, 40);
-            this.simpleButton3.TabIndex = 13;
+            this.simpleButton3.TabIndex = 4;
             this.simpleButton3.Text = "SİL";
             // 
             // simpleButton4
@@ -295,7 +295,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton4.Location = new System.Drawing.Point(81, 174);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(198, 47);
-            this.simpleButton4.TabIndex = 12;
+            this.simpleButton4.TabIndex = 3;
             this.simpleButton4.Text = "KAYDET";
             // 
             // textEdit6
@@ -303,7 +303,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit6.Location = new System.Drawing.Point(111, 91);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(198, 20);
-            this.textEdit6.TabIndex = 3;
+            this.textEdit6.TabIndex = 1;
             // 
             // labelControl8
             // 

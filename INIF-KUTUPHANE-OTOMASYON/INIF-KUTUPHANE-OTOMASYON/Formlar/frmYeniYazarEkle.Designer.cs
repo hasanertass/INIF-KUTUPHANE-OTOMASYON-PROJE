@@ -55,7 +55,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(268, 65);
-            this.simpleButton1.TabIndex = 165;
+            this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "VAZGEÇ";
             // 
             // label1
@@ -65,9 +65,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(129, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 50);
+            this.label1.Size = new System.Drawing.Size(215, 50);
             this.label1.TabIndex = 164;
-            this.label1.Text = "YENİ ÇEVİRMEN\r\n       EKLE";
+            this.label1.Text = "YENİ YAZAR     \r\n     EKLE";
             // 
             // btnKaydet
             // 
@@ -81,7 +81,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
-            this.btnKaydet.TabIndex = 163;
+            this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "KAYDET";
             // 
             // pictureBox7
@@ -99,7 +99,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit3.Location = new System.Drawing.Point(110, 145);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(198, 20);
-            this.textEdit3.TabIndex = 171;
+            this.textEdit3.TabIndex = 1;
             // 
             // labelControl4
             // 
@@ -118,7 +118,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit6.Location = new System.Drawing.Point(110, 119);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(198, 20);
-            this.textEdit6.TabIndex = 167;
+            this.textEdit6.TabIndex = 0;
             // 
             // labelControl8
             // 

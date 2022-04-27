@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars.Ribbon.ViewInfo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Ribbon;
 using System.Windows.Forms;
 
 namespace INIF_KUTUPHANE_OTOMASYON
@@ -21,7 +24,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         {
             Formlar.FrmKitapListesi fr = new Formlar.FrmKitapListesi();
             fr.MdiParent = this;
-            fr.Show();  
+            fr.Show();
         }
 
         private void BarBtnYeniKitapEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -145,13 +148,6 @@ namespace INIF_KUTUPHANE_OTOMASYON
             fr.Show();
         }
 
-        private void btnEmanetIstatistikleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Formlar.frmEmanetIstatistikleri fr = new Formlar.frmEmanetIstatistikleri();
-            fr.MdiParent = this;
-            fr.Show();
-        }
-
         private void btnOgrenciIstatistikleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmOgrenciIstatistikleri fr = new Formlar.frmOgrenciIstatistikleri();
@@ -175,6 +171,45 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    btnkitaplistesi.PerformClick();
+                    break;
+                case Keys.F2:
+                    BarBtnYeniKitapEkle.PerformClick();
+                    break;
+                case Keys.F3:
+                    btnKitapIstatistikleri.PerformClick();
+                    break;
+                case Keys.F4:
+                    btnEmanetListesi.PerformClick();
+                    break;
+                case Keys.F5:
+                    btnEmanetVer.PerformClick();
+                    break;
+                case Keys.F6:
+                    btnEmanetAl.PerformClick();
+                    break;
+                case Keys.F7:
+                    btnKategoriListesi.PerformClick();
+                    break;
+                case Keys.F8:
+                    btnYeniKategori.PerformClick();
+                    break;
+                case Keys.F9:
+                    btnYazarCevirmenListesi.PerformClick();
+                    break;
+                case Keys.F10:
+                    btnYeniYazar.PerformClick();
+                    break;
+                case Keys.F11:
+                    btnYeniCevirmen.PerformClick();
+                    break;
+            }
         }
     }
 }

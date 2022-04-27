@@ -52,7 +52,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(268, 65);
-            this.simpleButton1.TabIndex = 148;
+            this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "VAZGEÇ";
             // 
             // label1
@@ -78,7 +78,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
-            this.btnKaydet.TabIndex = 147;
+            this.btnKaydet.TabIndex = 1;
             this.btnKaydet.Text = "KAYDET";
             // 
             // txtISBN
@@ -86,7 +86,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtISBN.Location = new System.Drawing.Point(104, 119);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 145;
+            this.txtISBN.TabIndex = 0;
             // 
             // labelControl2
             // 

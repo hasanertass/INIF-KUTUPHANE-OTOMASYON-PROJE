@@ -84,7 +84,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
-            this.btnKaydet.TabIndex = 186;
+            this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "KAYDET";
             // 
             // textEdit10
@@ -118,7 +118,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit8.Location = new System.Drawing.Point(114, 325);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(198, 20);
-            this.textEdit8.TabIndex = 180;
+            this.textEdit8.TabIndex = 6;
             // 
             // labelControl15
             // 
@@ -137,14 +137,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtTür.Location = new System.Drawing.Point(114, 230);
             this.txtTür.Name = "txtTür";
             this.txtTür.Size = new System.Drawing.Size(198, 20);
-            this.txtTür.TabIndex = 177;
+            this.txtTür.TabIndex = 3;
             // 
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(114, 294);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 179;
+            this.textEdit1.TabIndex = 5;
             // 
             // labelControl8
             // 
@@ -167,7 +167,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lkpdtKategori.Properties.DisplayMember = "AD";
             this.lkpdtKategori.Properties.ValueMember = "ID";
             this.lkpdtKategori.Size = new System.Drawing.Size(198, 20);
-            this.lkpdtKategori.TabIndex = 178;
+            this.lkpdtKategori.TabIndex = 4;
             // 
             // labelControl6
             // 
@@ -198,7 +198,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtYayınYılı.Location = new System.Drawing.Point(114, 198);
             this.txtYayınYılı.Name = "txtYayınYılı";
             this.txtYayınYılı.Size = new System.Drawing.Size(198, 20);
-            this.txtYayınYılı.TabIndex = 176;
+            this.txtYayınYılı.TabIndex = 2;
             // 
             // labelControl4
             // 
@@ -217,7 +217,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtAd.Location = new System.Drawing.Point(112, 172);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 175;
+            this.txtAd.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -236,7 +236,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtISBN.Location = new System.Drawing.Point(114, 133);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 174;
+            this.txtISBN.TabIndex = 0;
             // 
             // labelControl2
             // 

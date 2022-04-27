@@ -55,7 +55,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtAd.Location = new System.Drawing.Point(119, 109);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 1;
+            this.txtAd.TabIndex = 0;
             // 
             // labelControl3
             // 
@@ -81,7 +81,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
-            this.btnKaydet.TabIndex = 2;
+            this.btnKaydet.TabIndex = 1;
             this.btnKaydet.Text = "KAYDET";
             // 
             // label1
@@ -107,7 +107,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(268, 65);
-            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "VAZGEÇ";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 

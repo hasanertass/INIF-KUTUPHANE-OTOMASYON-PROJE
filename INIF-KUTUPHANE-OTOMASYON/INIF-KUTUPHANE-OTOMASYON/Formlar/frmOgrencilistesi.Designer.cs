@@ -33,7 +33,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtTür = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -59,10 +60,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtISBN = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -96,11 +93,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.radioButton4);
-            this.groupControl1.Controls.Add(this.radioButton3);
             this.groupControl1.Controls.Add(this.radioButton2);
             this.groupControl1.Controls.Add(this.radioButton1);
-            this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Controls.Add(this.txtTür);
             this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.labelControl8);
@@ -129,33 +123,42 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Location = new System.Drawing.Point(1, 1);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(421, 830);
-            this.groupControl1.TabIndex = 7;
+            this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Ürün İşlemleri";
             // 
-            // labelControl13
+            // radioButton2
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(79, 361);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(51, 16);
-            this.labelControl13.TabIndex = 37;
-            this.labelControl13.Text = "DURUM :";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(220, 283);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(56, 17);
+            this.radioButton2.TabIndex = 9;
+            this.radioButton2.Text = "KADIN";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(135, 283);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(56, 17);
+            this.radioButton1.TabIndex = 8;
+            this.radioButton1.Text = "ERKEK";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // txtTür
             // 
             this.txtTür.Location = new System.Drawing.Point(133, 179);
             this.txtTür.Name = "txtTür";
             this.txtTür.Size = new System.Drawing.Size(198, 20);
-            this.txtTür.TabIndex = 30;
+            this.txtTür.TabIndex = 4;
             // 
             // textEdit1
             // 
-            this.textEdit1.Enabled = false;
             this.textEdit1.Location = new System.Drawing.Point(133, 230);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 28;
+            this.textEdit1.TabIndex = 6;
             // 
             // labelControl8
             // 
@@ -172,7 +175,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit2.Location = new System.Drawing.Point(133, 334);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(198, 20);
-            this.textEdit2.TabIndex = 26;
+            this.textEdit2.TabIndex = 11;
             // 
             // labelControl9
             // 
@@ -189,7 +192,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit3.Location = new System.Drawing.Point(133, 308);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(198, 20);
-            this.textEdit3.TabIndex = 24;
+            this.textEdit3.TabIndex = 10;
             // 
             // labelControl10
             // 
@@ -216,7 +219,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit5.Location = new System.Drawing.Point(133, 205);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(198, 20);
-            this.textEdit5.TabIndex = 20;
+            this.textEdit5.TabIndex = 5;
             // 
             // labelControl12
             // 
@@ -234,7 +237,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKitapid.Location = new System.Drawing.Point(133, 76);
             this.txtKitapid.Name = "txtKitapid";
             this.txtKitapid.Size = new System.Drawing.Size(198, 20);
-            this.txtKitapid.TabIndex = 17;
+            this.txtKitapid.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -249,7 +252,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // btnListele
             // 
             this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
-            this.btnListele.Location = new System.Drawing.Point(133, 549);
+            this.btnListele.Location = new System.Drawing.Point(133, 538);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(198, 48);
             this.btnListele.TabIndex = 15;
@@ -258,7 +261,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // btnGüncelle
             // 
             this.btnGüncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGüncelle.ImageOptions.Image")));
-            this.btnGüncelle.Location = new System.Drawing.Point(133, 495);
+            this.btnGüncelle.Location = new System.Drawing.Point(133, 484);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(198, 48);
             this.btnGüncelle.TabIndex = 14;
@@ -267,7 +270,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // btnSil
             // 
             this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.Location = new System.Drawing.Point(133, 441);
+            this.btnSil.Location = new System.Drawing.Point(133, 430);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(198, 48);
             this.btnSil.TabIndex = 13;
@@ -276,7 +279,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // btnKaydet
             // 
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(133, 386);
+            this.btnKaydet.Location = new System.Drawing.Point(133, 375);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(198, 48);
             this.btnKaydet.TabIndex = 12;
@@ -291,7 +294,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lkpdtKategori.Properties.DisplayMember = "AD";
             this.lkpdtKategori.Properties.ValueMember = "ID";
             this.lkpdtKategori.Size = new System.Drawing.Size(198, 20);
-            this.lkpdtKategori.TabIndex = 11;
+            this.lkpdtKategori.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -318,7 +321,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtYayınYılı.Location = new System.Drawing.Point(133, 153);
             this.txtYayınYılı.Name = "txtYayınYılı";
             this.txtYayınYılı.Size = new System.Drawing.Size(198, 20);
-            this.txtYayınYılı.TabIndex = 7;
+            this.txtYayınYılı.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -335,7 +338,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtAd.Location = new System.Drawing.Point(133, 127);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 5;
+            this.txtAd.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -352,7 +355,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtISBN.Location = new System.Drawing.Point(133, 101);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 3;
+            this.txtISBN.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -363,46 +366,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2.Size = new System.Drawing.Size(60, 16);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "OKUL NO :";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(135, 283);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 17);
-            this.radioButton1.TabIndex = 38;
-            this.radioButton1.Text = "ERKEK";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(220, 283);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 17);
-            this.radioButton2.TabIndex = 39;
-            this.radioButton2.Text = "KADIN";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(138, 360);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(54, 17);
-            this.radioButton3.TabIndex = 40;
-            this.radioButton3.Text = "AKTİF";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(223, 360);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(54, 17);
-            this.radioButton4.TabIndex = 41;
-            this.radioButton4.Text = "PASİF";
-            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // frmOgrencilistesi
             // 
@@ -437,7 +400,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit txtTür;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -463,8 +425,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtISBN;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
     }

@@ -145,7 +145,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(345, 833);
-            this.groupControl1.TabIndex = 4;
+            this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Kitap İşlemleri";
             // 
             // panel1
@@ -155,7 +155,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel1.Location = new System.Drawing.Point(105, 464);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 27);
-            this.panel1.TabIndex = 49;
+            this.panel1.TabIndex = 23;
             // 
             // radioButton4
             // 
@@ -163,7 +163,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton4.Location = new System.Drawing.Point(3, 3);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(60, 17);
-            this.radioButton4.TabIndex = 45;
+            this.radioButton4.TabIndex = 0;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Mevcut";
             this.radioButton4.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton3.Location = new System.Drawing.Point(96, 3);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(86, 17);
-            this.radioButton3.TabIndex = 46;
+            this.radioButton3.TabIndex = 1;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Mevcut Değil";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit1.Location = new System.Drawing.Point(108, 385);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 48;
+            this.textEdit1.TabIndex = 13;
             // 
             // lookUpEdit1
             // 
@@ -195,7 +195,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lookUpEdit1.Properties.DisplayMember = "AD";
             this.lookUpEdit1.Properties.ValueMember = "ID";
             this.lookUpEdit1.Size = new System.Drawing.Size(198, 20);
-            this.lookUpEdit1.TabIndex = 47;
+            this.lookUpEdit1.TabIndex = 10;
             // 
             // radioButton2
             // 
@@ -203,7 +203,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton2.Location = new System.Drawing.Point(201, 439);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 17);
-            this.radioButton2.TabIndex = 44;
+            this.radioButton2.TabIndex = 16;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Zimmet de";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton1.Location = new System.Drawing.Point(108, 439);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(76, 17);
-            this.radioButton1.TabIndex = 43;
+            this.radioButton1.TabIndex = 15;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Emanet de";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit2.Size = new System.Drawing.Size(200, 20);
-            this.dateEdit2.TabIndex = 42;
+            this.dateEdit2.TabIndex = 6;
             // 
             // dateEdit1
             // 
@@ -245,7 +245,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.dateEdit1.Properties.Mask.EditMask = "yyyy";
             this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateEdit1.Size = new System.Drawing.Size(197, 20);
-            this.dateEdit1.TabIndex = 41;
+            this.dateEdit1.TabIndex = 3;
             // 
             // labelControl18
             // 
@@ -263,7 +263,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnGüncelle.Location = new System.Drawing.Point(90, 649);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(216, 66);
-            this.btnGüncelle.TabIndex = 14;
+            this.btnGüncelle.TabIndex = 26;
             this.btnGüncelle.Text = "GÜNCELLE";
             // 
             // textEdit6
@@ -271,7 +271,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit6.Location = new System.Drawing.Point(110, 333);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(198, 20);
-            this.textEdit6.TabIndex = 38;
+            this.textEdit6.TabIndex = 11;
             // 
             // labelControl13
             // 
@@ -298,7 +298,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit8.Location = new System.Drawing.Point(108, 412);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(198, 20);
-            this.textEdit8.TabIndex = 34;
+            this.textEdit8.TabIndex = 14;
             // 
             // labelControl15
             // 
@@ -325,7 +325,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtTür.Location = new System.Drawing.Point(110, 152);
             this.txtTür.Name = "txtTür";
             this.txtTür.Size = new System.Drawing.Size(198, 20);
-            this.txtTür.TabIndex = 30;
+            this.txtTür.TabIndex = 4;
             // 
             // labelControl17
             // 
@@ -362,7 +362,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit3.Location = new System.Drawing.Point(110, 281);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(198, 20);
-            this.textEdit3.TabIndex = 24;
+            this.textEdit3.TabIndex = 9;
             // 
             // labelControl10
             // 
@@ -379,7 +379,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit4.Location = new System.Drawing.Point(110, 255);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(198, 20);
-            this.textEdit4.TabIndex = 22;
+            this.textEdit4.TabIndex = 8;
             // 
             // labelControl11
             // 
@@ -396,7 +396,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit5.Location = new System.Drawing.Point(110, 229);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(198, 20);
-            this.textEdit5.TabIndex = 20;
+            this.textEdit5.TabIndex = 7;
             // 
             // labelControl12
             // 
@@ -417,7 +417,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lookUpEdit2.Properties.DisplayMember = "AD";
             this.lookUpEdit2.Properties.ValueMember = "ID";
             this.lookUpEdit2.Size = new System.Drawing.Size(198, 20);
-            this.lookUpEdit2.TabIndex = 18;
+            this.lookUpEdit2.TabIndex = 12;
             // 
             // txtKitapid
             // 
@@ -425,7 +425,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKitapid.Location = new System.Drawing.Point(110, 49);
             this.txtKitapid.Name = "txtKitapid";
             this.txtKitapid.Size = new System.Drawing.Size(198, 20);
-            this.txtKitapid.TabIndex = 17;
+            this.txtKitapid.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -443,7 +443,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnListele.Location = new System.Drawing.Point(90, 721);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(216, 68);
-            this.btnListele.TabIndex = 15;
+            this.btnListele.TabIndex = 27;
             this.btnListele.Text = "Listele";
             // 
             // btnSil
@@ -452,7 +452,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnSil.Location = new System.Drawing.Point(88, 577);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(216, 65);
-            this.btnSil.TabIndex = 13;
+            this.btnSil.TabIndex = 25;
             this.btnSil.Text = "SİL";
             // 
             // btnKaydet
@@ -461,7 +461,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Location = new System.Drawing.Point(88, 507);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(216, 65);
-            this.btnKaydet.TabIndex = 12;
+            this.btnKaydet.TabIndex = 24;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -474,7 +474,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lkpdtKategori.Properties.DisplayMember = "AD";
             this.lkpdtKategori.Properties.ValueMember = "ID";
             this.lkpdtKategori.Size = new System.Drawing.Size(198, 20);
-            this.lkpdtKategori.TabIndex = 11;
+            this.lkpdtKategori.TabIndex = 5;
             // 
             // labelControl6
             // 
@@ -511,7 +511,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtAd.Location = new System.Drawing.Point(110, 100);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 5;
+            this.txtAd.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -528,7 +528,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtISBN.Location = new System.Drawing.Point(110, 74);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 3;
+            this.txtISBN.TabIndex = 1;
             // 
             // labelControl2
             // 

@@ -86,7 +86,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Location = new System.Drawing.Point(1, 58);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(416, 300);
-            this.groupControl1.TabIndex = 5;
+            this.groupControl1.TabIndex = 0;
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // dateTimePicker2
@@ -94,21 +94,21 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.dateTimePicker2.Location = new System.Drawing.Point(151, 139);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(198, 21);
-            this.dateTimePicker2.TabIndex = 32;
+            this.dateTimePicker2.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(151, 112);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 21);
-            this.dateTimePicker1.TabIndex = 31;
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // txtKitapid
             // 
             this.txtKitapid.Location = new System.Drawing.Point(184, 44);
             this.txtKitapid.Name = "txtKitapid";
             this.txtKitapid.Size = new System.Drawing.Size(198, 20);
-            this.txtKitapid.TabIndex = 17;
+            this.txtKitapid.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -126,7 +126,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Location = new System.Drawing.Point(89, 186);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(216, 65);
-            this.btnKaydet.TabIndex = 12;
+            this.btnKaydet.TabIndex = 4;
             this.btnKaydet.Text = "EMANET VER";
             // 
             // labelControl5
@@ -154,7 +154,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtAd.Location = new System.Drawing.Point(151, 86);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 5;
+            this.txtAd.TabIndex = 1;
             // 
             // labelControl3
             // 

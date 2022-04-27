@@ -55,7 +55,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(268, 65);
-            this.simpleButton1.TabIndex = 153;
+            this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "VAZGEÇ";
             // 
             // label1
@@ -65,9 +65,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(135, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 50);
+            this.label1.Size = new System.Drawing.Size(218, 50);
             this.label1.TabIndex = 152;
-            this.label1.Text = "YENİ YAZAR\r\n     EKLE";
+            this.label1.Text = "YENİ ÇEVİRMEN\r\n      EKLE";
             // 
             // btnKaydet
             // 
@@ -81,7 +81,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
-            this.btnKaydet.TabIndex = 151;
+            this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "KAYDET";
             // 
             // pictureBox7
@@ -99,7 +99,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit1.Location = new System.Drawing.Point(91, 152);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 159;
+            this.textEdit1.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -130,14 +130,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtISBN.Location = new System.Drawing.Point(91, 126);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 155;
+            this.txtISBN.TabIndex = 0;
             // 
             // frmYeniCevirmenEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(346, 383);
+            this.ClientSize = new System.Drawing.Size(359, 383);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl2);

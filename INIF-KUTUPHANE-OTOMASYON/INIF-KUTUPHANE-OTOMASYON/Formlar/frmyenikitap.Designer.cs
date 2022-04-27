@@ -376,7 +376,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
-            this.btnKaydet.TabIndex = 16;
+            this.btnKaydet.TabIndex = 17;
             this.btnKaydet.Text = "KAYDET";
             // 
             // pictureBox1
@@ -405,7 +405,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.dateEdit1.Properties.Mask.EditMask = "yyyy";
             this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateEdit1.Size = new System.Drawing.Size(197, 20);
-            this.dateEdit1.TabIndex = 138;
+            this.dateEdit1.TabIndex = 2;
             // 
             // dateEdit2
             // 
@@ -420,7 +420,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.dateEdit2.Properties.Mask.BeepOnError = true;
             this.dateEdit2.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateEdit2.Size = new System.Drawing.Size(197, 20);
-            this.dateEdit2.TabIndex = 139;
+            this.dateEdit2.TabIndex = 5;
             // 
             // lookUpEdit1
             // 
@@ -431,7 +431,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lookUpEdit1.Properties.DisplayMember = "AD";
             this.lookUpEdit1.Properties.ValueMember = "ID";
             this.lookUpEdit1.Size = new System.Drawing.Size(198, 20);
-            this.lookUpEdit1.TabIndex = 140;
+            this.lookUpEdit1.TabIndex = 10;
             // 
             // radioButton2
             // 
@@ -440,7 +440,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton2.Location = new System.Drawing.Point(820, 221);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 17);
-            this.radioButton2.TabIndex = 145;
+            this.radioButton2.TabIndex = 15;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Zimmet de";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -452,7 +452,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton1.Location = new System.Drawing.Point(727, 221);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(76, 17);
-            this.radioButton1.TabIndex = 144;
+            this.radioButton1.TabIndex = 14;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Emanet de";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -486,7 +486,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.textEdit1.Location = new System.Drawing.Point(410, 347);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 148;
+            this.textEdit1.TabIndex = 13;
             // 
             // panel1
             // 
@@ -495,7 +495,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel1.Location = new System.Drawing.Point(724, 242);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 27);
-            this.panel1.TabIndex = 149;
+            this.panel1.TabIndex = 16;
             // 
             // radioButton4
             // 
@@ -504,7 +504,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton4.Location = new System.Drawing.Point(3, 3);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(61, 17);
-            this.radioButton4.TabIndex = 45;
+            this.radioButton4.TabIndex = 0;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Mevcut";
             this.radioButton4.UseVisualStyleBackColor = true;
@@ -516,7 +516,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.radioButton3.Location = new System.Drawing.Point(96, 3);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(88, 17);
-            this.radioButton3.TabIndex = 46;
+            this.radioButton3.TabIndex = 1;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Mevcut Değil";
             this.radioButton3.UseVisualStyleBackColor = true;
