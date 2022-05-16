@@ -21,5 +21,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             this.Hide();
         }
+
+        private void labelControl8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

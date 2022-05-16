@@ -16,5 +16,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             InitializeComponent();
         }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

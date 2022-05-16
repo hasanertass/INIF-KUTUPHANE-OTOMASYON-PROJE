@@ -33,47 +33,47 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.txtTür = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.rdKadın = new System.Windows.Forms.RadioButton();
+            this.rdErkek = new System.Windows.Forms.RadioButton();
+            this.txtOgrTel = new DevExpress.XtraEditors.TextEdit();
+            this.txtOgrKartId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmanet = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtOgrSifre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtOgrEposta = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKitapid = new DevExpress.XtraEditors.TextEdit();
+            this.txtOgrId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnGüncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.lkpdtKategori = new DevExpress.XtraEditors.LookUpEdit();
+            this.lkpdtBolum = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtYayınYılı = new DevExpress.XtraEditors.TextEdit();
+            this.txtOgrSoyad = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAd = new DevExpress.XtraEditors.TextEdit();
+            this.txtOgrAd = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtISBN = new DevExpress.XtraEditors.TextEdit();
+            this.txtOkulNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTür.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKitapid.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkpdtKategori.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYayınYılı.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrTel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrKartId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmanet.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrSifre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrEposta.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpdtBolum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrSoyad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrAd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -93,32 +93,32 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.radioButton2);
-            this.groupControl1.Controls.Add(this.radioButton1);
-            this.groupControl1.Controls.Add(this.txtTür);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.rdKadın);
+            this.groupControl1.Controls.Add(this.rdErkek);
+            this.groupControl1.Controls.Add(this.txtOgrTel);
+            this.groupControl1.Controls.Add(this.txtOgrKartId);
             this.groupControl1.Controls.Add(this.labelControl8);
-            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.txtEmanet);
             this.groupControl1.Controls.Add(this.labelControl9);
-            this.groupControl1.Controls.Add(this.textEdit3);
+            this.groupControl1.Controls.Add(this.txtOgrSifre);
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl11);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.txtOgrEposta);
             this.groupControl1.Controls.Add(this.labelControl12);
-            this.groupControl1.Controls.Add(this.txtKitapid);
+            this.groupControl1.Controls.Add(this.txtOgrId);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.btnListele);
             this.groupControl1.Controls.Add(this.btnGüncelle);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnKaydet);
-            this.groupControl1.Controls.Add(this.lkpdtKategori);
+            this.groupControl1.Controls.Add(this.lkpdtBolum);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.txtYayınYılı);
+            this.groupControl1.Controls.Add(this.txtOgrSoyad);
             this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.txtAd);
+            this.groupControl1.Controls.Add(this.txtOgrAd);
             this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.txtISBN);
+            this.groupControl1.Controls.Add(this.txtOkulNo);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Location = new System.Drawing.Point(1, 1);
             this.groupControl1.Name = "groupControl1";
@@ -126,39 +126,39 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Ürün İşlemleri";
             // 
-            // radioButton2
+            // rdKadın
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(220, 283);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 17);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.Text = "KADIN";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdKadın.AutoSize = true;
+            this.rdKadın.Location = new System.Drawing.Point(220, 283);
+            this.rdKadın.Name = "rdKadın";
+            this.rdKadın.Size = new System.Drawing.Size(56, 17);
+            this.rdKadın.TabIndex = 9;
+            this.rdKadın.Text = "KADIN";
+            this.rdKadın.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdErkek
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(135, 283);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.Text = "ERKEK";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdErkek.AutoSize = true;
+            this.rdErkek.Location = new System.Drawing.Point(135, 283);
+            this.rdErkek.Name = "rdErkek";
+            this.rdErkek.Size = new System.Drawing.Size(56, 17);
+            this.rdErkek.TabIndex = 8;
+            this.rdErkek.Text = "ERKEK";
+            this.rdErkek.UseVisualStyleBackColor = true;
             // 
-            // txtTür
+            // txtOgrTel
             // 
-            this.txtTür.Location = new System.Drawing.Point(133, 179);
-            this.txtTür.Name = "txtTür";
-            this.txtTür.Size = new System.Drawing.Size(198, 20);
-            this.txtTür.TabIndex = 4;
+            this.txtOgrTel.Location = new System.Drawing.Point(133, 179);
+            this.txtOgrTel.Name = "txtOgrTel";
+            this.txtOgrTel.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrTel.TabIndex = 4;
             // 
-            // textEdit1
+            // txtOgrKartId
             // 
-            this.textEdit1.Location = new System.Drawing.Point(133, 230);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 6;
+            this.txtOgrKartId.Location = new System.Drawing.Point(133, 230);
+            this.txtOgrKartId.Name = "txtOgrKartId";
+            this.txtOgrKartId.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrKartId.TabIndex = 6;
             // 
             // labelControl8
             // 
@@ -170,12 +170,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl8.TabIndex = 27;
             this.labelControl8.Text = "KART İD :";
             // 
-            // textEdit2
+            // txtEmanet
             // 
-            this.textEdit2.Location = new System.Drawing.Point(133, 334);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(198, 20);
-            this.textEdit2.TabIndex = 11;
+            this.txtEmanet.Location = new System.Drawing.Point(133, 334);
+            this.txtEmanet.Name = "txtEmanet";
+            this.txtEmanet.Size = new System.Drawing.Size(198, 20);
+            this.txtEmanet.TabIndex = 11;
             // 
             // labelControl9
             // 
@@ -187,12 +187,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl9.TabIndex = 25;
             this.labelControl9.Text = "EMANETTEKİ KİTAP :";
             // 
-            // textEdit3
+            // txtOgrSifre
             // 
-            this.textEdit3.Location = new System.Drawing.Point(133, 308);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(198, 20);
-            this.textEdit3.TabIndex = 10;
+            this.txtOgrSifre.Location = new System.Drawing.Point(133, 308);
+            this.txtOgrSifre.Name = "txtOgrSifre";
+            this.txtOgrSifre.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrSifre.TabIndex = 10;
             // 
             // labelControl10
             // 
@@ -214,12 +214,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl11.TabIndex = 21;
             this.labelControl11.Text = "CİNSİYET :";
             // 
-            // textEdit5
+            // txtOgrEposta
             // 
-            this.textEdit5.Location = new System.Drawing.Point(133, 205);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(198, 20);
-            this.textEdit5.TabIndex = 5;
+            this.txtOgrEposta.Location = new System.Drawing.Point(133, 205);
+            this.txtOgrEposta.Name = "txtOgrEposta";
+            this.txtOgrEposta.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrEposta.TabIndex = 5;
             // 
             // labelControl12
             // 
@@ -231,13 +231,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl12.TabIndex = 19;
             this.labelControl12.Text = "BÖLÜM :";
             // 
-            // txtKitapid
+            // txtOgrId
             // 
-            this.txtKitapid.Enabled = false;
-            this.txtKitapid.Location = new System.Drawing.Point(133, 76);
-            this.txtKitapid.Name = "txtKitapid";
-            this.txtKitapid.Size = new System.Drawing.Size(198, 20);
-            this.txtKitapid.TabIndex = 0;
+            this.txtOgrId.Enabled = false;
+            this.txtOgrId.Location = new System.Drawing.Point(133, 76);
+            this.txtOgrId.Name = "txtOgrId";
+            this.txtOgrId.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrId.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -285,16 +285,16 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.TabIndex = 12;
             this.btnKaydet.Text = "KAYDET";
             // 
-            // lkpdtKategori
+            // lkpdtBolum
             // 
-            this.lkpdtKategori.Location = new System.Drawing.Point(133, 256);
-            this.lkpdtKategori.Name = "lkpdtKategori";
-            this.lkpdtKategori.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lkpdtBolum.Location = new System.Drawing.Point(133, 256);
+            this.lkpdtBolum.Name = "lkpdtBolum";
+            this.lkpdtBolum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkpdtKategori.Properties.DisplayMember = "AD";
-            this.lkpdtKategori.Properties.ValueMember = "ID";
-            this.lkpdtKategori.Size = new System.Drawing.Size(198, 20);
-            this.lkpdtKategori.TabIndex = 7;
+            this.lkpdtBolum.Properties.DisplayMember = "AD";
+            this.lkpdtBolum.Properties.ValueMember = "ID";
+            this.lkpdtBolum.Size = new System.Drawing.Size(198, 20);
+            this.lkpdtBolum.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -316,12 +316,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "TELEFON :";
             // 
-            // txtYayınYılı
+            // txtOgrSoyad
             // 
-            this.txtYayınYılı.Location = new System.Drawing.Point(133, 153);
-            this.txtYayınYılı.Name = "txtYayınYılı";
-            this.txtYayınYılı.Size = new System.Drawing.Size(198, 20);
-            this.txtYayınYılı.TabIndex = 3;
+            this.txtOgrSoyad.Location = new System.Drawing.Point(133, 153);
+            this.txtOgrSoyad.Name = "txtOgrSoyad";
+            this.txtOgrSoyad.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrSoyad.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -333,12 +333,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "ÖĞRENCİ SOYADI :";
             // 
-            // txtAd
+            // txtOgrAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(133, 127);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 2;
+            this.txtOgrAd.Location = new System.Drawing.Point(133, 127);
+            this.txtOgrAd.Name = "txtOgrAd";
+            this.txtOgrAd.Size = new System.Drawing.Size(198, 20);
+            this.txtOgrAd.TabIndex = 2;
             // 
             // labelControl3
             // 
@@ -350,12 +350,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "ÖĞRENCİ ADI :";
             // 
-            // txtISBN
+            // txtOkulNo
             // 
-            this.txtISBN.Location = new System.Drawing.Point(133, 101);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 1;
+            this.txtOkulNo.Location = new System.Drawing.Point(133, 101);
+            this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.Size = new System.Drawing.Size(198, 20);
+            this.txtOkulNo.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -371,7 +371,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 832);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmOgrencilistesi";
@@ -381,16 +381,16 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTür.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKitapid.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkpdtKategori.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYayınYılı.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrTel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrKartId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmanet.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrSifre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrEposta.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpdtBolum.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrSoyad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrAd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,32 +400,32 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.TextEdit txtTür;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtOgrTel;
+        private DevExpress.XtraEditors.TextEdit txtOgrKartId;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtEmanet;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtOgrSifre;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtOgrEposta;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.TextEdit txtKitapid;
+        private DevExpress.XtraEditors.TextEdit txtOgrId;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnGüncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
-        private DevExpress.XtraEditors.LookUpEdit lkpdtKategori;
+        private DevExpress.XtraEditors.LookUpEdit lkpdtBolum;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtYayınYılı;
+        private DevExpress.XtraEditors.TextEdit txtOgrSoyad;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtAd;
+        private DevExpress.XtraEditors.TextEdit txtOgrAd;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtISBN;
+        private DevExpress.XtraEditors.TextEdit txtOkulNo;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdKadın;
+        private System.Windows.Forms.RadioButton rdErkek;
     }
 }
