@@ -16,5 +16,15 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             InitializeComponent();
         }
+
+        private void txtKitapid_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtISBN_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
