@@ -50,24 +50,23 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnVazgec.Appearance.Options.UseFont = true;
             this.btnVazgec.Appearance.Options.UseForeColor = true;
             this.btnVazgec.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnVazgec.Location = new System.Drawing.Point(53, 321);
-            this.btnVazgec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVazgec.ImageOptions.Image")));
+            this.btnVazgec.Location = new System.Drawing.Point(40, 261);
             this.btnVazgec.Name = "btnVazgec";
             this.btnVazgec.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnVazgec.Size = new System.Drawing.Size(357, 80);
+            this.btnVazgec.Size = new System.Drawing.Size(268, 65);
             this.btnVazgec.TabIndex = 3;
             this.btnVazgec.Text = "VAZGEÇ";
+            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Snap ITC", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(172, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(129, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 62);
+            this.label1.Size = new System.Drawing.Size(215, 50);
             this.label1.TabIndex = 164;
             this.label1.Text = "YENİ YAZAR     \r\n     EKLE";
             // 
@@ -79,31 +78,29 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(53, 218);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Location = new System.Drawing.Point(40, 177);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKaydet.Size = new System.Drawing.Size(357, 80);
+            this.btnKaydet.Size = new System.Drawing.Size(268, 65);
             this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(15, 16);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(11, 13);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(141, 85);
+            this.pictureBox7.Size = new System.Drawing.Size(106, 69);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 158;
             this.pictureBox7.TabStop = false;
             // 
             // txtYzrSoyad
             // 
-            this.txtYzrSoyad.Location = new System.Drawing.Point(147, 178);
-            this.txtYzrSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtYzrSoyad.Location = new System.Drawing.Point(110, 145);
             this.txtYzrSoyad.Name = "txtYzrSoyad";
-            this.txtYzrSoyad.Size = new System.Drawing.Size(264, 22);
+            this.txtYzrSoyad.Size = new System.Drawing.Size(198, 20);
             this.txtYzrSoyad.TabIndex = 1;
             // 
             // labelControl4
@@ -112,19 +109,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(68, 180);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Location = new System.Drawing.Point(51, 146);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(70, 19);
+            this.labelControl4.Size = new System.Drawing.Size(53, 16);
             this.labelControl4.TabIndex = 170;
             this.labelControl4.Text = "SOYADI :";
             // 
             // txtYzrAd
             // 
-            this.txtYzrAd.Location = new System.Drawing.Point(147, 146);
-            this.txtYzrAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtYzrAd.Location = new System.Drawing.Point(110, 119);
             this.txtYzrAd.Name = "txtYzrAd";
-            this.txtYzrAd.Size = new System.Drawing.Size(264, 22);
+            this.txtYzrAd.Size = new System.Drawing.Size(198, 20);
             this.txtYzrAd.TabIndex = 0;
             // 
             // labelControl8
@@ -133,19 +128,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(100, 148);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Location = new System.Drawing.Point(75, 120);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(39, 19);
+            this.labelControl8.Size = new System.Drawing.Size(29, 16);
             this.labelControl8.TabIndex = 166;
             this.labelControl8.Text = "ADI :";
             // 
             // frmYeniYazarEkle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(487, 431);
+            this.ClientSize = new System.Drawing.Size(365, 350);
             this.Controls.Add(this.txtYzrSoyad);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtYzrAd);
@@ -155,7 +149,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.pictureBox7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmYeniYazarEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmYeniYazarEkle";
