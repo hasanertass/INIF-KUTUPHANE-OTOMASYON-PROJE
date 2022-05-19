@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         public frmEmanetListesi()
         {
             InitializeComponent();
+        }
+        MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
+        private void frmEmanetListesi_Load(object sender, EventArgs e)
+        {
+            //gridcontrolde veri listeleme
+            connection.Open();
+            MySqlCommand command = new MySqlCommand("select * from Odünç", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridControl1.DataSource = dt;
         }
     }
 }

@@ -58,6 +58,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.gridControl1);
             this.Name = "frmEmanetListesi";
             this.Text = "Emanet Listesi";
+            this.Load += new System.EventHandler(this.frmEmanetListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

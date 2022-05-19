@@ -92,6 +92,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Size = new System.Drawing.Size(268, 67);
             this.btnKaydet.TabIndex = 10;
             this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // textEdit10
             // 
@@ -344,6 +345,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Name = "frmYeniogrenciEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmYeniogrenciListesi";
+            this.Load += new System.EventHandler(this.frmYeniogrenciEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

@@ -35,22 +35,26 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtKitapid = new DevExpress.XtraEditors.TextEdit();
+            this.txtBarkod = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAd = new DevExpress.XtraEditors.TextEdit();
+            this.txtKartId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKitapid.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKartId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -74,14 +78,15 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.Gray;
             this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.Controls.Add(this.gridControl2);
             this.groupControl1.Controls.Add(this.dateTimePicker2);
             this.groupControl1.Controls.Add(this.dateTimePicker1);
-            this.groupControl1.Controls.Add(this.txtKitapid);
+            this.groupControl1.Controls.Add(this.txtBarkod);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.txtAd);
+            this.groupControl1.Controls.Add(this.txtKartId);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Location = new System.Drawing.Point(1, 58);
             this.groupControl1.Name = "groupControl1";
@@ -103,12 +108,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 21);
             this.dateTimePicker1.TabIndex = 2;
             // 
-            // txtKitapid
+            // txtBarkod
             // 
-            this.txtKitapid.Location = new System.Drawing.Point(184, 44);
-            this.txtKitapid.Name = "txtKitapid";
-            this.txtKitapid.Size = new System.Drawing.Size(198, 20);
-            this.txtKitapid.TabIndex = 0;
+            this.txtBarkod.Location = new System.Drawing.Point(184, 44);
+            this.txtBarkod.Name = "txtBarkod";
+            this.txtBarkod.Size = new System.Drawing.Size(198, 20);
+            this.txtBarkod.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -128,6 +133,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Size = new System.Drawing.Size(216, 65);
             this.btnKaydet.TabIndex = 4;
             this.btnKaydet.Text = "EMANET VER";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // labelControl5
             // 
@@ -149,12 +155,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "ALIŞ TARİHİ :";
             // 
-            // txtAd
+            // txtKartId
             // 
-            this.txtAd.Location = new System.Drawing.Point(151, 86);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(198, 20);
-            this.txtAd.TabIndex = 1;
+            this.txtKartId.Location = new System.Drawing.Point(151, 86);
+            this.txtKartId.Name = "txtKartId";
+            this.txtKartId.Size = new System.Drawing.Size(198, 20);
+            this.txtKartId.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -187,6 +193,21 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(121, 272);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(181, 10);
+            this.gridControl2.TabIndex = 17;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            // 
             // frmEmanetKitapVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,14 +222,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Name = "frmEmanetKitapVer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmanetKitapVer";
+            this.Load += new System.EventHandler(this.frmEmanetKitapVer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKitapid.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKartId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,16 +243,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.TextEdit txtKitapid;
+        private DevExpress.XtraEditors.TextEdit txtBarkod;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtAd;
+        private DevExpress.XtraEditors.TextEdit txtKartId;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

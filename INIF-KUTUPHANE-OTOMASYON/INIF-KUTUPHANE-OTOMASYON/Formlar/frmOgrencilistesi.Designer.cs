@@ -90,6 +90,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // groupControl1
             // 
@@ -233,7 +234,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // txtOgrId
             // 
-            this.txtOgrId.Enabled = false;
             this.txtOgrId.Location = new System.Drawing.Point(133, 76);
             this.txtOgrId.Name = "txtOgrId";
             this.txtOgrId.Size = new System.Drawing.Size(198, 20);
@@ -257,6 +257,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnListele.Size = new System.Drawing.Size(198, 48);
             this.btnListele.TabIndex = 15;
             this.btnListele.Text = "Listele";
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnGüncelle
             // 
@@ -266,6 +267,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnGüncelle.Size = new System.Drawing.Size(198, 48);
             this.btnGüncelle.TabIndex = 14;
             this.btnGüncelle.Text = "GÜNCELLE";
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnSil
             // 
@@ -275,6 +277,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnSil.Size = new System.Drawing.Size(198, 48);
             this.btnSil.TabIndex = 13;
             this.btnSil.Text = "SİL";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnKaydet
             // 
@@ -284,6 +287,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Size = new System.Drawing.Size(198, 48);
             this.btnKaydet.TabIndex = 12;
             this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // lkpdtBolum
             // 
@@ -354,6 +358,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.txtOkulNo.Location = new System.Drawing.Point(133, 101);
             this.txtOkulNo.Name = "txtOkulNo";
+            this.txtOkulNo.Properties.Mask.EditMask = "999999999";
+            this.txtOkulNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtOkulNo.Size = new System.Drawing.Size(198, 20);
             this.txtOkulNo.TabIndex = 1;
             // 
@@ -376,6 +382,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.gridControl1);
             this.Name = "frmOgrencilistesi";
             this.Text = "frmOgrencilistesi";
+            this.Load += new System.EventHandler(this.frmOgrencilistesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
