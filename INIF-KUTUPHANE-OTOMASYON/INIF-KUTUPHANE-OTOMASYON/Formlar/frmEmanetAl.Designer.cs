@@ -55,7 +55,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -66,7 +66,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKartId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKitapBarkod.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -98,7 +97,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.dataGridView1);
+            this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.txtEmanetId);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.groupBox1);
@@ -330,13 +329,15 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Text = "EMANET AL";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // dataGridView1
+            // labelControl8
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(155, 596);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(121, 16);
-            this.dataGridView1.TabIndex = 57;
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(19, 574);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(111, 16);
+            this.labelControl8.TabIndex = 57;
+            this.labelControl8.Text = "EMANET DURUMU :";
             // 
             // frmEmanetAl
             // 
@@ -361,7 +362,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKartId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKitapBarkod.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,6 +393,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.TextEdit txtEmanetId;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }

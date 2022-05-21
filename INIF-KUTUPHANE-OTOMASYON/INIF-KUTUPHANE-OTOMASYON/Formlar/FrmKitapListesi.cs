@@ -261,7 +261,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             try
             {
                 connection.Open();
-                MySqlCommand komut = new MySqlCommand("Update Kitap set Durum2=0 where id=@p1", connection);
+                MySqlCommand komut = new MySqlCommand("Update Kitap set Durum2=0,Durum=0 where id=@p1", connection);
                 komut.Parameters.AddWithValue("@p1", txtKitapid.Text);
                 komut.ExecuteNonQuery();
                 connection.Close();

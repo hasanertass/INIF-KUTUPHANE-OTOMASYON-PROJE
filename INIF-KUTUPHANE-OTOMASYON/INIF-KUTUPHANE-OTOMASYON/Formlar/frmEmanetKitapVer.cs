@@ -42,26 +42,54 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            try
+            //try
+            //{
+            connection.Open();
+            MySqlCommand command1 = new MySqlCommand("select stok from Kitap Where Barkod=@p1",connection);
+            command1.Parameters.AddWithValue("@p1", txtBarkod.Text);
+            MySqlDataReader reader = command1.ExecuteReader();
+            while (reader.Read())
             {
-                DateTime dateTime = Convert.ToDateTime(dateTimePicker1.Text);
-                DateTime dateTime1 = Convert.ToDateTime(dateTimePicker2.Text);
-                int durum = 1;
-
+                labelControl2.Text = reader[0].ToString();
+            }
+            connection.Close();
+            int stok = Convert.ToInt32(labelControl2.Text);
+            if (stok==1)
+            {
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Odünç (Barkod,KartId,AlisTarihi,TeslimTarihi,OduncDurum) values (@p1,@p2,@p3,@p4,@p5)", connection);
-                command.Parameters.AddWithValue("@p1", txtBarkod.Text);
-                command.Parameters.AddWithValue("@p2", txtKartId.Text);
-                command.Parameters.AddWithValue("@p3", dateTime.ToString("yyyy-MM-dd"));
-                command.Parameters.AddWithValue("@p4", dateTime1.ToString("yyyy-MM-dd"));
-                command.Parameters.AddWithValue("@p5", durum);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Kitap Emanet Edilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MySqlCommand command2 = new MySqlCommand("Update Kitap Set Durum=0,Stok=@p2 where Barkod=@p1",connection);
+                command2.Parameters.AddWithValue("@p1", txtBarkod.Text);
+                command2.Parameters.AddWithValue("@p2", stok-1);
+                command2.ExecuteNonQuery();
+                connection.Close();
             }
-            catch (Exception)
+            else if (stok>1)
             {
-
+                connection.Open();
+                MySqlCommand command2 = new MySqlCommand("Update Kitap Set stok=@p1 where barkod=@p2",connection);
+                command2.Parameters.AddWithValue("@p1", stok - 1);
+                command2.Parameters.AddWithValue("@p2", txtBarkod.Text);
+                command2.ExecuteNonQuery();
+                connection.Close();
             }
+            DateTime dateTime = Convert.ToDateTime(dateTimePicker1.Text);
+            DateTime dateTime1 = Convert.ToDateTime(dateTimePicker2.Text);
+            int durum = 1;
+
+            connection.Open();
+            MySqlCommand command = new MySqlCommand("insert into Odünç (Barkod,KartId,AlisTarihi,TeslimTarihi,OduncDurum) values (@p1,@p2,@p3,@p4,@p5)", connection);
+            command.Parameters.AddWithValue("@p1", txtBarkod.Text);
+            command.Parameters.AddWithValue("@p2", txtKartId.Text);
+            command.Parameters.AddWithValue("@p3", dateTime.ToString("yyyy-MM-dd"));
+            command.Parameters.AddWithValue("@p4", dateTime1.ToString("yyyy-MM-dd"));
+            command.Parameters.AddWithValue("@p5", durum);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Kitap Emanet Edilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //catch (Exception)
+            //{
+
+            //}
 
         }
     }

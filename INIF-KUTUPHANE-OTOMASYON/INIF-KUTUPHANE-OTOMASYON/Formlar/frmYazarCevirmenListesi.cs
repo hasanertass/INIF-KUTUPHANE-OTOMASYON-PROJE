@@ -203,9 +203,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txtYazarid.Text = gridView1.GetFocusedRowCellValue("id").ToString();
-            txtYazarAdı.Text = gridView1.GetFocusedRowCellValue("YazarAdi").ToString();
-            txtYazarSoyad.Text = gridView1.GetFocusedRowCellValue("YazarSoyadi").ToString();
+            try
+            {
+                txtYazarid.Text = gridView1.GetFocusedRowCellValue("id").ToString(); 
+                txtYazarAdı.Text = gridView1.GetFocusedRowCellValue("YazarAdi").ToString();
+                txtYazarSoyad.Text = gridView1.GetFocusedRowCellValue("YazarSoyadi").ToString();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
         }
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
