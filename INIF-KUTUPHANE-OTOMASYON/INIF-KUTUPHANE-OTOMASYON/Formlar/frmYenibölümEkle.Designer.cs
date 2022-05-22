@@ -33,10 +33,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.txtISBN = new DevExpress.XtraEditors.TextEdit();
+            this.txtad = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Size = new System.Drawing.Size(268, 65);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "VAZGEÇ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // label1
             // 
@@ -80,13 +81,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
             this.btnKaydet.TabIndex = 1;
             this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // txtISBN
+            // txtad
             // 
-            this.txtISBN.Location = new System.Drawing.Point(104, 119);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(198, 20);
-            this.txtISBN.TabIndex = 0;
+            this.txtad.Location = new System.Drawing.Point(104, 119);
+            this.txtad.Name = "txtad";
+            this.txtad.Size = new System.Drawing.Size(198, 20);
+            this.txtad.TabIndex = 0;
             // 
             // labelControl2
             // 
@@ -119,15 +121,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.txtISBN);
+            this.Controls.Add(this.txtad);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.pictureBox7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmYenibölümEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmYenibölümEkle";
-            this.Load += new System.EventHandler(this.frmYenibölümEkle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,7 +140,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
-        private DevExpress.XtraEditors.TextEdit txtISBN;
+        private DevExpress.XtraEditors.TextEdit txtad;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.PictureBox pictureBox7;
     }

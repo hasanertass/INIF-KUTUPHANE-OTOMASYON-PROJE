@@ -34,24 +34,24 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txtPersonelSifre = new DevExpress.XtraEditors.TextEdit();
+            this.txtsifre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPersonelSoyad = new DevExpress.XtraEditors.TextEdit();
+            this.txtsoyad = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPersonelAd = new DevExpress.XtraEditors.TextEdit();
+            this.txtadi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPersonelTc = new DevExpress.XtraEditors.TextEdit();
+            this.txttc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.rdErkek = new System.Windows.Forms.RadioButton();
             this.rdKadın = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelSifre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelSoyad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelAd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelTc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsifre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsoyad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtadi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -64,7 +64,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 201;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnKaydet
             // 
@@ -80,6 +79,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // textEdit10
             // 
@@ -107,13 +107,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.pictureBox7.TabIndex = 199;
             this.pictureBox7.TabStop = false;
             // 
-            // txtPersonelSifre
+            // txtsifre
             // 
-            this.txtPersonelSifre.Location = new System.Drawing.Point(165, 268);
-            this.txtPersonelSifre.Name = "txtPersonelSifre";
-            this.txtPersonelSifre.Size = new System.Drawing.Size(198, 20);
-            this.txtPersonelSifre.TabIndex = 5;
-            this.txtPersonelSifre.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtsifre.Location = new System.Drawing.Point(165, 268);
+            this.txtsifre.Name = "txtsifre";
+            this.txtsifre.Size = new System.Drawing.Size(198, 20);
+            this.txtsifre.TabIndex = 5;
             // 
             // labelControl8
             // 
@@ -126,7 +125,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl8.Size = new System.Drawing.Size(43, 16);
             this.labelControl8.TabIndex = 196;
             this.labelControl8.Text = "ŞİFRE :";
-            this.labelControl8.Click += new System.EventHandler(this.labelControl8_Click);
             // 
             // labelControl5
             // 
@@ -140,12 +138,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl5.TabIndex = 190;
             this.labelControl5.Text = "CİNSİYET :";
             // 
-            // txtPersonelSoyad
+            // txtsoyad
             // 
-            this.txtPersonelSoyad.Location = new System.Drawing.Point(165, 203);
-            this.txtPersonelSoyad.Name = "txtPersonelSoyad";
-            this.txtPersonelSoyad.Size = new System.Drawing.Size(198, 20);
-            this.txtPersonelSoyad.TabIndex = 2;
+            this.txtsoyad.Location = new System.Drawing.Point(165, 203);
+            this.txtsoyad.Name = "txtsoyad";
+            this.txtsoyad.Size = new System.Drawing.Size(198, 20);
+            this.txtsoyad.TabIndex = 2;
             // 
             // labelControl4
             // 
@@ -159,12 +157,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl4.TabIndex = 189;
             this.labelControl4.Text = "PERSONEL SOYADI :";
             // 
-            // txtPersonelAd
+            // txtadi
             // 
-            this.txtPersonelAd.Location = new System.Drawing.Point(165, 166);
-            this.txtPersonelAd.Name = "txtPersonelAd";
-            this.txtPersonelAd.Size = new System.Drawing.Size(198, 20);
-            this.txtPersonelAd.TabIndex = 1;
+            this.txtadi.Location = new System.Drawing.Point(165, 166);
+            this.txtadi.Name = "txtadi";
+            this.txtadi.Size = new System.Drawing.Size(198, 20);
+            this.txtadi.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -178,12 +176,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3.TabIndex = 188;
             this.labelControl3.Text = "PERSONEL ADI:";
             // 
-            // txtPersonelTc
+            // txttc
             // 
-            this.txtPersonelTc.Location = new System.Drawing.Point(165, 133);
-            this.txtPersonelTc.Name = "txtPersonelTc";
-            this.txtPersonelTc.Size = new System.Drawing.Size(198, 20);
-            this.txtPersonelTc.TabIndex = 0;
+            this.txttc.Location = new System.Drawing.Point(165, 133);
+            this.txttc.Name = "txttc";
+            this.txttc.Size = new System.Drawing.Size(198, 20);
+            this.txttc.TabIndex = 0;
             // 
             // labelControl2
             // 
@@ -196,7 +194,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2.Size = new System.Drawing.Size(89, 16);
             this.labelControl2.TabIndex = 187;
             this.labelControl2.Text = "PERSONEL TC :";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // rdErkek
             // 
@@ -234,14 +231,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.textEdit10);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.txtPersonelSifre);
+            this.Controls.Add(this.txtsifre);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.txtPersonelSoyad);
+            this.Controls.Add(this.txtsoyad);
             this.Controls.Add(this.labelControl4);
-            this.Controls.Add(this.txtPersonelAd);
+            this.Controls.Add(this.txtadi);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.txtPersonelTc);
+            this.Controls.Add(this.txttc);
             this.Controls.Add(this.labelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmYeniPersonelEkle";
@@ -250,10 +247,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelSifre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelSoyad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelAd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPersonelTc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsifre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsoyad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtadi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,14 +262,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.TextEdit textEdit10;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private DevExpress.XtraEditors.TextEdit txtPersonelSifre;
+        private DevExpress.XtraEditors.TextEdit txtsifre;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtPersonelSoyad;
+        private DevExpress.XtraEditors.TextEdit txtsoyad;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtPersonelAd;
+        private DevExpress.XtraEditors.TextEdit txtadi;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtPersonelTc;
+        private DevExpress.XtraEditors.TextEdit txttc;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.RadioButton rdErkek;
         private System.Windows.Forms.RadioButton rdKadın;

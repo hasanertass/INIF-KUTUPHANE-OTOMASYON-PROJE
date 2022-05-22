@@ -125,11 +125,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("Update Yazar set durum=0 where id=@p1", connection);
                 command.Parameters.AddWithValue("@p1", txtYazarid.Text);
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
+                command.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("Geçerli Yazar Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception)
             {
@@ -145,11 +143,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("Update Cevrimen set CevirmenDurum=0 where id=@p1", connection);
                 command.Parameters.AddWithValue("@p1", txtCvrmnid.Text);
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
+                command.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("Geçerli Çevirmen Silinmiştir","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             catch (Exception)
             {
@@ -167,17 +163,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.Parameters.AddWithValue("@p1", txtYazarAdı.Text);
                 command.Parameters.AddWithValue("@p2", txtYazarSoyad.Text);
                 command.Parameters.AddWithValue("@p3", txtYazarid.Text);
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
+                command.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("Geçerli Yazar Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception)
             {
                 return;
             }
-
         }
 
         private void btnGüncelle1_Click(object sender, EventArgs e)
@@ -189,11 +182,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.Parameters.AddWithValue("@p1", txtCvrmnAd.Text);
                 command.Parameters.AddWithValue("@p2", txtCvrmnSoyad.Text);
                 command.Parameters.AddWithValue("@p3", txtCvrmnid.Text);
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
+                command.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("Geçerli Çevirmen Güncellenmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception)
             {
@@ -205,9 +196,16 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                txtYazarid.Text = gridView1.GetFocusedRowCellValue("id").ToString(); 
-                txtYazarAdı.Text = gridView1.GetFocusedRowCellValue("YazarAdi").ToString();
-                txtYazarSoyad.Text = gridView1.GetFocusedRowCellValue("YazarSoyadi").ToString();
+                if (gridView1.FocusedRowHandle>=0)
+                {
+                    //txtYazarid.Text = gridView1.GetFocusedRowCellValue("id").ToString(); 
+                    txtYazarid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "id").ToString();
+                    //txtYazarAdı.Text = gridView1.GetFocusedRowCellValue("YazarAdi").ToString();
+                    txtYazarAdı.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "YazarAdi").ToString();
+                    //txtYazarSoyad.Text = gridView1.GetFocusedRowCellValue("YazarSoyadi").ToString();
+                    txtYazarSoyad.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "YazarSoyadi").ToString();
+                }
+                
             }
             catch (Exception)
             {

@@ -46,13 +46,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.txtKitapid = new DevExpress.XtraEditors.TextEdit();
+            this.txtid = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnGüncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.txtISBN = new DevExpress.XtraEditors.TextEdit();
+            this.txtad = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -70,8 +70,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKitapid.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -262,13 +262,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.txtKitapid);
+            this.groupControl1.Controls.Add(this.txtid);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.btnListele);
             this.groupControl1.Controls.Add(this.btnGüncelle);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnKaydet);
-            this.groupControl1.Controls.Add(this.txtISBN);
+            this.groupControl1.Controls.Add(this.txtad);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Location = new System.Drawing.Point(2, 219);
             this.groupControl1.Name = "groupControl1";
@@ -276,13 +276,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Ürün İşlemleri";
             // 
-            // txtKitapid
+            // txtid
             // 
-            this.txtKitapid.Enabled = false;
-            this.txtKitapid.Location = new System.Drawing.Point(109, 135);
-            this.txtKitapid.Name = "txtKitapid";
-            this.txtKitapid.Size = new System.Drawing.Size(159, 20);
-            this.txtKitapid.TabIndex = 6;
+            this.txtid.Enabled = false;
+            this.txtid.Location = new System.Drawing.Point(109, 135);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(159, 20);
+            this.txtid.TabIndex = 6;
             // 
             // labelControl7
             // 
@@ -304,6 +304,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnListele.Size = new System.Drawing.Size(207, 68);
             this.btnListele.TabIndex = 5;
             this.btnListele.Text = "Listele";
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnGüncelle
             // 
@@ -315,6 +316,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnGüncelle.Size = new System.Drawing.Size(207, 68);
             this.btnGüncelle.TabIndex = 4;
             this.btnGüncelle.Text = "GÜNCELLE";
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnSil
             // 
@@ -326,6 +328,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnSil.Size = new System.Drawing.Size(207, 68);
             this.btnSil.TabIndex = 3;
             this.btnSil.Text = "SİL";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnKaydet
             // 
@@ -337,13 +340,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Size = new System.Drawing.Size(207, 68);
             this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // txtISBN
+            // txtad
             // 
-            this.txtISBN.Location = new System.Drawing.Point(109, 160);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(159, 20);
-            this.txtISBN.TabIndex = 1;
+            this.txtad.Location = new System.Drawing.Point(109, 160);
+            this.txtad.Name = "txtad";
+            this.txtad.Size = new System.Drawing.Size(159, 20);
+            this.txtad.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -407,6 +411,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // gridControl1
             // 
@@ -443,6 +448,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.panel2);
             this.Name = "frmBölümListesi";
             this.Text = "frmBölümListesi";
+            this.Load += new System.EventHandler(this.frmBölümListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -456,8 +462,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKitapid.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -487,13 +493,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.TextEdit txtKitapid;
+        private DevExpress.XtraEditors.TextEdit txtid;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnGüncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
-        private DevExpress.XtraEditors.TextEdit txtISBN;
+        private DevExpress.XtraEditors.TextEdit txtad;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl1;

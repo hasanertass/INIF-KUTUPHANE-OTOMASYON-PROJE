@@ -113,17 +113,27 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private void FrmKitapListesi_Load_1(object sender, EventArgs e)
         {
             //gridcontrolde veri listeleme
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("select * from Kitap", connection);
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridControl1.DataSource = dt;
+
+            gridControl1.DataSource = ListeleTablolari(connection, "SELECT Kitap.id,Kitap.Barkod,Kitap.ISBN,Kitap.KitapAdi,Kitap.YayinYili," +
+            " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
+            " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
+            " , CONCAT(Yazar.YazarAdi, ' ', Yazar.YazarSoyadi) as Yazar, " +
+            " Kitap.Baski, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
+            " FROM Kitap INNER JOIN Kategori ON Kitap.Kategori = Kategori.id " +
+            " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
+            " INNER JOIN Yazar on Kitap.Yazar = Yazar.id");
+
+            //connection.Open();
+            //MySqlCommand command = new MySqlCommand("select * from Kitap", connection);
+            //MySqlDataAdapter da = new MySqlDataAdapter(command);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //gridControl1.DataSource = dt;
 
             // lookupedite kategori ekleme 
             MySqlCommand command1 = new MySqlCommand("select * from Kategori", connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
-            dt = new DataTable();
+            DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -246,6 +256,19 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void btnListele_Click(object sender, EventArgs e)
         {
+            // List();
+            gridControl1.DataSource = ListeleTablolari(connection, "SELECT Kitap.id,Kitap.Barkod,Kitap.ISBN,Kitap.KitapAdi,Kitap.YayinYili," +
+            " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
+            " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
+            " , CONCAT(Yazar.YazarAdi, ' ', Yazar.YazarSoyadi) as Yazar, " +
+            " Kitap.Baski, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
+            " FROM Kitap INNER JOIN Kategori ON Kitap.Kategori = Kategori.id " +
+            " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
+            " INNER JOIN Yazar on Kitap.Yazar = Yazar.id");
+        }
+
+        private void List()
+        {
             //gridcontrolde veri listeleme
             connection.Open();
             MySqlCommand command = new MySqlCommand("select * from Kitap", connection);
@@ -254,6 +277,23 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             da.Fill(dt);
             gridControl1.DataSource = dt;
             connection.Close();
+        }
+
+        /// <summary>
+        /// Verilen Connetcion ve sorguyu datatable olarak döndürür
+        /// </summary>
+        /// <param name="con">bağlantıyı verin</param>
+        /// <param name="sorgu">select sorgunuzu gönderin</param>
+        /// <returns></returns>
+        public DataTable ListeleTablolari(MySqlConnection con, string sorgu)
+        {
+            con.Open();
+            MySqlCommand command = new MySqlCommand(sorgu, con);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            return dt;
         }
 
         private void btnSil_Click(object sender, EventArgs e)
