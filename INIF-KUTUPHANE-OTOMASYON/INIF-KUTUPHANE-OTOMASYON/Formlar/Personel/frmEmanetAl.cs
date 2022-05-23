@@ -99,6 +99,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             command.Parameters.AddWithValue("@u6", txtEmanetId.Text);
             command.ExecuteNonQuery();
             MessageBox.Show("Emanet Kitap Alınmıştır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // öğrenci tablosundaki emanet kısmı güncellenecek
+            command = new MySqlCommand("update Ogrenci set EmanetAdeti=@p1 where KartId=@p1",connection);
             connection.Close();
         }
 
