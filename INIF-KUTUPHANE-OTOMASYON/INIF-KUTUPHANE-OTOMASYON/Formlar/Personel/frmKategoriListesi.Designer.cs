@@ -118,7 +118,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKtgrid.Name = "txtKtgrid";
             this.txtKtgrid.Size = new System.Drawing.Size(198, 20);
             this.txtKtgrid.TabIndex = 0;
-       //     this.txtKtgrid.EditValueChanged += new System.EventHandler(this.txtKitapid_EditValueChanged);
             // 
             // labelControl7
             // 
@@ -184,7 +183,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKtgriAd.Name = "txtKtgriAd";
             this.txtKtgriAd.Size = new System.Drawing.Size(198, 20);
             this.txtKtgriAd.TabIndex = 1;
-   //         this.txtKtgriAd.EditValueChanged += new System.EventHandler(this.txtISBN_EditValueChanged);
             // 
             // labelControl2
             // 
@@ -440,7 +438,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 832);
+            this.ClientSize = new System.Drawing.Size(1924, 832);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

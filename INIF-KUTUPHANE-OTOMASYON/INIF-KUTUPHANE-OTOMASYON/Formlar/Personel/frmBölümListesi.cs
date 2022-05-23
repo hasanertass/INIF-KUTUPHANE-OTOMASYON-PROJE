@@ -30,6 +30,50 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 labelControl1.Text = reader[0].ToString();
             }
             connection.Close();
+            connection.Open();
+            // En Çok Kitap Okuyan Bölüm
+            command = new MySqlCommand("select Bölüm.BolumAdi,COUNT(Bölüm.BolumAdi) from Odünç inner JOIN Ogrenci ON Ogrenci.KartId=Odünç.KartId INNER JOIN Bölüm On Bölüm.id=Ogrenci.BolumId GROUP by Bölüm.BolumAdi ASC",connection);
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                labelControl15.Text = reader[0].ToString();
+            }
+            if (labelControl15.Text.Length>7)
+            {
+                Font font = labelControl15.Font;
+                labelControl15.Font = new Font(font.FontFamily, font.Size - 16, font.Style);
+                if (labelControl15.Text== "Uluslararası Ticaret Ve İşletmecilik")
+                {
+                    labelControl15.Text = "Uluslararası Ticaret\n Ve İşletmecilik";
+                }
+                else
+                {
+                    labelControl15.Text = "yönetim Bilişim\n Sistemleri";
+                }
+            }
+            connection.Close();
+            connection.Open();
+            // En Az Kitap Okuyan Bölüm
+            command = new MySqlCommand("select Bölüm.BolumAdi,COUNT(Bölüm.BolumAdi) from Odünç inner JOIN Ogrenci ON Ogrenci.KartId=Odünç.KartId INNER JOIN Bölüm On Bölüm.id=Ogrenci.BolumId GROUP by Bölüm.BolumAdi DESC", connection);
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                labelControl17.Text = reader[0].ToString();
+            }
+            if (labelControl17.Text.Length > 7)
+            {
+                Font font = labelControl17.Font;
+                labelControl17.Font = new Font(font.FontFamily, font.Size - 16, font.Style);
+                if (labelControl17.Text == "Uluslararası Ticaret Ve İşletmecilik")
+                {
+                    labelControl17.Text = "Uluslararası Ticaret\n Ve İşletmecilik";
+                }
+                else
+                {
+                    labelControl17.Text = "yönetim Bilişim\n Sistemleri";
+                }
+            }
+            connection.Close();
         }
 
         private void List()

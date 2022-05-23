@@ -56,7 +56,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -75,7 +75,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -131,7 +131,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -149,7 +149,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -169,7 +169,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -188,7 +188,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

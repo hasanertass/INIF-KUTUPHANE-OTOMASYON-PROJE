@@ -43,7 +43,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtid = new DevExpress.XtraEditors.TextEdit();
@@ -61,6 +60,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
@@ -235,18 +235,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit2.Size = new System.Drawing.Size(117, 88);
             this.pictureEdit2.TabIndex = 2;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(23, 69);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(84, 65);
-            this.labelControl15.TabIndex = 1;
-            this.labelControl15.Text = "545";
             // 
             // labelControl16
             // 
@@ -434,6 +422,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel2.Size = new System.Drawing.Size(374, 217);
             this.panel2.TabIndex = 18;
             // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Appearance.Options.UseForeColor = true;
+            this.labelControl15.Location = new System.Drawing.Point(23, 59);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(84, 65);
+            this.labelControl15.TabIndex = 1;
+            this.labelControl15.Text = "545";
+            // 
             // frmBölümListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,7 +490,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private System.Windows.Forms.Panel panel3;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtid;
@@ -508,5 +507,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
     }
 }

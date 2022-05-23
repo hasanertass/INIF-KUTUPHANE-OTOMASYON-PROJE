@@ -33,27 +33,35 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         }
         private void frmOgrencilistesi_Load(object sender, EventArgs e)
         {
-            //gridcontrolde veri listeleme
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridControl1.DataSource = dt;
-
-            // lookupedite kategori ekleme 
-            MySqlCommand command1 = new MySqlCommand("select * from Bölüm where durum=1", connection);
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
-            dt = new DataTable();
-            dataAdapter.Fill(dt);
-            for (int i = 0; i < dt.Rows.Count; i++)
+            try
             {
-                bölüms.Add(new Bölüm(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("BolumAdi")));
+                //gridcontrolde veri listeleme
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
+                MySqlDataAdapter da = new MySqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                gridControl1.DataSource = dt;
+
+                // lookupedite kategori ekleme 
+                MySqlCommand command1 = new MySqlCommand("select * from Bölüm where durum=1", connection);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
+                dt = new DataTable();
+                dataAdapter.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    bölüms.Add(new Bölüm(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("BolumAdi")));
+                }
+                lkpdtBolum.Properties.DataSource = bölüms;
+                lkpdtBolum.Properties.DisplayMember = "BölümAdi";
+                lkpdtBolum.Properties.ValueMember = "id";
+                connection.Close();
             }
-            lkpdtBolum.Properties.DataSource = bölüms;
-            lkpdtBolum.Properties.DisplayMember = "BölümAdi";
-            lkpdtBolum.Properties.ValueMember = "id";
-            connection.Close();
+            catch (Exception)
+            {
+                return;
+            }
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -122,7 +130,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             txtOgrKartId.Text = gridView1.GetFocusedRowCellValue("KartId").ToString();
             txtEmanet.Text = gridView1.GetFocusedRowCellValue("EmanetAdeti").ToString();
             txtOgrSifre.Text = gridView1.GetFocusedRowCellValue("OgrenciSifre").ToString();
-            lkpdtBolum.Properties.ValueMember = gridView1.GetFocusedRowCellValue("BolumAdi").ToString();
+            //lkpdtBolum.Properties.ValueMember = gridView1.GetFocusedRowCellValue("BolumAdi").ToString();
             if (gridView1.GetFocusedRowCellValue("Cinsiyet").ToString() == "Erkek")
             {
                 rdErkek.Checked = true;
@@ -136,13 +144,21 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridControl1.DataSource = dt;
-            connection.Close();
+            try
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
+                MySqlDataAdapter da = new MySqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                gridControl1.DataSource = dt;
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
         }
 
         private void btnGüncelle_Click(object sender, EventArgs e)

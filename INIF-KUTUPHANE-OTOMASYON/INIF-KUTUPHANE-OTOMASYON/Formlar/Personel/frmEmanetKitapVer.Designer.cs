@@ -207,9 +207,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1086, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(1117, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;

@@ -43,7 +43,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 DateTime kayıt = Convert.ToDateTime(dateEdit2.Text);
                 connection.Open();
-                MySqlCommand komut = new MySqlCommand("insert into Kitap (Barkod, ISBN, KitapAdi, YayinYili, Tur, Kategori, KayitTarihi, Konum, SayfaSayisi, Stok, Cevirmen, Yazar, Baski, Ozet, YayinEvi, Durum, Durum2) VALUES " +
+                MySqlCommand komut = new MySqlCommand("insert into Kitap (Barkod, ISBN, KitapAdi, YayinYili, Tur, Kategori, KayitTarihi, Konum, SayfaSayisi, Stok, Cevirmen, Yazar, Dil, Ozet, YayinEvi, Durum, Durum2) VALUES " +
                     "(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17) ", connection);
                 komut.Parameters.AddWithValue("@p1", txtBarkod.Text);
                 komut.Parameters.AddWithValue("@p2", txtISBN.Text);
@@ -57,7 +57,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 komut.Parameters.AddWithValue("@p10", txtstok.Text);
                 komut.Parameters.AddWithValue("@p11", lkpdtCevirmen.EditValue);
                 komut.Parameters.AddWithValue("@p12", lkpdtyazar.EditValue);
-                komut.Parameters.AddWithValue("@p13", txtBaski.Text);
+                komut.Parameters.AddWithValue("@p13", txtDil.Text);
                 komut.Parameters.AddWithValue("@p14", txtOzet.Text);
                 komut.Parameters.AddWithValue("@p15", txtYayınEvi.Text);
                 komut.Parameters.AddWithValue("@p16", durum);
@@ -120,7 +120,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
                 " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
                 " , CONCAT(Yazar.YazarAdi, ' ', Yazar.YazarSoyadi) as Yazar, " +
-                " Kitap.Baski, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
+                " Kitap.Dil, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
                 " FROM Kitap INNER JOIN Kategori ON Kitap.Kategori = Kategori.id " +
                 " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
                 " INNER JOIN Yazar on Kitap.Yazar = Yazar.id where Durum2=1");
@@ -196,7 +196,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             txtstok.Text = gridView1.GetFocusedRowCellValue("Stok").ToString();
             //lkpdtCevirmen.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Cevirmen").ToString();
             //lkpdtyazar.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Yazar").ToString();
-            txtBaski.Text = gridView1.GetFocusedRowCellValue("Baski").ToString();
+            txtDil.Text = gridView1.GetFocusedRowCellValue("Dil").ToString();
             txtOzet.Text = gridView1.GetFocusedRowCellValue("Ozet").ToString();
             txtYayınEvi.Text = gridView1.GetFocusedRowCellValue("YayinEvi").ToString();
             dateEdit2.Text = gridView1.GetFocusedRowCellValue("KayitTarihi").ToString();
@@ -232,7 +232,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 DateTime kayıt = Convert.ToDateTime(dateEdit2.Text);
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("UPDATE Kitap SET Barkod=@u1,ISBN=@u2,KitapAdi=@u3,YayinYili=@u4,Tur=@u5,Kategori=@u6,KayitTarihi=@u7,Konum=@u8,SayfaSayisi=@u9,Stok=@u10,Cevirmen=@u11,Yazar=@u12,Baski=@u13,Ozet=@u14,YayinEvi=@u15,Durum=@u16,Durum2=@u17 WHERE id=@u18", connection);
+                MySqlCommand command = new MySqlCommand("UPDATE Kitap SET Barkod=@u1,ISBN=@u2,KitapAdi=@u3,YayinYili=@u4,Tur=@u5,Kategori=@u6,KayitTarihi=@u7,Konum=@u8,SayfaSayisi=@u9,Stok=@u10,Cevirmen=@u11,Yazar=@u12,Dil=@u13,Ozet=@u14,YayinEvi=@u15,Durum=@u16,Durum2=@u17 WHERE id=@u18", connection);
                 command.Parameters.AddWithValue("@u1", txtBarkod.Text);
                 command.Parameters.AddWithValue("@u2", txtISBN.Text);
                 command.Parameters.AddWithValue("@u3", txtAd.Text);
@@ -245,7 +245,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.Parameters.AddWithValue("@u10", txtstok.Text);
                 command.Parameters.AddWithValue("@u11", lkpdtCevirmen.EditValue);
                 command.Parameters.AddWithValue("@u12", lkpdtyazar.EditValue);
-                command.Parameters.AddWithValue("@u13", txtBaski.Text);
+                command.Parameters.AddWithValue("@u13", txtDil.Text);
                 command.Parameters.AddWithValue("@u14", txtOzet.Text);
                 command.Parameters.AddWithValue("@u15", txtYayınEvi.Text);
                 command.Parameters.AddWithValue("@u16", durum);
@@ -269,7 +269,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
             " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
             " , CONCAT(Yazar.YazarAdi, ' ', Yazar.YazarSoyadi) as Yazar, " +
-            " Kitap.Baski, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
+            " Kitap.Dil, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
             " FROM Kitap INNER JOIN Kategori ON Kitap.Kategori = Kategori.id " +
             " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
             " INNER JOIN Yazar on Kitap.Yazar = Yazar.id where Durum2=1");

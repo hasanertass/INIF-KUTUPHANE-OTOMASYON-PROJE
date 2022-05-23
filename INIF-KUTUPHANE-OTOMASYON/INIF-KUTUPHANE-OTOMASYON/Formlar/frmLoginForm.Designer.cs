@@ -31,8 +31,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginForm));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -104,7 +104,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtSifre.Location = new System.Drawing.Point(123, 244);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(153, 20);
-            this.txtSifre.TabIndex = 13;
+            this.txtSifre.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -122,7 +122,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Location = new System.Drawing.Point(346, 188);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(106, 35);
-            this.simpleButton1.TabIndex = 14;
+            this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "GİRİŞ YAP";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -132,7 +132,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton2.Location = new System.Drawing.Point(346, 249);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(106, 35);
-            this.simpleButton2.TabIndex = 15;
+            this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "ÇIKIŞ";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -150,12 +150,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKullaniciAdi.Location = new System.Drawing.Point(125, 203);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(151, 20);
-            toolTipItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem2.Text = "Personel girişi için TC kimlik numaralarını öğrenci girişi için okul numaralarını" +
+            toolTipItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Text = "Personel girişi için TC kimlik numaralarını öğrenci girişi için okul numaralarını" +
     " girmeleri gerekir.";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.txtKullaniciAdi.SuperTip = superToolTip2;
-            this.txtKullaniciAdi.TabIndex = 17;
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txtKullaniciAdi.SuperTip = superToolTip1;
+            this.txtKullaniciAdi.TabIndex = 0;
             // 
             // label3
             // 

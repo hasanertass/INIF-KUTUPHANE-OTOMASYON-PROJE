@@ -30,7 +30,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void BarBtnYeniKitapEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmyenikitap fr = new Formlar.frmyenikitap();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BarbtnOgrenciListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -43,7 +43,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void BarBtnYeniOgrenciEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmYeniogrenciEkle fr = new Formlar.frmYeniogrenciEkle();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BarButonPersonelListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -56,7 +56,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void BarBtnYeniPersonelEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmYeniPersonelEkle fr = new Formlar.frmYeniPersonelEkle();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BarButonEmanetListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -108,19 +108,19 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void btnYeniKategori_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmYeniKategoriEkle fr = new Formlar.frmYeniKategoriEkle();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void btnYeniYazar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmYeniYazarEkle fr = new Formlar.frmYeniYazarEkle();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void btnYeniCevirmen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmYeniCevirmenEkle fr = new Formlar.frmYeniCevirmenEkle();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void ribbonControl1_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void btnEmanetVer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmEmanetKitapVer fr = new Formlar.frmEmanetKitapVer();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void btnEmanetAl_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -165,7 +165,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         private void btnYeniBölümEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.frmYenibölümEkle fr = new Formlar.frmYenibölümEkle();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)

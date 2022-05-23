@@ -43,7 +43,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdZimmet = new System.Windows.Forms.RadioButton();
             this.rdEmanet = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDogrulama = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -64,7 +64,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.txtEmanetId.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDogrulama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKartId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKitapBarkod.Properties)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +106,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Controls.Add(this.rdZimmet);
             this.groupControl1.Controls.Add(this.rdEmanet);
             this.groupControl1.Controls.Add(this.pictureBox1);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtDogrulama);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.dateTimePicker2);
             this.groupControl1.Controls.Add(this.dateTimePicker1);
@@ -224,12 +224,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
-            // textEdit1
+            // txtDogrulama
             // 
-            this.textEdit1.Location = new System.Drawing.Point(121, 161);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 3;
+            this.txtDogrulama.Location = new System.Drawing.Point(121, 161);
+            this.txtDogrulama.Name = "txtDogrulama";
+            this.txtDogrulama.Size = new System.Drawing.Size(198, 20);
+            this.txtDogrulama.TabIndex = 3;
             // 
             // labelControl1
             // 
@@ -373,7 +373,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDogrulama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKartId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKitapBarkod.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -401,7 +401,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private System.Windows.Forms.RadioButton rdZimmet;
         private System.Windows.Forms.RadioButton rdEmanet;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtDogrulama;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;

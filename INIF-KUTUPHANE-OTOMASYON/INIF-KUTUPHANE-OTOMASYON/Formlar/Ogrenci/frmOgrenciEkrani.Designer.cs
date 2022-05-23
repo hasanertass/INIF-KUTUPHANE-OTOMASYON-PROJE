@@ -31,6 +31,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOgrenciEkrani));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSifre = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,6 +92,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
             this.panel1.Size = new System.Drawing.Size(384, 339);
             this.panel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(24, 302);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 25);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "00";
+            this.label9.Visible = false;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -101,6 +112,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
             this.label8.Size = new System.Drawing.Size(32, 25);
             this.label8.TabIndex = 18;
             this.label8.Text = "00";
+            this.label8.Visible = false;
             // 
             // pictureBox1
             // 
@@ -323,16 +335,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(24, 302);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 25);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "00";
             // 
             // frmOgrenciEkrani
             // 

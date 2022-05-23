@@ -344,7 +344,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 832);
+            this.ClientSize = new System.Drawing.Size(1924, 832);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.gridControl2);
             this.Controls.Add(this.groupControl1);
