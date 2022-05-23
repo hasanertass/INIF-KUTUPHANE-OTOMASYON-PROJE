@@ -22,7 +22,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             //gridcontrolde veri listeleme
             connection.Open();
-            MySqlCommand command = new MySqlCommand("select * from Odünç", connection);
+            MySqlCommand command = new MySqlCommand("select * from Odünç where OduncDurum=1", connection);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();
             da.Fill(dt);

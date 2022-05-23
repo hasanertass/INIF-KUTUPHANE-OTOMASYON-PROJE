@@ -34,6 +34,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.button1 = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmanetId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,7 +57,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -97,6 +98,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.labelControl9);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.txtEmanetId);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -123,6 +125,28 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Size = new System.Drawing.Size(345, 833);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Kitap İşlemleri";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(19, 596);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(111, 16);
+            this.labelControl9.TabIndex = 58;
+            this.labelControl9.Text = "EMANET DURUMU :";
+            this.labelControl9.Visible = false;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(19, 574);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(111, 16);
+            this.labelControl8.TabIndex = 57;
+            this.labelControl8.Text = "EMANET DURUMU :";
+            this.labelControl8.Visible = false;
             // 
             // txtEmanetId
             // 
@@ -329,16 +353,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Text = "EMANET AL";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(19, 574);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(111, 16);
-            this.labelControl8.TabIndex = 57;
-            this.labelControl8.Text = "EMANET DURUMU :";
-            // 
             // frmEmanetAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,5 +408,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.TextEdit txtEmanetId;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }

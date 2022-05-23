@@ -69,59 +69,67 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void frmyenikitap_Load(object sender, EventArgs e)
         {
-            connection.Open();
-            // lookupedite kategori ekleme 
-            MySqlCommand command1 = new MySqlCommand("select * from Kategori", connection);
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
-            for (int i = 0; i < dt.Rows.Count; i++)
+            try
             {
-                kategoris.Add(new kategori(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("KategoriAdi")));
-            }
-            lkpdtKategori.Properties.DataSource = kategoris;
-            lkpdtKategori.Properties.DisplayMember = "KategoriAdi";
-            lkpdtKategori.Properties.ValueMember = "KategoriId";
-            //lkpdtKategori.Properties.Columns[1].Visible = false;
+                connection.Open();
+                // lookupedite kategori ekleme 
+                MySqlCommand command1 = new MySqlCommand("select * from Kategori", connection);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    kategoris.Add(new kategori(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("KategoriAdi")));
+                }
+                lkpdtKategori.Properties.DataSource = kategoris;
+                lkpdtKategori.Properties.DisplayMember = "KategoriAdi";
+                lkpdtKategori.Properties.ValueMember = "KategoriId";
+                //lkpdtKategori.Properties.Columns[1].Visible = false;
 
 
-            // lookupedite cevirmen ekleme 
-            MySqlCommand command2 = new MySqlCommand("SELECT id,CONCAT(CevirmenAdi ,' ',CevirmenSoyadi) AS AdSoyad FROM Cevirmen", connection);
-            MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(command2);
-            dt = new DataTable();
-            dataAdapter1.Fill(dt);
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                cevirmens.Add(new cevirmen(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("AdSoyad")));
-            }
-            lkpdtCevirmen.Properties.DataSource = cevirmens;
-            lkpdtCevirmen.Properties.DisplayMember = "AdSoyad";
-            lkpdtCevirmen.Properties.ValueMember = "id";
+                // lookupedite cevirmen ekleme 
+                MySqlCommand command2 = new MySqlCommand("SELECT id,CONCAT(CevirmenAdi ,' ',CevirmenSoyadi) AS AdSoyad FROM Cevirmen", connection);
+                MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(command2);
+                dt = new DataTable();
+                dataAdapter1.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    cevirmens.Add(new cevirmen(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("AdSoyad")));
+                }
+                lkpdtCevirmen.Properties.DataSource = cevirmens;
+                lkpdtCevirmen.Properties.DisplayMember = "AdSoyad";
+                lkpdtCevirmen.Properties.ValueMember = "id";
 
-            // lookupedite yazar ekleme 
-            MySqlCommand command3 = new MySqlCommand("SELECT id,CONCAT(YazarAdi ,' ',YazarSoyadi) AS AdSoyad FROM Yazar", connection);
-            MySqlDataAdapter dataAdapter2 = new MySqlDataAdapter(command3);
-            dt = new DataTable();
-            dataAdapter2.Fill(dt);
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                yazars.Add(new yazar(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("AdSoyad")));
+                // lookupedite yazar ekleme 
+                MySqlCommand command3 = new MySqlCommand("SELECT id,CONCAT(YazarAdi ,' ',YazarSoyadi) AS AdSoyad FROM Yazar", connection);
+                MySqlDataAdapter dataAdapter2 = new MySqlDataAdapter(command3);
+                dt = new DataTable();
+                dataAdapter2.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    yazars.Add(new yazar(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("AdSoyad")));
+                }
+                lkpdtyazar.Properties.DataSource = yazars;
+                lkpdtyazar.Properties.DisplayMember = "AdSoyad";
+                lkpdtyazar.Properties.ValueMember = "id";
+                connection.Close();
             }
-            lkpdtyazar.Properties.DataSource = yazars;
-            lkpdtyazar.Properties.DisplayMember = "AdSoyad";
-            lkpdtyazar.Properties.ValueMember = "id";
-            connection.Close();
+            catch (Exception)
+            {
+                return;
+            }
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
             {
-                if (rdEmanet.Checked == true)
+                if (rdZimmet.Checked == true)
                 {
                     durum = 1;
                 }
-                if (rdMevcutDegil.Checked == true)
+                if (rdMevcut.Checked == true)
                 {
                     durum2 = 1;
                 }
