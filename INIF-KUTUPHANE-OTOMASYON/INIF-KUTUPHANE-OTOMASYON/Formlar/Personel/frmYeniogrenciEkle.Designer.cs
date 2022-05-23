@@ -30,10 +30,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmYeniogrenciEkle));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtOgrKartId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtOgrSoyad = new DevExpress.XtraEditors.TextEdit();
@@ -53,9 +50,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.rdErkek = new System.Windows.Forms.RadioButton();
             this.rdKadın = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrKartId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrEposta.Properties)).BeginInit();
@@ -64,61 +59,25 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.lkpdtBolum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(695, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 173;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Viner Hand ITC", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(434, 260);
+            this.btnKaydet.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(568, 223);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKaydet.Size = new System.Drawing.Size(268, 67);
+            this.btnKaydet.Size = new System.Drawing.Size(123, 60);
             this.btnKaydet.TabIndex = 10;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            // 
-            // textEdit10
-            // 
-            this.textEdit10.EditValue = "YENİ ÖĞRENCİ EKLEME";
-            this.textEdit10.Enabled = false;
-            this.textEdit10.Location = new System.Drawing.Point(231, 46);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Snap ITC", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit10.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.textEdit10.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit10.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEdit10.Size = new System.Drawing.Size(471, 42);
-            this.textEdit10.TabIndex = 172;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(8, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(216, 110);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 171;
-            this.pictureBox7.TabStop = false;
             // 
             // txtOgrKartId
             // 
@@ -291,6 +250,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // rdErkek
             // 
             this.rdErkek.AutoSize = true;
+            this.rdErkek.BackColor = System.Drawing.Color.Transparent;
             this.rdErkek.ForeColor = System.Drawing.Color.White;
             this.rdErkek.Location = new System.Drawing.Point(497, 230);
             this.rdErkek.Name = "rdErkek";
@@ -298,32 +258,45 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdErkek.TabIndex = 8;
             this.rdErkek.TabStop = true;
             this.rdErkek.Text = "ERKEK";
-            this.rdErkek.UseVisualStyleBackColor = true;
+            this.rdErkek.UseVisualStyleBackColor = false;
             // 
             // rdKadın
             // 
             this.rdKadın.AutoSize = true;
+            this.rdKadın.BackColor = System.Drawing.Color.Transparent;
             this.rdKadın.ForeColor = System.Drawing.Color.White;
-            this.rdKadın.Location = new System.Drawing.Point(582, 229);
+            this.rdKadın.Location = new System.Drawing.Point(497, 253);
             this.rdKadın.Name = "rdKadın";
             this.rdKadın.Size = new System.Drawing.Size(58, 17);
             this.rdKadın.TabIndex = 9;
             this.rdKadın.TabStop = true;
             this.rdKadın.Text = "KADIN";
-            this.rdKadın.UseVisualStyleBackColor = true;
+            this.rdKadın.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(750, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 202;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmYeniogrenciEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(777, 345);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.rdKadın);
             this.Controls.Add(this.rdErkek);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.textEdit10);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.txtOgrKartId);
             this.Controls.Add(this.labelControl15);
             this.Controls.Add(this.txtOgrSoyad);
@@ -346,9 +319,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmYeniogrenciListesi";
             this.Load += new System.EventHandler(this.frmYeniogrenciEkle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrKartId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrSoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrEposta.Properties)).EndInit();
@@ -357,17 +327,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.lkpdtBolum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOgrAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private DevExpress.XtraEditors.TextEdit txtOgrKartId;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.TextEdit txtOgrSoyad;
@@ -387,5 +354,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.RadioButton rdErkek;
         private System.Windows.Forms.RadioButton rdKadın;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

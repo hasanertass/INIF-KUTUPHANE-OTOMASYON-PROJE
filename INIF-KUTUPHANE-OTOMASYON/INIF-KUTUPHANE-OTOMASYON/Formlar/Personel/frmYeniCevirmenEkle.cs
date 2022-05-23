@@ -18,12 +18,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             InitializeComponent();
         }
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
-        private void btnVazgec_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void btnKaydet_Click(object sender, EventArgs e)
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -39,6 +34,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 return;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -30,7 +30,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmyenikitap));
-            this.txtBaski = new DevExpress.XtraEditors.TextEdit();
+            this.txtDil = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txtYayinEvi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
@@ -54,8 +54,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtISBN = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
@@ -71,7 +69,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtBarkod = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtYayinYili = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBaski.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYayinEvi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTür.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstok.Properties)).BeginInit();
@@ -81,8 +79,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.lkpdtKategori.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
@@ -93,12 +89,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.txtYayinYili.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtBaski
+            // txtDil
             // 
-            this.txtBaski.Location = new System.Drawing.Point(408, 316);
-            this.txtBaski.Name = "txtBaski";
-            this.txtBaski.Size = new System.Drawing.Size(198, 20);
-            this.txtBaski.TabIndex = 12;
+            this.txtDil.Location = new System.Drawing.Point(408, 316);
+            this.txtDil.Name = "txtDil";
+            this.txtDil.Size = new System.Drawing.Size(198, 20);
+            this.txtDil.TabIndex = 12;
             // 
             // labelControl13
             // 
@@ -106,11 +102,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl13.Appearance.Options.UseFont = true;
             this.labelControl13.Appearance.Options.UseForeColor = true;
-            this.labelControl13.Location = new System.Drawing.Point(359, 319);
+            this.labelControl13.Location = new System.Drawing.Point(377, 317);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(43, 16);
+            this.labelControl13.Size = new System.Drawing.Size(23, 16);
             this.labelControl13.TabIndex = 71;
-            this.labelControl13.Text = "BASKI :";
+            this.labelControl13.Text = "Dil :";
             // 
             // txtYayinEvi
             // 
@@ -137,7 +133,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl16.Appearance.Options.UseFont = true;
             this.labelControl16.Appearance.Options.UseForeColor = true;
-            this.labelControl16.Location = new System.Drawing.Point(660, 189);
+            this.labelControl16.Location = new System.Drawing.Point(659, 217);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(40, 16);
             this.labelControl16.TabIndex = 65;
@@ -339,42 +335,15 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2.TabIndex = 41;
             this.labelControl2.Text = "ISBN :";
             // 
-            // textEdit10
-            // 
-            this.textEdit10.EditValue = "YENİ KİTAP EKLEME";
-            this.textEdit10.Enabled = false;
-            this.textEdit10.Location = new System.Drawing.Point(317, 38);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Snap ITC", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit10.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.textEdit10.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit10.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEdit10.Size = new System.Drawing.Size(512, 52);
-            this.textEdit10.TabIndex = 135;
-            this.textEdit10.EditValueChanged += new System.EventHandler(this.textEdit10_EditValueChanged);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(87, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(216, 110);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 134;
-            this.pictureBox7.TabStop = false;
-            // 
             // btnKaydet
             // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Viner Hand ITC", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(649, 301);
+            this.btnKaydet.Location = new System.Drawing.Point(648, 329);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(268, 65);
@@ -384,11 +353,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(866, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(914, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 137;
             this.pictureBox1.TabStop = false;
@@ -423,26 +393,28 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // rdZimmet
             // 
             this.rdZimmet.AutoSize = true;
+            this.rdZimmet.BackColor = System.Drawing.Color.Transparent;
             this.rdZimmet.ForeColor = System.Drawing.Color.White;
-            this.rdZimmet.Location = new System.Drawing.Point(832, 232);
+            this.rdZimmet.Location = new System.Drawing.Point(831, 260);
             this.rdZimmet.Name = "rdZimmet";
             this.rdZimmet.Size = new System.Drawing.Size(74, 17);
             this.rdZimmet.TabIndex = 16;
             this.rdZimmet.TabStop = true;
             this.rdZimmet.Text = "Zimmet de";
-            this.rdZimmet.UseVisualStyleBackColor = true;
+            this.rdZimmet.UseVisualStyleBackColor = false;
             // 
             // rdEmanet
             // 
             this.rdEmanet.AutoSize = true;
+            this.rdEmanet.BackColor = System.Drawing.Color.Transparent;
             this.rdEmanet.ForeColor = System.Drawing.Color.White;
-            this.rdEmanet.Location = new System.Drawing.Point(739, 232);
+            this.rdEmanet.Location = new System.Drawing.Point(738, 260);
             this.rdEmanet.Name = "rdEmanet";
             this.rdEmanet.Size = new System.Drawing.Size(76, 17);
             this.rdEmanet.TabIndex = 15;
             this.rdEmanet.TabStop = true;
             this.rdEmanet.Text = "Emanet de";
-            this.rdEmanet.UseVisualStyleBackColor = true;
+            this.rdEmanet.UseVisualStyleBackColor = false;
             // 
             // labelControl18
             // 
@@ -450,7 +422,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl18.Appearance.Options.UseFont = true;
             this.labelControl18.Appearance.Options.UseForeColor = true;
-            this.labelControl18.Location = new System.Drawing.Point(647, 257);
+            this.labelControl18.Location = new System.Drawing.Point(646, 285);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(86, 16);
             this.labelControl18.TabIndex = 143;
@@ -462,7 +434,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl14.Appearance.Options.UseFont = true;
             this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(632, 232);
+            this.labelControl14.Location = new System.Drawing.Point(631, 260);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(101, 16);
             this.labelControl14.TabIndex = 142;
@@ -470,16 +442,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // txtOzet
             // 
-            this.txtOzet.Location = new System.Drawing.Point(708, 188);
+            this.txtOzet.Location = new System.Drawing.Point(707, 216);
             this.txtOzet.Name = "txtOzet";
             this.txtOzet.Size = new System.Drawing.Size(198, 20);
             this.txtOzet.TabIndex = 14;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.rdMevcut);
             this.panel1.Controls.Add(this.rdMevcutDegil);
-            this.panel1.Location = new System.Drawing.Point(736, 253);
+            this.panel1.Location = new System.Drawing.Point(735, 281);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 27);
             this.panel1.TabIndex = 17;
@@ -539,6 +512,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(943, 432);
             this.Controls.Add(this.txtYayinYili);
             this.Controls.Add(this.txtBarkod);
@@ -552,9 +526,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.dateEdit2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.textEdit10);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.txtBaski);
+            this.Controls.Add(this.txtDil);
             this.Controls.Add(this.labelControl13);
             this.Controls.Add(this.txtYayinEvi);
             this.Controls.Add(this.labelControl15);
@@ -584,7 +556,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmyenikitap";
             this.Load += new System.EventHandler(this.frmyenikitap_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtBaski.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYayinEvi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTür.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstok.Properties)).EndInit();
@@ -594,8 +566,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.lkpdtKategori.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtISBN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
@@ -611,7 +581,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         }
 
         #endregion
-        private DevExpress.XtraEditors.TextEdit txtBaski;
+        private DevExpress.XtraEditors.TextEdit txtDil;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit txtYayinEvi;
         private DevExpress.XtraEditors.LabelControl labelControl15;
@@ -635,8 +605,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtISBN;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.DateEdit dateEdit2;

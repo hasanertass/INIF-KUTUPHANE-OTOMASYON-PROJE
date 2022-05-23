@@ -22,14 +22,25 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Hide();
         }
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
-        private void btnKaydet_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("insert into Bölüm (BolumAdi,Durum) values (@p1,1)", connection);
-            command.Parameters.AddWithValue("@p1", txtad.Text);
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Yeni Bölüm Eklenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+        }
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("insert into Bölüm (BolumAdi,Durum) values (@p1,1)", connection);
+                command.Parameters.AddWithValue("@p1", txtad.Text);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Yeni Bölüm Eklenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

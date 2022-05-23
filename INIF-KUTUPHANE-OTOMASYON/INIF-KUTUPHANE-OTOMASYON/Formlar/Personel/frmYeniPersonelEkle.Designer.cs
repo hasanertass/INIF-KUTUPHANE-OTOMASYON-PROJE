@@ -32,8 +32,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmYeniPersonelEkle));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtsifre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -46,8 +44,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdErkek = new System.Windows.Forms.RadioButton();
             this.rdKadın = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsifre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtadi.Properties)).BeginInit();
@@ -56,60 +52,37 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(715, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(437, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 201;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Viner Hand ITC", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(412, 175);
+            this.btnKaydet.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(373, 220);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnKaydet.Size = new System.Drawing.Size(268, 65);
+            this.btnKaydet.Size = new System.Drawing.Size(62, 49);
             this.btnKaydet.TabIndex = 7;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // textEdit10
-            // 
-            this.textEdit10.EditValue = "YENİ PERSONEL EKLEME";
-            this.textEdit10.Enabled = false;
-            this.textEdit10.Location = new System.Drawing.Point(238, 45);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Snap ITC", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit10.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.textEdit10.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit10.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.textEdit10.Size = new System.Drawing.Size(471, 42);
-            this.textEdit10.TabIndex = 200;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(16, 11);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(216, 110);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 199;
-            this.pictureBox7.TabStop = false;
-            // 
             // txtsifre
             // 
-            this.txtsifre.Location = new System.Drawing.Point(165, 268);
+            this.txtsifre.Location = new System.Drawing.Point(152, 199);
             this.txtsifre.Name = "txtsifre";
             this.txtsifre.Size = new System.Drawing.Size(198, 20);
             this.txtsifre.TabIndex = 5;
@@ -120,7 +93,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(96, 272);
+            this.labelControl8.Location = new System.Drawing.Point(83, 203);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(43, 16);
             this.labelControl8.TabIndex = 196;
@@ -132,7 +105,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(96, 243);
+            this.labelControl5.Location = new System.Drawing.Point(78, 236);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(63, 16);
             this.labelControl5.TabIndex = 190;
@@ -140,7 +113,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // txtsoyad
             // 
-            this.txtsoyad.Location = new System.Drawing.Point(165, 203);
+            this.txtsoyad.Location = new System.Drawing.Point(152, 168);
             this.txtsoyad.Name = "txtsoyad";
             this.txtsoyad.Size = new System.Drawing.Size(198, 20);
             this.txtsoyad.TabIndex = 2;
@@ -151,7 +124,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(45, 207);
+            this.labelControl4.Location = new System.Drawing.Point(32, 172);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(117, 16);
             this.labelControl4.TabIndex = 189;
@@ -159,7 +132,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // txtadi
             // 
-            this.txtadi.Location = new System.Drawing.Point(165, 166);
+            this.txtadi.Location = new System.Drawing.Point(152, 136);
             this.txtadi.Name = "txtadi";
             this.txtadi.Size = new System.Drawing.Size(198, 20);
             this.txtadi.TabIndex = 1;
@@ -170,7 +143,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(70, 170);
+            this.labelControl3.Location = new System.Drawing.Point(57, 140);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(89, 16);
             this.labelControl3.TabIndex = 188;
@@ -178,7 +151,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // txttc
             // 
-            this.txttc.Location = new System.Drawing.Point(165, 133);
+            this.txttc.Location = new System.Drawing.Point(152, 104);
             this.txttc.Name = "txttc";
             this.txttc.Size = new System.Drawing.Size(198, 20);
             this.txttc.TabIndex = 0;
@@ -189,7 +162,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(70, 137);
+            this.labelControl2.Location = new System.Drawing.Point(57, 108);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(89, 16);
             this.labelControl2.TabIndex = 187;
@@ -198,39 +171,40 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // rdErkek
             // 
             this.rdErkek.AutoSize = true;
+            this.rdErkek.BackColor = System.Drawing.Color.Transparent;
             this.rdErkek.ForeColor = System.Drawing.Color.White;
-            this.rdErkek.Location = new System.Drawing.Point(183, 242);
+            this.rdErkek.Location = new System.Drawing.Point(165, 235);
             this.rdErkek.Name = "rdErkek";
             this.rdErkek.Size = new System.Drawing.Size(61, 17);
             this.rdErkek.TabIndex = 203;
             this.rdErkek.TabStop = true;
             this.rdErkek.Text = "ERKEK";
-            this.rdErkek.UseVisualStyleBackColor = true;
+            this.rdErkek.UseVisualStyleBackColor = false;
             // 
             // rdKadın
             // 
             this.rdKadın.AutoSize = true;
+            this.rdKadın.BackColor = System.Drawing.Color.Transparent;
             this.rdKadın.ForeColor = System.Drawing.Color.White;
-            this.rdKadın.Location = new System.Drawing.Point(290, 241);
+            this.rdKadın.Location = new System.Drawing.Point(272, 234);
             this.rdKadın.Name = "rdKadın";
             this.rdKadın.Size = new System.Drawing.Size(58, 17);
             this.rdKadın.TabIndex = 204;
             this.rdKadın.TabStop = true;
             this.rdKadın.Text = "KADIN";
-            this.rdKadın.UseVisualStyleBackColor = true;
+            this.rdKadın.UseVisualStyleBackColor = false;
             // 
             // frmYeniPersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(803, 369);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(465, 310);
             this.Controls.Add(this.rdKadın);
             this.Controls.Add(this.rdErkek);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.textEdit10);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.txtsifre);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl5);
@@ -244,9 +218,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Name = "frmYeniPersonelEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmYeniPersonelEkle";
+            this.Load += new System.EventHandler(this.frmYeniPersonelEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsifre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtadi.Properties)).EndInit();
@@ -260,8 +233,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private DevExpress.XtraEditors.TextEdit txtsifre;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl5;

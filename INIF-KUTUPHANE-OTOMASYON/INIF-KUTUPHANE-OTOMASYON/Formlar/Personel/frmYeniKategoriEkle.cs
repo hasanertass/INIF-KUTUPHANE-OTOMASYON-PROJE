@@ -23,7 +23,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Hide();
         }
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
-        private void btnKaydet_Click(object sender, EventArgs e)
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -34,12 +35,22 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.Parameters.AddWithValue("@p2", durum); ;
                 command.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Kategori Kaydedilmiştir.","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Kategori Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {
                 return;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void labelControl3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

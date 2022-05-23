@@ -37,20 +37,28 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         }
         private void frmYeniogrenciEkle_Load(object sender, EventArgs e)
         {
-            // lookupedite kategori ekleme 
-            connection.Open();
-            MySqlCommand command1 = new MySqlCommand("select * from Bölüm where durum=1", connection);
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
-            for (int i = 0; i < dt.Rows.Count; i++)
+            try
             {
-                bölüms.Add(new Bölüm(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("BolumAdi")));
+                // lookupedite kategori ekleme 
+                connection.Open();
+                MySqlCommand command1 = new MySqlCommand("select * from Bölüm where durum=1", connection);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    bölüms.Add(new Bölüm(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("BolumAdi")));
+                }
+                lkpdtBolum.Properties.DataSource = bölüms;
+                lkpdtBolum.Properties.DisplayMember = "BölümAdi";
+                lkpdtBolum.Properties.ValueMember = "id";
+                connection.Close();
             }
-            lkpdtBolum.Properties.DataSource = bölüms;
-            lkpdtBolum.Properties.DisplayMember = "BölümAdi";
-            lkpdtBolum.Properties.ValueMember = "id";
-            connection.Close();
+            catch (Exception)
+            {
+                return;
+            }
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -88,6 +96,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 MessageBox.Show("Hatalı Ekleme İşlemi !!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

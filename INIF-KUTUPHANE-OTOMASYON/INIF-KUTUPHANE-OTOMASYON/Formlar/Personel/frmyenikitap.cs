@@ -135,7 +135,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 DateTime kayıt = Convert.ToDateTime(dateEdit2.Text);
                 connection.Open();
-                MySqlCommand komut = new MySqlCommand("insert into Kitap (Barkod, ISBN, KitapAdi, YayinYili, Tur, Kategori, KayitTarihi, Konum, SayfaSayisi, Stok, Cevirmen, Yazar, Baski, Ozet, YayinEvi, Durum, Durum2) VALUES " +
+                MySqlCommand komut = new MySqlCommand("insert into Kitap (Barkod, ISBN, KitapAdi, YayinYili, Tur, Kategori, KayitTarihi, Konum, SayfaSayisi, Stok, Cevirmen, Yazar, Dil, Ozet, YayinEvi, Durum, Durum2) VALUES " +
                     "(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17) ", connection);
                 komut.Parameters.AddWithValue("@p1", txtBarkod.Text);
                 komut.Parameters.AddWithValue("@p2", txtISBN.Text);
@@ -149,7 +149,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 komut.Parameters.AddWithValue("@p10", txtstok.Text);
                 komut.Parameters.AddWithValue("@p11", lkpdtCevirmen.EditValue);
                 komut.Parameters.AddWithValue("@p12", lkpdtyazar.EditValue);
-                komut.Parameters.AddWithValue("@p13", txtBaski.Text);
+                komut.Parameters.AddWithValue("@p13", txtDil.Text);
                 komut.Parameters.AddWithValue("@p14", txtOzet.Text);
                 komut.Parameters.AddWithValue("@p15", txtYayinEvi.Text);
                 komut.Parameters.AddWithValue("@p16", durum);
