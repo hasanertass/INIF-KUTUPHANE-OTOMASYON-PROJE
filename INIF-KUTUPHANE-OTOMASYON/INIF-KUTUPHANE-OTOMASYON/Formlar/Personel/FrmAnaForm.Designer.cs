@@ -139,8 +139,8 @@ namespace INIF_KUTUPHANE_OTOMASYON
             // 
             this.btnkitaplistesi.Caption = "Kitap Tablosu\r\n( F1 )";
             this.btnkitaplistesi.Id = 1;
-            this.btnkitaplistesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnkitaplistesi.ImageOptions.Image")));
-            this.btnkitaplistesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnkitaplistesi.ImageOptions.LargeImage")));
+            this.btnkitaplistesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnkitaplistesi.ImageOptions.Image")));
+            this.btnkitaplistesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnkitaplistesi.ImageOptions.LargeImage")));
             this.btnkitaplistesi.Name = "btnkitaplistesi";
             this.btnkitaplistesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnkitaplistesi_ItemClick);
             // 
@@ -166,8 +166,8 @@ namespace INIF_KUTUPHANE_OTOMASYON
             // 
             this.btnOgrenciListesi.Caption = "Öğrenci Listesi";
             this.btnOgrenciListesi.Id = 4;
-            this.btnOgrenciListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BarbtnOgrenciListesi.ImageOptions.Image")));
-            this.btnOgrenciListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BarbtnOgrenciListesi.ImageOptions.LargeImage")));
+            this.btnOgrenciListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOgrenciListesi.ImageOptions.Image")));
+            this.btnOgrenciListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnOgrenciListesi.ImageOptions.LargeImage")));
             this.btnOgrenciListesi.Name = "btnOgrenciListesi";
             this.btnOgrenciListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarbtnOgrenciListesi_ItemClick);
             // 
@@ -233,8 +233,8 @@ namespace INIF_KUTUPHANE_OTOMASYON
             // 
             this.btnKategoriListesi.Caption = "Kategori Listesi\r\n( F7 )";
             this.btnKategoriListesi.Id = 12;
-            this.btnKategoriListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.btnKategoriListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.btnKategoriListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKategoriListesi.ImageOptions.Image")));
+            this.btnKategoriListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnKategoriListesi.ImageOptions.LargeImage")));
             this.btnKategoriListesi.Name = "btnKategoriListesi";
             this.btnKategoriListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
@@ -259,8 +259,8 @@ namespace INIF_KUTUPHANE_OTOMASYON
             // 
             this.btnEmanetListesi.Caption = "Emanet Kitap Listesi\r\n( F4 )";
             this.btnEmanetListesi.Id = 15;
-            this.btnEmanetListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BarButonEmanetListesi.ImageOptions.Image")));
-            this.btnEmanetListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BarButonEmanetListesi.ImageOptions.LargeImage")));
+            this.btnEmanetListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmanetListesi.ImageOptions.Image")));
+            this.btnEmanetListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmanetListesi.ImageOptions.LargeImage")));
             this.btnEmanetListesi.Name = "btnEmanetListesi";
             this.btnEmanetListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButonEmanetListesi_ItemClick);
             // 
@@ -289,7 +289,6 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.btnEmanetIstatistikleri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmanetIstatistikleri.ImageOptions.Image")));
             this.btnEmanetIstatistikleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmanetIstatistikleri.ImageOptions.LargeImage")));
             this.btnEmanetIstatistikleri.Name = "btnEmanetIstatistikleri";
-   //         this.btnEmanetIstatistikleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmanetIstatistikleri_ItemClick);
             // 
             // btnYazarCevirmenListesi
             // 
@@ -544,7 +543,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Uludağ Üniversitesi İnegöl İşletme Fakltesi Kütüphane Otomasyonu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

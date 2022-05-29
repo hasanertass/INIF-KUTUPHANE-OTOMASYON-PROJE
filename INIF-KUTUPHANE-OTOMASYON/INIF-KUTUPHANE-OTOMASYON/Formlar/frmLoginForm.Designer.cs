@@ -31,8 +31,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginForm));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -105,6 +105,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(153, 20);
             this.txtSifre.TabIndex = 1;
+            this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
             // 
             // labelControl2
             // 
@@ -123,7 +124,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(106, 35);
             this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "GİRİŞ YAP";
+            this.simpleButton1.Text = "GİRİŞ YAP\r\n (enter)";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
@@ -150,12 +151,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtKullaniciAdi.Location = new System.Drawing.Point(125, 203);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(151, 20);
-            toolTipItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Text = "Personel girişi için TC kimlik numaralarını öğrenci girişi için okul numaralarını" +
+            toolTipItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem2.Text = "Personel girişi için TC kimlik numaralarını öğrenci girişi için okul numaralarını" +
     " girmeleri gerekir.";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.txtKullaniciAdi.SuperTip = superToolTip1;
+            superToolTip2.Items.Add(toolTipItem2);
+            this.txtKullaniciAdi.SuperTip = superToolTip2;
             this.txtKullaniciAdi.TabIndex = 0;
+            this.txtKullaniciAdi.EditValueChanged += new System.EventHandler(this.txtKullaniciAdi_EditValueChanged);
             // 
             // label3
             // 
@@ -170,6 +172,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // frmLoginForm
             // 
+            this.AcceptButton = this.simpleButton1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;

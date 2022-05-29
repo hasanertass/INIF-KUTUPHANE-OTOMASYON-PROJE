@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void frmKategoriListesi_Load(object sender, EventArgs e)
         {
+            List();
+        }
+
+        private void List()
+        {
             try
             {
                 connection.Open();
@@ -33,29 +39,39 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
             {
-                int durum = 1;
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Kategori (KategoriAdi,Durum) values (@p1,@p2)", connection);
-                command.Parameters.AddWithValue("@p1", txtKtgriAd.Text);
-                command.Parameters.AddWithValue("@p2", durum); ;
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Kategori Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Sorgulama.KontrolEt("KategoriAdi", "Kategori", "Durum", txtKtgriAd.Text))
+                {
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz Kategori adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    int durum = 1;
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Kategori (KategoriAdi,Durum) values (@p1,@p2)", connection);
+                    command.Parameters.AddWithValue("@p1", txtKtgriAd.Text);
+                    command.Parameters.AddWithValue("@p2", durum); ;
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Kategori Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            List();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -71,9 +87,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            List();
         }
 
         private void btnGüncelle_Click(object sender, EventArgs e)
@@ -82,37 +99,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("update Kategori set KategoriAdi=@p1 where id=@p2", connection);
-                command.Parameters.AddWithValue("@p1", txtKtgriAd);
-                command.Parameters.AddWithValue("@p2", txtKtgrid);
+                command.Parameters.AddWithValue("@p1", txtKtgriAd.Text);
+                command.Parameters.AddWithValue("@p2", txtKtgrid.Text);
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Kategori Güncelleniştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {
-                return;
-            }
-
-        }
-
-        private void btnListele_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("select * from Kategori where durum=1", connection);
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
             }
-            catch (Exception)
-            {
-                return;
-            }
-
-
+            List();
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -124,7 +122,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

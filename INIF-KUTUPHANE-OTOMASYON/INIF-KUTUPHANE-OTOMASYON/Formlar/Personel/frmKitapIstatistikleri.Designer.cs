@@ -63,9 +63,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit8 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -76,8 +78,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.pictureEdit10 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -108,13 +110,15 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(-1, 440);
+            this.chart1.Location = new System.Drawing.Point(-1, 484);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             series1.Legend = "Legend1";
             series1.Name = "Series1";
+            series1.YValuesPerPoint = 4;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(956, 392);
+            this.chart1.Size = new System.Drawing.Size(956, 348);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -124,19 +128,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(959, 440);
+            this.chart2.Location = new System.Drawing.Point(959, 484);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Teal;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(964, 392);
+            this.chart2.Size = new System.Drawing.Size(964, 348);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(173)))), ((int)(((byte)(169)))));
             this.panel3.Controls.Add(this.pictureEdit3);
             this.panel3.Controls.Add(this.labelControl17);
             this.panel3.Controls.Add(this.labelControl20);
@@ -184,7 +189,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(219)))), ((int)(((byte)(251)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(233)))), ((int)(((byte)(148)))));
             this.panel1.Controls.Add(this.pictureEdit1);
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Controls.Add(this.labelControl14);
@@ -232,7 +237,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(227)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(224)))), ((int)(((byte)(143)))));
             this.panel2.Controls.Add(this.pictureEdit2);
             this.panel2.Controls.Add(this.labelControl15);
             this.panel2.Controls.Add(this.labelControl16);
@@ -280,7 +285,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(152)))), ((int)(((byte)(58)))));
             this.panel4.Controls.Add(this.pictureEdit4);
             this.panel4.Controls.Add(this.labelControl2);
             this.panel4.Controls.Add(this.labelControl3);
@@ -328,7 +333,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(219)))), ((int)(((byte)(251)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(211)))), ((int)(((byte)(144)))));
             this.panel5.Controls.Add(this.pictureEdit5);
             this.panel5.Controls.Add(this.labelControl4);
             this.panel5.Controls.Add(this.labelControl5);
@@ -376,7 +381,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(227)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(185)))), ((int)(((byte)(59)))));
             this.panel6.Controls.Add(this.pictureEdit6);
             this.panel6.Controls.Add(this.labelControl6);
             this.panel6.Controls.Add(this.labelControl7);
@@ -424,7 +429,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.panel7.Controls.Add(this.labelControl11);
             this.panel7.Controls.Add(this.pictureEdit7);
             this.panel7.Controls.Add(this.labelControl8);
@@ -432,6 +437,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(388, 217);
             this.panel7.TabIndex = 23;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Appearance.Options.UseForeColor = true;
+            this.labelControl11.Location = new System.Drawing.Point(23, 22);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(342, 30);
+            this.labelControl11.TabIndex = 3;
+            this.labelControl11.Text = "En Çok Kitap Okuyan Kadın Öğrenci";
             // 
             // pictureEdit7
             // 
@@ -460,7 +477,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
             this.panel8.Controls.Add(this.labelControl21);
             this.panel8.Controls.Add(this.pictureEdit8);
             this.panel8.Controls.Add(this.labelControl10);
@@ -468,6 +485,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(388, 217);
             this.panel8.TabIndex = 24;
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl21.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl21.Appearance.Options.UseFont = true;
+            this.labelControl21.Appearance.Options.UseForeColor = true;
+            this.labelControl21.Location = new System.Drawing.Point(19, 22);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(340, 30);
+            this.labelControl21.TabIndex = 3;
+            this.labelControl21.Text = "En Çok Kitap Okuyan Erkek Öğrenci";
             // 
             // pictureEdit8
             // 
@@ -496,7 +525,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(227)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(142)))), ((int)(((byte)(38)))));
             this.panel9.Controls.Add(this.pictureEdit9);
             this.panel9.Controls.Add(this.labelControl12);
             this.panel9.Controls.Add(this.labelControl13);
@@ -544,7 +573,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(227)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(146)))));
             this.panel10.Controls.Add(this.pictureEdit10);
             this.panel10.Controls.Add(this.labelControl18);
             this.panel10.Controls.Add(this.labelControl19);
@@ -590,35 +619,33 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl19.TabIndex = 0;
             this.labelControl19.Text = "Son 1 Ayda Okunan Toplam Kitap";
             // 
-            // labelControl21
+            // label1
             // 
-            this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl21.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Appearance.Options.UseForeColor = true;
-            this.labelControl21.Location = new System.Drawing.Point(19, 22);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(340, 30);
-            this.labelControl21.TabIndex = 3;
-            this.labelControl21.Text = "En Çok Kitap Okuyan Erkek Öğrenci";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Corbel", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(160, 442);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(550, 39);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "KATEGORİLERE GÖRE KİTAP MİKTARI";
             // 
-            // labelControl11
+            // label2
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Appearance.Options.UseForeColor = true;
-            this.labelControl11.Location = new System.Drawing.Point(23, 22);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(342, 30);
-            this.labelControl11.TabIndex = 3;
-            this.labelControl11.Text = "En Çok Kitap Okuyan Kadın Öğrenci";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Corbel", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(1125, 442);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(582, 39);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "KATEGORİLERİN OKUNMA MİKTARLARI";
             // 
             // frmKitapIstatistikleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 832);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel9);
@@ -667,6 +694,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -714,5 +742,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl21;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

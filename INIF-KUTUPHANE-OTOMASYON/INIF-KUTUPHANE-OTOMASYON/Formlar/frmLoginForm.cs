@@ -31,7 +31,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (txtKullaniciAdi.Text.Length==11)
+            if (txtKullaniciAdi.Text.Length == 11)
             {
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("select * from Personel where PersonelTc=@p1 and Sifre=@p2", connection);
@@ -54,7 +54,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 //}
                 //connection.Close();
             }
-            if (txtKullaniciAdi.Text.Length==9)
+            if (txtKullaniciAdi.Text.Length == 9)
             {
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("select * from Ogrenci where OkulNo=@p1 and OgrenciSifre=@p2", connection);
@@ -78,8 +78,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             else
             {
                 label3.Visible = true;
+                connection.Close();
             }
-            
+
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -90,6 +91,16 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private void frmLoginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtKullaniciAdi_EditValueChanged(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+        }
+
+        private void txtSifre_TextChanged(object sender, EventArgs e)
+        {
+            label3.Visible = false;
         }
     }
 }

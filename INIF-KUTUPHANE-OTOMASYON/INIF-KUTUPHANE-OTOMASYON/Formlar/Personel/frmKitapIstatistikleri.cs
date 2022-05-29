@@ -54,8 +54,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     labelControl2.Text = reader[0].ToString();
                 }
                 connection.Close();
-                connection.Open();
-                command = new MySqlCommand("select Kategori.KategoriAdi,COUNT(Kategori) from Kitap INNER JOIN Kategori ON Kategori.id=Kitap.Kategori GROUP by Kategori",connection);
+                connection.Open(); 
+                command = new MySqlCommand("select Kategori.KategoriAdi,COUNT(Kategori) from Kitap INNER JOIN Kategori ON Kategori.id=Kitap.Kategori where Durum2=1 GROUP by Kategori ", connection);
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -108,7 +108,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 connection.Close();
                 connection.Open();
-                MySqlCommand command1 = new MySqlCommand("SELECT Ogrenci.OgrenciAdi,COUNT(Odünç.OduncId) FROM Odünç INNER JOIN Ogrenci ON Odünç.KartId = Ogrenci.KartId Where Ogrenci.Cinsiyet = 'Erkek'and OgrenciDurum=1 GROUP BY Ogrenci.OgrenciAdi asc", connection);
+                MySqlCommand command1 = new MySqlCommand("SELECT Concat(Ogrenci.OgrenciAdi,' ',Ogrenci.OgrenciSoyadi) as ad,COUNT(Odünç.OduncId) FROM Odünç INNER JOIN Ogrenci ON Odünç.KartId = Ogrenci.KartId Where Ogrenci.Cinsiyet = 'ERKEK' and OgrenciDurum=1 GROUP BY ad DESC", connection);
                 reader = command1.ExecuteReader();
                 if (reader.Read())
                 {
@@ -116,17 +116,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 connection.Close();
                 connection.Open();
-                MySqlCommand command2 = new MySqlCommand("SELECT Ogrenci.OgrenciAdi,COUNT(Odünç.OduncId) FROM Odünç INNER JOIN Ogrenci ON Odünç.KartId = Ogrenci.KartId Where Ogrenci.Cinsiyet = 'Kadın'and OgrenciDurum=1 GROUP BY Ogrenci.OgrenciAdi asc", connection);
-                reader = command2.ExecuteReader();
-                if (reader.Read())
+                MySqlCommand command2 = new MySqlCommand("SELECT Concat(Ogrenci.OgrenciAdi,' ',Ogrenci.OgrenciSoyadi) as ad,COUNT(Odünç.OduncId) FROM Odünç INNER JOIN Ogrenci ON Odünç.KartId = Ogrenci.KartId Where Ogrenci.Cinsiyet = 'KADIN' and OgrenciDurum=1 GROUP BY ad DESC", connection);
+               MySqlDataReader reader2 = command2.ExecuteReader();
+                if (reader2.Read())
                 {
-                    labelControl8.Text = reader[0].ToString();
+                    labelControl8.Text = reader2[0].ToString();
                 }
                 connection.Close();
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
     }

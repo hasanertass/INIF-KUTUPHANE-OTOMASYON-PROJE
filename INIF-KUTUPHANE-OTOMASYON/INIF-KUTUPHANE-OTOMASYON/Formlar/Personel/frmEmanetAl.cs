@@ -35,12 +35,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
         private void frmEmanetAl_Load(object sender, EventArgs e)
         {
+            List();
+
+        }
+
+        private void List()
+        {
             try
             {
-                int durum = 1;
                 //gridcontrolde veri listeleme
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("select * from Odünç where OduncDurum=@p1", connection);
+                MySqlCommand command = new MySqlCommand("select * from Odünç where OduncDurum=1", connection);
                 command.Parameters.AddWithValue("@p1", durum);
                 MySqlDataAdapter da = new MySqlDataAdapter(command);
                 DataTable dt = new DataTable();
@@ -52,8 +57,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 return;
             }
-
         }
+
         int durum = 0;
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -74,7 +79,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     if (stok == 0)
                     {
                         connection.Open();
-                        MySqlCommand command2 = new MySqlCommand("Update Kitap Set durum=0,stok=@p2 where Barkod=@p1", connection);
+                        MySqlCommand command2 = new MySqlCommand("Update Kitap Set durum=1,stok=@p2 where Barkod=@p1", connection);
                         command2.Parameters.AddWithValue("@p1", txtKitapBarkod.Text);
                         command2.Parameters.AddWithValue("@p2", stok + 1);
                         command2.ExecuteNonQuery();
@@ -128,11 +133,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 {
                     MessageBox.Show("Kitabı teslim alan öğrenci ile \nteslim etmeye çalışan öğrenci farklıdır !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                List();
 
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
         }
@@ -187,22 +194,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             catch (Exception)
             {
                 MessageBox.Show("Hatalı işlem yapılmıştır. Lütfen tekrara deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                connection.Close();
             }
-
-        }
-
-        private void btnListele_Click(object sender, EventArgs e)
-        {
-            //gridcontrolde veri listeleme
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("select * from Odünç where OduncDurum=@p1", connection);
-            command.Parameters.AddWithValue("@p1", true);
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridControl1.DataSource = dt;
-            connection.Close();
-
+            List();
         }
     }
 }

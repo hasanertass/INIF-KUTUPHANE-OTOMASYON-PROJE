@@ -50,17 +50,22 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
                 label8.Text = reader[6].ToString();
                 label9.Text = reader[0].ToString();
             }
+            if (lblEmanet.Text=="0")
+            {
+                gridControl2.Visible = false;
+            }
             connection.Close();
             connection.Open();
-            MySqlCommand command1 = new MySqlCommand("select * from Odünç where KartId=@p1", connection);
+            MySqlCommand command1 = new MySqlCommand("SELECT Odünç.Barkod,Kitap.KitapAdi,Kitap.Tur,Kategori.KategoriAdi,Kitap.SayfaSayisi,CONCAT(Yazar.YazarAdi,' ',Yazar.YazarSoyadi) as Yazar,Odünç.AlisTarihi,Odünç.TeslimTarihi FROM Odünç INNER JOIN Kitap on Kitap.Barkod = Odünç.Barkod INNER JOIN Kategori on Kategori.id = Kitap.Kategori INNER JOIN Yazar on Yazar.id = Kitap.Yazar where KartId=@p1 and OduncDurum=1", connection);
             command1.Parameters.AddWithValue("@p1", label8.Text);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command1);
             DataTable table = new DataTable();
             adapter.Fill(table);
             gridControl2.DataSource = table;
             connection.Close();
+            
             connection.Open();
-            MySqlCommand command2 = new MySqlCommand("select * from Kitap where Durum=1 and Durum2=1", connection);
+            MySqlCommand command2 = new MySqlCommand("SELECT Kitap.Barkod,Kitap.KitapAdi,Kitap.YayinYili,Kitap.Tur,Kategori.KategoriAdi,Kitap.Konum,Kitap.SayfaSayisi,Kitap.Stok,Concat(Cevirmen.CevirmenAdi,'     ',Cevirmen.CevirmenSoyadi) as Çevirmen,Concat(Yazar.YazarAdi,' ',Yazar.YazarSoyadi) AS Yazar ,Kitap.Dil,Kitap.Ozet,Kitap.Durum as 'Emanet Durumu',Kitap.Durum2 as 'Mevcut Durumu' FROM Kitap INNER JOIN Kategori on Kategori.id = Kitap.Kategori inner JOIN Yazar on Yazar.id = Kitap.Yazar INNER JOIN Cevirmen on Cevirmen.id = Kitap.Cevirmen where Kitap.Durum=1 and Kitap.Durum2=1", connection);
             adapter = new MySqlDataAdapter(command2);
             table = new DataTable();
             adapter.Fill(table);
@@ -68,6 +73,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
             connection.Close();
             tel = lblTel.Text;
             sifre = lblSifre.Text;
+
         }
     }
 }

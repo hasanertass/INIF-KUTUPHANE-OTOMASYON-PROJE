@@ -34,8 +34,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.button1 = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmanetId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,9 +52,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtKitapBarkod = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -117,7 +116,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.txtKitapBarkod);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.btnListele);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Location = new System.Drawing.Point(-1, 0);
@@ -125,6 +123,200 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Size = new System.Drawing.Size(345, 833);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Kitap İşlemleri";
+            // 
+            // txtEmanetId
+            // 
+            this.txtEmanetId.Location = new System.Drawing.Point(121, 190);
+            this.txtEmanetId.Name = "txtEmanetId";
+            this.txtEmanetId.Size = new System.Drawing.Size(198, 20);
+            this.txtEmanetId.TabIndex = 1;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(45, 191);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(73, 16);
+            this.labelControl2.TabIndex = 56;
+            this.labelControl2.Text = "EMANET İD :";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(42, 225);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(184, 67);
+            this.groupBox1.TabIndex = 55;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "BİLGİLENDİRME";
+            this.groupBox1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(6, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 39);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Kart İd Doğrulama satırının \r\nsadece emanet kitap alındığında \r\nkullanılması zoru" +
+    "nludur !";
+            // 
+            // rdZimmet
+            // 
+            this.rdZimmet.AutoSize = true;
+            this.rdZimmet.Location = new System.Drawing.Point(202, 336);
+            this.rdZimmet.Name = "rdZimmet";
+            this.rdZimmet.Size = new System.Drawing.Size(74, 17);
+            this.rdZimmet.TabIndex = 7;
+            this.rdZimmet.TabStop = true;
+            this.rdZimmet.Text = "Zimmet de";
+            this.rdZimmet.UseVisualStyleBackColor = true;
+            // 
+            // rdEmanet
+            // 
+            this.rdEmanet.AutoSize = true;
+            this.rdEmanet.Location = new System.Drawing.Point(121, 336);
+            this.rdEmanet.Name = "rdEmanet";
+            this.rdEmanet.Size = new System.Drawing.Size(76, 17);
+            this.rdEmanet.TabIndex = 6;
+            this.rdEmanet.TabStop = true;
+            this.rdEmanet.Text = "Emanet de";
+            this.rdEmanet.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 241);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            // 
+            // txtDogrulama
+            // 
+            this.txtDogrulama.Location = new System.Drawing.Point(121, 245);
+            this.txtDogrulama.Name = "txtDogrulama";
+            this.txtDogrulama.Size = new System.Drawing.Size(198, 20);
+            this.txtDogrulama.TabIndex = 3;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(42, 238);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(73, 32);
+            this.labelControl1.TabIndex = 49;
+            this.labelControl1.Text = "    KART İD  \r\nDOĞRULAMA";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(121, 307);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(198, 21);
+            this.dateTimePicker2.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(121, 280);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(198, 21);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(4, 336);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(111, 16);
+            this.labelControl6.TabIndex = 45;
+            this.labelControl6.Text = "EMANET DURUMU :";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(19, 311);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(96, 16);
+            this.labelControl5.TabIndex = 44;
+            this.labelControl5.Text = "TESLİM TARİHİ :";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(36, 281);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(79, 16);
+            this.labelControl4.TabIndex = 43;
+            this.labelControl4.Text = "ALIŞ TARİHİ :";
+            // 
+            // txtKartId
+            // 
+            this.txtKartId.Enabled = false;
+            this.txtKartId.Location = new System.Drawing.Point(121, 215);
+            this.txtKartId.Name = "txtKartId";
+            this.txtKartId.Size = new System.Drawing.Size(198, 20);
+            this.txtKartId.TabIndex = 2;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(62, 216);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(56, 16);
+            this.labelControl3.TabIndex = 41;
+            this.labelControl3.Text = "KART İD :";
+            // 
+            // txtKitapBarkod
+            // 
+            this.txtKitapBarkod.Location = new System.Drawing.Point(161, 154);
+            this.txtKitapBarkod.Name = "txtKitapBarkod";
+            this.txtKitapBarkod.Size = new System.Drawing.Size(177, 20);
+            this.txtKitapBarkod.TabIndex = 0;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(15, 149);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(140, 27);
+            this.labelControl7.TabIndex = 16;
+            this.labelControl7.Text = "KİTAP BARKOD";
+            // 
+            // btnSil
+            // 
+            this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
+            this.btnSil.Location = new System.Drawing.Point(62, 480);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(216, 65);
+            this.btnSil.TabIndex = 9;
+            this.btnSil.Text = "GÜNCELLE";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(62, 397);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(216, 65);
+            this.btnKaydet.TabIndex = 8;
+            this.btnKaydet.Text = "EMANET AL";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // labelControl9
             // 
@@ -147,211 +339,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl8.TabIndex = 57;
             this.labelControl8.Text = "EMANET DURUMU :";
             this.labelControl8.Visible = false;
-            // 
-            // txtEmanetId
-            // 
-            this.txtEmanetId.Location = new System.Drawing.Point(121, 106);
-            this.txtEmanetId.Name = "txtEmanetId";
-            this.txtEmanetId.Size = new System.Drawing.Size(198, 20);
-            this.txtEmanetId.TabIndex = 1;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(45, 107);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(73, 16);
-            this.labelControl2.TabIndex = 56;
-            this.labelControl2.Text = "EMANET İD :";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(42, 141);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(184, 67);
-            this.groupBox1.TabIndex = 55;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "BİLGİLENDİRME";
-            this.groupBox1.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(6, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 39);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "Kart İd Doğrulama satırının \r\nsadece emanet kitap alındığında \r\nkullanılması zoru" +
-    "nludur !";
-            // 
-            // rdZimmet
-            // 
-            this.rdZimmet.AutoSize = true;
-            this.rdZimmet.Location = new System.Drawing.Point(202, 252);
-            this.rdZimmet.Name = "rdZimmet";
-            this.rdZimmet.Size = new System.Drawing.Size(74, 17);
-            this.rdZimmet.TabIndex = 7;
-            this.rdZimmet.TabStop = true;
-            this.rdZimmet.Text = "Zimmet de";
-            this.rdZimmet.UseVisualStyleBackColor = true;
-            // 
-            // rdEmanet
-            // 
-            this.rdEmanet.AutoSize = true;
-            this.rdEmanet.Location = new System.Drawing.Point(121, 252);
-            this.rdEmanet.Name = "rdEmanet";
-            this.rdEmanet.Size = new System.Drawing.Size(76, 17);
-            this.rdEmanet.TabIndex = 6;
-            this.rdEmanet.TabStop = true;
-            this.rdEmanet.Text = "Emanet de";
-            this.rdEmanet.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 157);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            // 
-            // txtDogrulama
-            // 
-            this.txtDogrulama.Location = new System.Drawing.Point(121, 161);
-            this.txtDogrulama.Name = "txtDogrulama";
-            this.txtDogrulama.Size = new System.Drawing.Size(198, 20);
-            this.txtDogrulama.TabIndex = 3;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(42, 154);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(73, 32);
-            this.labelControl1.TabIndex = 49;
-            this.labelControl1.Text = "    KART İD  \r\nDOĞRULAMA";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(121, 223);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(198, 21);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(121, 196);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 21);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(4, 252);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(111, 16);
-            this.labelControl6.TabIndex = 45;
-            this.labelControl6.Text = "EMANET DURUMU :";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(19, 227);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(96, 16);
-            this.labelControl5.TabIndex = 44;
-            this.labelControl5.Text = "TESLİM TARİHİ :";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(36, 197);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(79, 16);
-            this.labelControl4.TabIndex = 43;
-            this.labelControl4.Text = "ALIŞ TARİHİ :";
-            // 
-            // txtKartId
-            // 
-            this.txtKartId.Enabled = false;
-            this.txtKartId.Location = new System.Drawing.Point(121, 131);
-            this.txtKartId.Name = "txtKartId";
-            this.txtKartId.Size = new System.Drawing.Size(198, 20);
-            this.txtKartId.TabIndex = 2;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(62, 132);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(56, 16);
-            this.labelControl3.TabIndex = 41;
-            this.labelControl3.Text = "KART İD :";
-            // 
-            // txtKitapBarkod
-            // 
-            this.txtKitapBarkod.Location = new System.Drawing.Point(161, 70);
-            this.txtKitapBarkod.Name = "txtKitapBarkod";
-            this.txtKitapBarkod.Size = new System.Drawing.Size(177, 20);
-            this.txtKitapBarkod.TabIndex = 0;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(15, 65);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(140, 27);
-            this.labelControl7.TabIndex = 16;
-            this.labelControl7.Text = "KİTAP BARKOD";
-            // 
-            // btnListele
-            // 
-            this.btnListele.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
-            this.btnListele.Location = new System.Drawing.Point(62, 485);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(216, 68);
-            this.btnListele.TabIndex = 10;
-            this.btnListele.Text = "Listele";
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.Location = new System.Drawing.Point(62, 396);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(216, 65);
-            this.btnSil.TabIndex = 9;
-            this.btnSil.Text = "GÜNCELLE";
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(62, 313);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(216, 65);
-            this.btnKaydet.TabIndex = 8;
-            this.btnKaydet.Text = "EMANET AL";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // frmEmanetAl
             // 
@@ -388,7 +375,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtKitapBarkod;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -407,7 +393,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.TextEdit txtEmanetId;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }
