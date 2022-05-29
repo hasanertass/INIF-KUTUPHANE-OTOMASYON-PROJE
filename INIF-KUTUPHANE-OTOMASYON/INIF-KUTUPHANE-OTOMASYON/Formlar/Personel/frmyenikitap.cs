@@ -160,7 +160,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı Ekleme İşlemi !!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
     }

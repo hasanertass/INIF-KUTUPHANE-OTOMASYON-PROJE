@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,25 +23,35 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                string ciniyet = "Erkek";
-                if (rdKadın.Checked == true)
+                if (Sorgulama.KontrolEt("PersonelTc", "Personel", "PersonelDurum", txttc.Text))
                 {
-                    ciniyet = "Kadın";
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz TC kimlik ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
                 }
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Personel (PersonelTc,PersonelAdi,PersonelSoyadi,Cinsiyet,Sifre,PersonelDurum) Values (@p1,@p2,@p3,@p4,@p5,1)", connection);
-                command.Parameters.AddWithValue("@p1", txttc.Text);
-                command.Parameters.AddWithValue("@p2", txtadi.Text);
-                command.Parameters.AddWithValue("@p3", txtsoyad.Text);
-                command.Parameters.AddWithValue("@p4", ciniyet);
-                command.Parameters.AddWithValue("@p5", txtsifre.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Yeni Personel Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    // aynı değil ise
+                    string ciniyet = "Erkek";
+                    if (rdKadın.Checked == true)
+                    {
+                        ciniyet = "Kadın";
+                    }
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Personel (PersonelTc,PersonelAdi,PersonelSoyadi,Cinsiyet,Sifre,PersonelDurum) Values (@p1,@p2,@p3,@p4,@p5,1)", connection);
+                    command.Parameters.AddWithValue("@p1", txttc.Text);
+                    command.Parameters.AddWithValue("@p2", txtadi.Text);
+                    command.Parameters.AddWithValue("@p3", txtsoyad.Text);
+                    command.Parameters.AddWithValue("@p4", ciniyet);
+                    command.Parameters.AddWithValue("@p5", txtsifre.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Yeni Personel Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
         }

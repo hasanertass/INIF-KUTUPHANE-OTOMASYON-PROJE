@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,18 +29,27 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                int durum = 1;
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Kategori (KategoriAdi,Durum) values (@p1,@p2)", connection);
-                command.Parameters.AddWithValue("@p1", txtKtgriAd.Text);
-                command.Parameters.AddWithValue("@p2", durum); ;
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Kategori Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Sorgulama.KontrolEt("KategoriAdi", "Kategori", "Durum", txtKtgriAd.Text))
+                {
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz Kategori adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    int durum = 1;
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Kategori (KategoriAdi,Durum) values (@p1,@p2)", connection);
+                    command.Parameters.AddWithValue("@p1", txtKtgriAd.Text);
+                    command.Parameters.AddWithValue("@p2", durum); ;
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Kategori Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
 

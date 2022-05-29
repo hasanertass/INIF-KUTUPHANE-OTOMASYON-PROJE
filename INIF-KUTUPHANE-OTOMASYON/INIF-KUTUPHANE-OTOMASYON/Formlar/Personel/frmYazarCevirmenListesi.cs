@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
 
@@ -46,41 +48,61 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Yazar (YazarAdi,YazarSoyadi,Durum) values (@p1,@p2,1)", connection);
-                command.Parameters.AddWithValue("@p1", txtYazarAdı.Text);
-                command.Parameters.AddWithValue("@p2", txtYazarSoyad.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Sorgulama.KontrolEt("YazarAdi", "Yazar", "Durum", txtYazarAdı.Text))
+                {
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    //aynı değilse
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Yazar (YazarAdi,YazarSoyadi,Durum) values (@p1,@p2,1)", connection);
+                    command.Parameters.AddWithValue("@p1", txtYazarAdı.Text);
+                    command.Parameters.AddWithValue("@p2", txtYazarSoyad.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            ListYazar();
         }
 
         private void btnKaydet1_Click(object sender, EventArgs e)
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Cevirmen (CevirmenAdi,CevirmenSoyadi,CevirmenDurum) values (@p1,@p2,1)", connection);
-                command.Parameters.AddWithValue("@p1", txtCvrmnAd.Text);
-                command.Parameters.AddWithValue("@p2", txtCvrmnSoyad.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Yeni Çevirmen Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Sorgulama.KontrolEt("CevirmenAdi", "Cevrimen", "CevirmenDurum", txtCvrmnAd.Text))
+                {
+                    // aynı ise
+                    MessageBox.Show("Girdiğiniz çevirmen adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Cevirmen (CevirmenAdi,CevirmenSoyadi,CevirmenDurum) values (@p1,@p2,1)", connection);
+                    command.Parameters.AddWithValue("@p1", txtCvrmnAd.Text);
+                    command.Parameters.AddWithValue("@p2", txtCvrmnSoyad.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Yeni Çevirmen Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            ListCevirmen();
         }
-
-        private void btnListele_Click(object sender, EventArgs e)
+        private void ListYazar()
         {
             try
             {
@@ -94,12 +116,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
         }
-
-        private void btnListele1_Click(object sender, EventArgs e)
+        private void ListCevirmen()
         {
             try
             {
@@ -113,9 +134,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -131,9 +152,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            ListYazar();
         }
 
         private void btnSil1_Click(object sender, EventArgs e)
@@ -141,17 +163,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             try
             {
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("Update Cevrimen set CevirmenDurum=0 where id=@p1", connection);
+                MySqlCommand command = new MySqlCommand("Update Cevirmen set CevirmenDurum=0 where id=@p1", connection);
                 command.Parameters.AddWithValue("@p1", txtCvrmnid.Text);
                 command.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Geçerli Çevirmen Silinmiştir","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Geçerli Çevirmen Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            ListCevirmen();
         }
 
         private void btnGüncelle_Click(object sender, EventArgs e)
@@ -165,12 +188,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.Parameters.AddWithValue("@p3", txtYazarid.Text);
                 command.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Geçerli Yazar Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Geçerli Yazarın Bilgileri Füncellenmiştir.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
+            ListYazar();
         }
 
         private void btnGüncelle1_Click(object sender, EventArgs e)
@@ -188,15 +213,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
+            ListCevirmen();
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             try
             {
-                if (gridView1.FocusedRowHandle>=0)
+                if (gridView1.FocusedRowHandle >= 0)
                 {
                     //txtYazarid.Text = gridView1.GetFocusedRowCellValue("id").ToString(); 
                     txtYazarid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "id").ToString();
@@ -205,7 +232,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     //txtYazarSoyad.Text = gridView1.GetFocusedRowCellValue("YazarSoyadi").ToString();
                     txtYazarSoyad.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "YazarSoyadi").ToString();
                 }
-                
+
             }
             catch (Exception)
             {

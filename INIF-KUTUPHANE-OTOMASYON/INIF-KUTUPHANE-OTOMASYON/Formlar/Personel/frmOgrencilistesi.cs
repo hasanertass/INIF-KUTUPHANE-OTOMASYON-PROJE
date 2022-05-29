@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,13 +45,25 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 gridControl1.DataSource = dt;
 
                 // lookupedite kategori ekleme 
+                //MySqlCommand command1 = new MySqlCommand("select * from Bölüm where durum=1", connection);
+                //MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
+                //DataTable dt1 = new DataTable();
+                //dataAdapter.Fill(dt1);
+                //for (int i = 0; i < dt1.Rows.Count; i++)
+                //{
+                //    bölüms.Add(new Bölüm(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("BolumAdi")));
+                //}
+                //lkpdtBolum.Properties.DataSource = bölüms;
+                //lkpdtBolum.Properties.DisplayMember = "BölümAdi";
+                //lkpdtBolum.Properties.ValueMember = "id";
+                //connection.Close();
+
+                // lookupedite kategori ekleme 
                 MySqlCommand command1 = new MySqlCommand("select * from Bölüm where durum=1", connection);
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command1);
-                dt = new DataTable();
-                dataAdapter.Fill(dt);
-                for (int i = 0; i < dt.Rows.Count; i++)
+                MySqlDataReader reader = command1.ExecuteReader();
+                while (reader.Read())
                 {
-                    bölüms.Add(new Bölüm(dt.Rows[i].Field<int>("id"), dt.Rows[i].Field<string>("BolumAdi")));
+                    bölüms.Add(new Bölüm(Convert.ToInt32(reader[0].ToString()), reader[1].ToString()));
                 }
                 lkpdtBolum.Properties.DataSource = bölüms;
                 lkpdtBolum.Properties.DisplayMember = "BölümAdi";
@@ -59,7 +72,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
         }
@@ -68,36 +82,53 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                int emanet = 0, durum = 1;
-                string cinsiyet = "Erkek";
-                if (rdKadın.Checked == true)
+                if (Sorgulama.KontrolEt("Okulno", "Ogrenci", "OgrenciDurum", txtOkulNo.Text))
                 {
-                    cinsiyet = "Kadın";
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz Okul Numarası ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
                 }
-                else if (rdErkek.Checked == true)
+                else
                 {
-                    cinsiyet = "Erkek";
+                    int emanet = 0, durum = 1;
+                    string cinsiyet = "ERKEK";
+                    if (rdKadın.Checked == true)
+                    {
+                        cinsiyet = "KADIN";
+                    }
+                    else if (rdErkek.Checked == true)
+                    {
+                        cinsiyet = "ERKEK";
+                    }
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Ogrenci (OkulNo,OgrenciAdi,OgrenciSoyadi,OgrenciTelefon,OgrenciEposta,KartId,BolumId,Cinsiyet,EmanetAdeti,OgrenciŞifre,OgrenciDurum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", connection);
+                    command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
+                    command.Parameters.AddWithValue("@p2", txtOgrAd.Text);
+                    command.Parameters.AddWithValue("@p3", txtOgrSoyad.Text);
+                    command.Parameters.AddWithValue("@p4", txtOgrTel.Text);
+                    command.Parameters.AddWithValue("@p5", txtOgrEposta.Text);
+                    command.Parameters.AddWithValue("@p6", txtOgrKartId.Text);
+                    command.Parameters.AddWithValue("@p7", lkpdtBolum.EditValue);
+                    command.Parameters.AddWithValue("@p8", cinsiyet);
+                    command.Parameters.AddWithValue("@p9", emanet);
+                    command.Parameters.AddWithValue("@p10", txtOgrSifre.Text);
+                    command.Parameters.AddWithValue("@p11", durum);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
+                    connection.Open();
+                    MySqlCommand command1 = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
+                    MySqlDataAdapter da = new MySqlDataAdapter(command1);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    gridControl1.DataSource = dt;
+                    connection.Close();
                 }
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Ogrenci (OkulNo,OgrenciAdi,OgrenciSoyadi,OgrenciTelefon,OgrenciEposta,KartId,BolumId,Cinsiyet,EmanetAdeti,OgrenciŞifre,OgrenciDurum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", connection);
-                command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
-                command.Parameters.AddWithValue("@p2", txtOgrAd.Text);
-                command.Parameters.AddWithValue("@p3", txtOgrSoyad.Text);
-                command.Parameters.AddWithValue("@p4", txtOgrTel.Text);
-                command.Parameters.AddWithValue("@p5", txtOgrEposta.Text);
-                command.Parameters.AddWithValue("@p6", txtOgrKartId.Text);
-                command.Parameters.AddWithValue("@p7", lkpdtBolum.EditValue);
-                command.Parameters.AddWithValue("@p8", cinsiyet);
-                command.Parameters.AddWithValue("@p9", emanet);
-                command.Parameters.AddWithValue("@p10", txtOgrSifre.Text);
-                command.Parameters.AddWithValue("@p11", durum);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
+
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı Ekleme İşlemi !!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
         }
@@ -112,11 +143,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 komut.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Silme İŞlemi Gerçekleşmiştir");
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
+                MySqlDataAdapter da = new MySqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                gridControl1.DataSource = dt;
+                connection.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                connection.Close();
             }
+
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -142,25 +182,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         }
 
-        private void btnListele_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gridControl1.DataSource = dt;
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                return;
-            }
-
-        }
-
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
             try
@@ -168,7 +189,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 string cinsiyet = "Erkek";
                 if (rdKadın.Checked == true)
                 {
-                    cinsiyet = "Kadın";
+                    cinsiyet = "KADIN";
                 }
                 else if (rdErkek.Checked == true)
                 {
@@ -190,11 +211,19 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Güncelleme İşlemi Yapılmıştır", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MySqlCommand command1 = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
+                MySqlDataAdapter da = new MySqlDataAdapter(command1);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                gridControl1.DataSource = dt;
+                connection.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                connection.Close();
             }
+            connection.Open();
 
         }
     }

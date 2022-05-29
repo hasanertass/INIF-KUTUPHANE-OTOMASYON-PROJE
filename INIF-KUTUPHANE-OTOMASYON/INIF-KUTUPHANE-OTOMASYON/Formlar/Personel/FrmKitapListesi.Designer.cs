@@ -63,7 +63,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.lkpdtyazar = new DevExpress.XtraEditors.LookUpEdit();
             this.txtKitapid = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.lkpdtKategori = new DevExpress.XtraEditors.LookUpEdit();
@@ -135,7 +134,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Controls.Add(this.lkpdtyazar);
             this.groupControl1.Controls.Add(this.txtKitapid);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.btnListele);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Controls.Add(this.lkpdtKategori);
@@ -455,16 +453,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl7.TabIndex = 16;
             this.labelControl7.Text = "KİTAP İD:";
             // 
-            // btnListele
-            // 
-            this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
-            this.btnListele.Location = new System.Drawing.Point(90, 736);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(216, 68);
-            this.btnListele.TabIndex = 22;
-            this.btnListele.Text = "Listele";
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
-            // 
             // btnSil
             // 
             this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
@@ -562,6 +550,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // gridControl1
             // 
+            this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridControl1.EmbeddedNavigator.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBorderColor = true;
             this.gridControl1.Location = new System.Drawing.Point(344, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -574,6 +566,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+   //         this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // button1
@@ -629,7 +622,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtKitapid;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnGüncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;

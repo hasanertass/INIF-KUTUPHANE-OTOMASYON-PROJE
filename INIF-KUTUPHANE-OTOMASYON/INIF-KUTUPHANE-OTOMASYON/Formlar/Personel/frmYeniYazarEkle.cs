@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,17 +28,27 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Yazar (YazarAdi,YazarSoyadi,Durum) values (@p1,@p2,1)", connection);
-                command.Parameters.AddWithValue("@p1", txtYzrAd.Text);
-                command.Parameters.AddWithValue("@p2", txtYzrSoyad.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Sorgulama.KontrolEt("YazarAdi", "Yazar", "Durum", txtYzrAd.Text))
+                {
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    //aynı değilse
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Yazar (YazarAdi,YazarSoyadi,Durum) values (@p1,@p2,1)", connection);
+                    command.Parameters.AddWithValue("@p1", txtYzrAd.Text);
+                    command.Parameters.AddWithValue("@p2", txtYzrSoyad.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
 

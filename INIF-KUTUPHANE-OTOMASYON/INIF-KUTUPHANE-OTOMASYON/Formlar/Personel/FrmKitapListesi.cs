@@ -7,7 +7,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Views.Grid;
+using GridView = DevExpress.XtraGrid.Views.Grid.GridView;
 
 namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 {
@@ -41,36 +44,75 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 {
                     durum2 = 1;
                 }
-                DateTime kayıt = Convert.ToDateTime(dateEdit2.Text);
+                string barkod = "";
+                int kategori = 0, yazar = 0;
+                int stok = 0;
                 connection.Open();
-                MySqlCommand komut = new MySqlCommand("insert into Kitap (Barkod, ISBN, KitapAdi, YayinYili, Tur, Kategori, KayitTarihi, Konum, SayfaSayisi, Stok, Cevirmen, Yazar, Dil, Ozet, YayinEvi, Durum, Durum2) VALUES " +
-                    "(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17) ", connection);
-                komut.Parameters.AddWithValue("@p1", txtBarkod.Text);
-                komut.Parameters.AddWithValue("@p2", txtISBN.Text);
-                komut.Parameters.AddWithValue("@p3", txtAd.Text);
-                komut.Parameters.AddWithValue("@p4", txtYayinYili.Text);
-                komut.Parameters.AddWithValue("@p5", txtTür.Text);
-                komut.Parameters.AddWithValue("@p6", lkpdtKategori.EditValue);
-                komut.Parameters.AddWithValue("@p7", kayıt.ToString("yyyy-MM-dd"));
-                komut.Parameters.AddWithValue("@p8", txtkonum.Text);
-                komut.Parameters.AddWithValue("@p9", txtsayfa.Text);
-                komut.Parameters.AddWithValue("@p10", txtstok.Text);
-                komut.Parameters.AddWithValue("@p11", lkpdtCevirmen.EditValue);
-                komut.Parameters.AddWithValue("@p12", lkpdtyazar.EditValue);
-                komut.Parameters.AddWithValue("@p13", txtDil.Text);
-                komut.Parameters.AddWithValue("@p14", txtOzet.Text);
-                komut.Parameters.AddWithValue("@p15", txtYayınEvi.Text);
-                komut.Parameters.AddWithValue("@p16", durum);
-                komut.Parameters.AddWithValue("@p17", durum2);
-                komut.ExecuteNonQuery();
+                MySqlCommand command = new MySqlCommand("SELECT Barkod,Kategori,Yazar,stok FROM `Kitap` WHERE Barkod=@p1 and Durum2=1", connection);
+                command.Parameters.AddWithValue("@p1", txtBarkod.Text);
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    barkod = reader[0].ToString();
+                    kategori = Convert.ToInt32(reader[1].ToString());
+                    yazar = Convert.ToInt32(reader[2].ToString());
+                    stok = Convert.ToInt32(reader[3].ToString());
+                }
                 connection.Close();
-                MessageBox.Show("Ekleme İşlemi Gerçekleşmiştir");
+                if (barkod == txtBarkod.Text)
+                {
+                    if (kategori == Convert.ToInt32(lkpdtKategori.EditValue) && yazar == Convert.ToInt32(lkpdtyazar.EditValue))
+                    {
+                        connection.Open();
+                        command = new MySqlCommand("Update Kitap set Stok=@p1 where Barkod=@p2", connection);
+                        command.Parameters.AddWithValue("@p1", stok += 1);
+                        command.Parameters.AddWithValue("@p2", barkod);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        //MessageBox.Show("Belirtilen bilgilere ait olan kitap kütüphanede mevcut olduğu için s", "Uyarı", MessageBoxButtons.OK, Messa
+                        //geBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Belirtilen barkod numarası daha önce kullanılmıştır.\n Lütfen barkod numarasını kontrol ediniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    //connection.Close();
+                    DateTime kayıt = Convert.ToDateTime(dateEdit2.Text);
+                    connection.Open();
+                    MySqlCommand komut = new MySqlCommand("insert into Kitap (Barkod, ISBN, KitapAdi, YayinYili, Tur, Kategori, KayitTarihi, Konum, SayfaSayisi, Stok, Cevirmen, Yazar, Dil, Ozet, YayinEvi, Durum, Durum2) VALUES " +
+                        "(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15,@p16,@p17) ", connection);
+                    komut.Parameters.AddWithValue("@p1", txtBarkod.Text);
+                    komut.Parameters.AddWithValue("@p2", txtISBN.Text);
+                    komut.Parameters.AddWithValue("@p3", txtAd.Text);
+                    komut.Parameters.AddWithValue("@p4", txtYayinYili.Text);
+                    komut.Parameters.AddWithValue("@p5", txtTür.Text);
+                    komut.Parameters.AddWithValue("@p6", lkpdtKategori.EditValue);
+                    komut.Parameters.AddWithValue("@p7", kayıt.ToString("yyyy-MM-dd"));
+                    komut.Parameters.AddWithValue("@p8", txtkonum.Text);
+                    komut.Parameters.AddWithValue("@p9", txtsayfa.Text);
+                    komut.Parameters.AddWithValue("@p10", txtstok.Text);
+                    komut.Parameters.AddWithValue("@p11", lkpdtCevirmen.EditValue);
+                    komut.Parameters.AddWithValue("@p12", lkpdtyazar.EditValue);
+                    komut.Parameters.AddWithValue("@p13", txtDil.Text);
+                    komut.Parameters.AddWithValue("@p14", txtOzet.Text);
+                    komut.Parameters.AddWithValue("@p15", txtYayınEvi.Text);
+                    komut.Parameters.AddWithValue("@p16", durum);
+                    komut.Parameters.AddWithValue("@p17", durum2);
+                    komut.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Ekleme İşlemi Gerçekleşmiştir");
+                }
+
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı Ekleme İşlemi !!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
-
+            Liste();
         }
         public class kategori
         {
@@ -116,14 +158,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 //gridcontrolde veri listeleme
 
-                gridControl1.DataSource = ListeleTablolari(connection, "SELECT Kitap.id,Kitap.Barkod,Kitap.ISBN,Kitap.KitapAdi,Kitap.YayinYili," +
-                " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
-                " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
-                " , CONCAT(Yazar.YazarAdi, ' ', Yazar.YazarSoyadi) as Yazar, " +
-                " Kitap.Dil, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
-                " FROM Kitap INNER JOIN Kategori ON Kitap.Kategori = Kategori.id " +
-                " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
-                " INNER JOIN Yazar on Kitap.Yazar = Yazar.id where Durum2=1");
+                Liste();
 
                 //connection.Open();
                 //MySqlCommand command = new MySqlCommand("select * from Kitap", connection);
@@ -176,10 +211,23 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
 
+        }
+
+        private void Liste()
+        {
+            gridControl1.DataSource = ListeleTablolari(connection, "SELECT Kitap.id,Kitap.Barkod,Kitap.ISBN,Kitap.KitapAdi,Kitap.YayinYili," +
+                            " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
+                            " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
+                            " , CONCAT(Yazar.YazarAdi, ' ', Yazar.YazarSoyadi) as Yazar, " +
+                            " Kitap.Dil, Kitap.Ozet, Kitap.YayinEvi, Kitap.Durum, Kitap.Durum2 " +
+                            " FROM Kitap INNER JOIN Kategori ON Kitap.Kategori = Kategori.id " +
+                            " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
+                            " INNER JOIN Yazar on Kitap.Yazar = Yazar.id where Durum2=1");
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -254,10 +302,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Güncelleme İşlemi Gerçekleşmiştir");
+                Liste();
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
         }
@@ -274,19 +324,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             " INNER JOIN Cevirmen ON Kitap.Cevirmen = Cevirmen.id " +
             " INNER JOIN Yazar on Kitap.Yazar = Yazar.id where Durum2=1");
         }
-
-        private void List()
-        {
-            //gridcontrolde veri listeleme
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("select * from Kitap", connection);
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            gridControl1.DataSource = dt;
-            connection.Close();
-        }
-
         /// <summary>
         /// Verilen Connetcion ve sorguyu datatable olarak döndürür
         /// </summary>
@@ -303,7 +340,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             con.Close();
             return dt;
         }
-
         private void btnSil_Click(object sender, EventArgs e)
         {
             try
@@ -317,8 +353,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
+            Liste();
         }
     }
 }

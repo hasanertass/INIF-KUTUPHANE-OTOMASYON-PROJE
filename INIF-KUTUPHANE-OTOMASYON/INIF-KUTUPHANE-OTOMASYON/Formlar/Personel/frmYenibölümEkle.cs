@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,16 +31,28 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Bölüm (BolumAdi,Durum) values (@p1,1)", connection);
-                command.Parameters.AddWithValue("@p1", txtad.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Yeni Bölüm Eklenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Sorgulama.KontrolEt("BolumAdi", "Bölüm", "Durum", txtad.Text))
+                {
+                    //aynı ise
+                    MessageBox.Show("Girdiğiniz bölüm adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                }
+                else
+                {
+                    // aynı değil ise
+                    connection.Open();
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Bölüm (BolumAdi,Durum) values (@p1,1)", connection);
+                    command.Parameters.AddWithValue("@p1", txtad.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Yeni Bölüm Eklenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı işlem yapıldı. Lütfen tekrar deneyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
     }

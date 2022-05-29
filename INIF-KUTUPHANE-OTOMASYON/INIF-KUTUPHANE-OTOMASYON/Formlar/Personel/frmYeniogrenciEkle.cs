@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +57,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             catch (Exception)
             {
-                return;
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
 
         }
@@ -65,36 +67,45 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                int emanet = 0, durum = 1;
-                string cinsiyet = "Erkek";
-                if (rdKadın.Checked == true)
+                if (Sorgulama.KontrolEt("Okulno", "Ogrenci", "OgrenciDurum", txtOkulNo.Text))
                 {
-                    cinsiyet = "Kadın";
+                    // aynı ise 
+                    MessageBox.Show("Girdiğiniz Okul Numarası ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
                 }
-                else if (rdErkek.Checked == true)
+                else
                 {
-                    cinsiyet = "Erkek";
+                    int emanet = 0, durum = 1;
+                    string cinsiyet = "ERKEK";
+                    if (rdKadın.Checked == true)
+                    {
+                        cinsiyet = "KADIN";
+                    }
+                    else if (rdErkek.Checked == true)
+                    {
+                        cinsiyet = "ERKEK";
+                    }
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("insert into Ogrenci (OkulNo,OgrenciAdi,OgrenciSoyadi,OgrenciTelefon,OgrenciEposta,KartId,BolumId,Cinsiyet,EmanetAdeti,OgrenciŞifre,OgrenciDurum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", connection);
+                    command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
+                    command.Parameters.AddWithValue("@p2", txtOgrAd.Text);
+                    command.Parameters.AddWithValue("@p3", txtOgrSoyad.Text);
+                    command.Parameters.AddWithValue("@p4", txtOgrTel.Text);
+                    command.Parameters.AddWithValue("@p5", txtOgrEposta.Text);
+                    command.Parameters.AddWithValue("@p6", txtOgrKartId.Text);
+                    command.Parameters.AddWithValue("@p7", lkpdtBolum.EditValue);
+                    command.Parameters.AddWithValue("@p8", cinsiyet);
+                    command.Parameters.AddWithValue("@p9", emanet);
+                    command.Parameters.AddWithValue("@p10", txtOgrSifre.Text);
+                    command.Parameters.AddWithValue("@p11", durum);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
                 }
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into Ogrenci (OkulNo,OgrenciAdi,OgrenciSoyadi,OgrenciTelefon,OgrenciEposta,KartId,BolumId,Cinsiyet,EmanetAdeti,OgrenciŞifre,OgrenciDurum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", connection);
-                command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
-                command.Parameters.AddWithValue("@p2", txtOgrAd.Text);
-                command.Parameters.AddWithValue("@p3", txtOgrSoyad.Text);
-                command.Parameters.AddWithValue("@p4", txtOgrTel.Text);
-                command.Parameters.AddWithValue("@p5", txtOgrEposta.Text);
-                command.Parameters.AddWithValue("@p6", txtOgrKartId.Text);
-                command.Parameters.AddWithValue("@p7", lkpdtBolum.EditValue);
-                command.Parameters.AddWithValue("@p8", cinsiyet);
-                command.Parameters.AddWithValue("@p9", emanet);
-                command.Parameters.AddWithValue("@p10", txtOgrSifre.Text);
-                command.Parameters.AddWithValue("@p11", durum);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
             }
             catch (Exception)
             {
-                MessageBox.Show("Hatalı Ekleme İşlemi !!!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
             }
         }
 

@@ -47,7 +47,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtOgrId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnGüncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -108,7 +107,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl1.Controls.Add(this.labelControl12);
             this.groupControl1.Controls.Add(this.txtOgrId);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.btnListele);
             this.groupControl1.Controls.Add(this.btnGüncelle);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnKaydet);
@@ -249,16 +247,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl7.TabIndex = 16;
             this.labelControl7.Text = "ÖĞRENCİ İD:";
             // 
-            // btnListele
-            // 
-            this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
-            this.btnListele.Location = new System.Drawing.Point(133, 538);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(198, 48);
-            this.btnListele.TabIndex = 15;
-            this.btnListele.Text = "Listele";
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
-            // 
             // btnGüncelle
             // 
             this.btnGüncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGüncelle.ImageOptions.Image")));
@@ -381,7 +369,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmOgrencilistesi";
-            this.Text = "frmOgrencilistesi";
+            this.Text = "Öğrenci Listesi";
             this.Load += new System.EventHandler(this.frmOgrencilistesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -419,7 +407,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TextEdit txtOgrId;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnGüncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;

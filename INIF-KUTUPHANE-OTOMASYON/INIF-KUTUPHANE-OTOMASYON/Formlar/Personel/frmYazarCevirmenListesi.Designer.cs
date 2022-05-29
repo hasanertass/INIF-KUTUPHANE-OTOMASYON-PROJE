@@ -32,7 +32,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmYazarCevirmenListesi));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtYazarid = new DevExpress.XtraEditors.TextEdit();
-            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnGüncelle = new DevExpress.XtraEditors.SimpleButton();
             this.txtYazarSoyad = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -48,7 +47,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtCvrmnid = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.btnListele1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnGüncelle1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet1 = new DevExpress.XtraEditors.SimpleButton();
@@ -75,7 +73,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.txtYazarid);
-            this.groupControl1.Controls.Add(this.btnListele);
             this.groupControl1.Controls.Add(this.btnGüncelle);
             this.groupControl1.Controls.Add(this.txtYazarSoyad);
             this.groupControl1.Controls.Add(this.labelControl7);
@@ -97,18 +94,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtYazarid.Name = "txtYazarid";
             this.txtYazarid.Size = new System.Drawing.Size(198, 20);
             this.txtYazarid.TabIndex = 0;
-            // 
-            // btnListele
-            // 
-            this.btnListele.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnListele.Appearance.Options.UseFont = true;
-            this.btnListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.ImageOptions.Image")));
-            this.btnListele.Location = new System.Drawing.Point(81, 309);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(198, 40);
-            this.btnListele.TabIndex = 6;
-            this.btnListele.Text = "Listele";
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnGüncelle
             // 
@@ -212,7 +197,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.txtCvrmnid);
             this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.btnListele1);
             this.groupControl2.Controls.Add(this.btnGüncelle1);
             this.groupControl2.Controls.Add(this.btnSil1);
             this.groupControl2.Controls.Add(this.btnKaydet1);
@@ -258,18 +242,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl6.Size = new System.Drawing.Size(81, 16);
             this.labelControl6.TabIndex = 16;
             this.labelControl6.Text = "ÇEVİRMEN İD:";
-            // 
-            // btnListele1
-            // 
-            this.btnListele1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnListele1.Appearance.Options.UseFont = true;
-            this.btnListele1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListele1.ImageOptions.Image")));
-            this.btnListele1.Location = new System.Drawing.Point(81, 319);
-            this.btnListele1.Name = "btnListele1";
-            this.btnListele1.Size = new System.Drawing.Size(198, 40);
-            this.btnListele1.TabIndex = 6;
-            this.btnListele1.Text = "Listele";
-            this.btnListele1.Click += new System.EventHandler(this.btnListele1_Click);
             // 
             // btnGüncelle1
             // 
@@ -376,7 +348,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtYazarid;
-        private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnGüncelle;
         private DevExpress.XtraEditors.TextEdit txtYazarSoyad;
         private DevExpress.XtraEditors.LabelControl labelControl7;
@@ -392,7 +363,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtCvrmnid;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.SimpleButton btnListele1;
         private DevExpress.XtraEditors.SimpleButton btnGüncelle1;
         private DevExpress.XtraEditors.SimpleButton btnSil1;
         private DevExpress.XtraEditors.SimpleButton btnKaydet1;
