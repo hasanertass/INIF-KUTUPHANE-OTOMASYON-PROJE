@@ -51,11 +51,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 if (Sorgulama.KontrolEt("YazarAdi", "Yazar", "Durum", txtYazarAdı.Text))
                 {
                     // aynı ise 
-                    MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
-                }
-                else
-                {
-                    //aynı değilse
+                    //MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir yazar vardır.\nLütfen tekrar deneyiniz.");
                     connection.Open();
                     MySqlCommand command = new MySqlCommand("insert into Yazar (YazarAdi,YazarSoyadi,Durum) values (@p1,@p2,1)", connection);
                     command.Parameters.AddWithValue("@p1", txtYazarAdı.Text);
@@ -63,6 +59,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //aynı değilse
+                    MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir yazar vardır.\nLütfen tekrar deneyiniz.");
+                    //connection.Open();
+                    //MySqlCommand command = new MySqlCommand("insert into Yazar (YazarAdi,YazarSoyadi,Durum) values (@p1,@p2,1)", connection);
+                    //command.Parameters.AddWithValue("@p1", txtYazarAdı.Text);
+                    //command.Parameters.AddWithValue("@p2", txtYazarSoyad.Text);
+                    //command.ExecuteNonQuery();
+                    //connection.Close();
+                    //MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }

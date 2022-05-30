@@ -88,7 +88,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
 
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            System.Diagnostics.Process.Start("");
+           ///System.Diagnostics.Process.Start("");
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

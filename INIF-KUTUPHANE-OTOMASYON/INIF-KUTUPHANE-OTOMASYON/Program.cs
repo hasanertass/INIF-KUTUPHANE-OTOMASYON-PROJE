@@ -16,7 +16,7 @@ namespace INIF_KUTUPHANE_OTOMASYON
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formlar.frmBölümListesi());
+            Application.Run(new Formlar.frmLoginForm());
         }
     }
 }
