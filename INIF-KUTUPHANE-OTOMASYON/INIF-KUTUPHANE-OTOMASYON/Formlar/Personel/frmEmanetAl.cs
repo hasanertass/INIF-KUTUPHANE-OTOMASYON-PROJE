@@ -198,5 +198,32 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
             List();
         }
+
+        private void txtKitapBarkod_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtKitapBarkod.Text.Length == 13)
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("select * from Odünç where Barkod=@p1 and OduncDurum=1", connection);
+                    command.Parameters.AddWithValue("@p1", txtKitapBarkod.Text);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        txtEmanetId.Text = reader[0].ToString();
+                        txtKartId.Text = reader[2].ToString();
+                        dateTimePicker1.Value = Convert.ToDateTime(reader[3].ToString());
+                        dateTimePicker2.Value = Convert.ToDateTime(reader[4].ToString());
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+        }
     }
 }

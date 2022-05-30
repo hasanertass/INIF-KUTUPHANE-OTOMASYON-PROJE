@@ -26,7 +26,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 if (Sorgulama.KontrolEt("PersonelTc", "Personel", "PersonelDurum", txttc.Text))
                 {
                     // aynı ise 
-                    MessageBox.Show("Girdiğiniz TC kimlik ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                    MessageBox.Show("Girdiğiniz TC kimlik ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

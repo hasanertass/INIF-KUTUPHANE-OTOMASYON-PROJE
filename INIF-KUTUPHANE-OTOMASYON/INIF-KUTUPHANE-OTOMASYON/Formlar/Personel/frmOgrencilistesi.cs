@@ -85,7 +85,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 if (Sorgulama.KontrolEt("Okulno", "Ogrenci", "OgrenciDurum", txtOkulNo.Text))
                 {
                     // aynı ise 
-                    MessageBox.Show("Girdiğiniz Okul Numarası ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                    MessageBox.Show("Girdiğiniz Okul Numarası ile eşdeğer başka bir öğrenci vardır.\nLütfen tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -171,7 +171,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             txtEmanet.Text = gridView1.GetFocusedRowCellValue("EmanetAdeti").ToString();
             txtOgrSifre.Text = gridView1.GetFocusedRowCellValue("OgrenciSifre").ToString();
             //lkpdtBolum.Properties.ValueMember = gridView1.GetFocusedRowCellValue("BolumAdi").ToString();
-            if (gridView1.GetFocusedRowCellValue("Cinsiyet").ToString() == "Erkek")
+            if (gridView1.GetFocusedRowCellValue("Cinsiyet").ToString() == "ERKEK")
             {
                 rdErkek.Checked = true;
             }

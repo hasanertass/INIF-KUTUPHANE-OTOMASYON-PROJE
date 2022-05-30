@@ -23,7 +23,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             try
             {
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("select Count(*) from Kitap",connection);
+                MySqlCommand command = new MySqlCommand("select Count(*) from Kitap where Durum2=1",connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {

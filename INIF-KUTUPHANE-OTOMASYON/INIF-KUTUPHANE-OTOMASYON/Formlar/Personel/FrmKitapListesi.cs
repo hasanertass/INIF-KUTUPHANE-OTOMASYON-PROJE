@@ -232,49 +232,57 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            //lkpdtKategori.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Kategori").ToString();
-            txtKitapid.Text = gridView1.GetFocusedRowCellValue("id").ToString();
-            txtBarkod.Text = gridView1.GetFocusedRowCellValue("Barkod").ToString();
-            txtISBN.Text = gridView1.GetFocusedRowCellValue("ISBN").ToString();
-            txtAd.Text = gridView1.GetFocusedRowCellValue("KitapAdi").ToString();
-            txtYayinYili.Text = gridView1.GetFocusedRowCellValue("YayinYili").ToString();
-            txtTür.Text = gridView1.GetFocusedRowCellValue("Tur").ToString();
-            txtkonum.Text = gridView1.GetFocusedRowCellValue("Konum").ToString();
-            txtsayfa.Text = gridView1.GetFocusedRowCellValue("SayfaSayisi").ToString();
-            txtstok.Text = gridView1.GetFocusedRowCellValue("Stok").ToString();
-            //lkpdtCevirmen.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Cevirmen").ToString();
-            //lkpdtyazar.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Yazar").ToString();
-            txtDil.Text = gridView1.GetFocusedRowCellValue("Dil").ToString();
-            txtOzet.Text = gridView1.GetFocusedRowCellValue("Ozet").ToString();
-            txtYayınEvi.Text = gridView1.GetFocusedRowCellValue("YayinEvi").ToString();
-            dateEdit2.Text = gridView1.GetFocusedRowCellValue("KayitTarihi").ToString();
-            if (gridView1.GetFocusedRowCellValue("Durum").ToString() == "True")
+            try
             {
-                rdZimmet.Checked = true;
+                //lkpdtKategori.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Kategori").ToString();
+                txtKitapid.Text = gridView1.GetFocusedRowCellValue("id").ToString();
+                txtBarkod.Text = gridView1.GetFocusedRowCellValue("Barkod").ToString();
+                txtISBN.Text = gridView1.GetFocusedRowCellValue("ISBN").ToString();
+                txtAd.Text = gridView1.GetFocusedRowCellValue("KitapAdi").ToString();
+                txtYayinYili.Text = gridView1.GetFocusedRowCellValue("YayinYili").ToString();
+                txtTür.Text = gridView1.GetFocusedRowCellValue("Tur").ToString();
+                txtkonum.Text = gridView1.GetFocusedRowCellValue("Konum").ToString();
+                txtsayfa.Text = gridView1.GetFocusedRowCellValue("SayfaSayisi").ToString();
+                txtstok.Text = gridView1.GetFocusedRowCellValue("Stok").ToString();
+                //lkpdtCevirmen.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Cevirmen").ToString();
+                //lkpdtyazar.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Yazar").ToString();
+                txtDil.Text = gridView1.GetFocusedRowCellValue("Dil").ToString();
+                txtOzet.Text = gridView1.GetFocusedRowCellValue("Ozet").ToString();
+                txtYayınEvi.Text = gridView1.GetFocusedRowCellValue("YayinEvi").ToString();
+                dateEdit2.Text = gridView1.GetFocusedRowCellValue("KayitTarihi").ToString();
+                if (gridView1.GetFocusedRowCellValue("Durum").ToString() == "True")
+                {
+                    rdZimmet.Checked = true;
+                }
+                else
+                {
+                    rdEmanet.Checked = true;
+                }
+                if (gridView1.GetFocusedRowCellValue("Durum2").ToString() == "True")
+                {
+                    rdMevcut.Checked = true;
+                }
+                else
+                {
+                    rdMevcutDegil.Checked = true;
+                }
             }
-            else
+            catch (Exception)
             {
-                rdEmanet.Checked = true;
+                return;
             }
-            if (gridView1.GetFocusedRowCellValue("Durum2").ToString() == "True")
-            {
-                rdMevcut.Checked = true;
-            }
-            else
-            {
-                rdMevcutDegil.Checked = true;
-            }
+
         }
 
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
             try
             {
-                if (rdEmanet.Checked == true)
+                if (rdZimmet.Checked == true)
                 {
                     durum = 1;
                 }
-                if (rdMevcutDegil.Checked == true)
+                if (rdMevcut.Checked == true)
                 {
                     durum2 = 1;
                 }

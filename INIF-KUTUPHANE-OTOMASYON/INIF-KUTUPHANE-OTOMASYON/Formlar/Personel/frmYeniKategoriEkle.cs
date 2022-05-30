@@ -32,7 +32,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 if (Sorgulama.KontrolEt("KategoriAdi", "Kategori", "Durum", txtKtgriAd.Text))
                 {
                     // aynı ise 
-                    MessageBox.Show("Girdiğiniz Kategori adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                    MessageBox.Show("Girdiğiniz Kategori adı ile eşdeğer başka bir kategori vardır.\nLütfen tekrar deneyiniz.");
                 }
                 else
                 {

@@ -146,7 +146,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 if (Sorgulama.KontrolEt("BolumAdi", "Bölüm", "Durum", txtad.Text))
                 {
                     //aynı ise
-                    MessageBox.Show("Girdiğiniz bölüm adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                    MessageBox.Show("Girdiğiniz bölüm adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

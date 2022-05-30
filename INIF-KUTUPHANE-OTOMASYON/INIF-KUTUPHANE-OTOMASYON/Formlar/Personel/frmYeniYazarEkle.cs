@@ -30,8 +30,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 if (Sorgulama.KontrolEt("YazarAdi", "Yazar", "Durum", txtYzrAd.Text))
                 {
-                    // aynı ise 
-                    MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
+                    // aynı ise
+                    MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir Yazar vardır.\nLütfen tekrar deneyiniz.");
+
                 }
                 else
                 {
@@ -43,6 +44,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Yeni Yazar Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
             }
             catch (Exception)

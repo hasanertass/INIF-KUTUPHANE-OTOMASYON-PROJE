@@ -67,13 +67,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                if (Sorgulama.KontrolEt("Okulno", "Ogrenci", "OgrenciDurum", txtOkulNo.Text))
-                {
-                    // aynı ise 
-                    MessageBox.Show("Girdiğiniz Okul Numarası ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.");
-                }
-                else
-                {
+                //if (Sorgulama.KontrolEt("OkulNo", "Ogrenci", "OgrenciDurum", txtOkulNo.Text))
+                //{
+                //    // aynı ise 
+                //    MessageBox.Show("Girdiğiniz Okul Numarası ile eşdeğer başka bir öğrenci vardır.\nLütfen tekrar deneyiniz.");
+
+                //}
+                //else
+                //{
                     int emanet = 0, durum = 1;
                     string cinsiyet = "ERKEK";
                     if (rdKadın.Checked == true)
@@ -100,7 +101,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
-                }
+                //}
             }
             catch (Exception)
             {
