@@ -220,6 +220,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void Liste()
         {
+            // listeleme yapma
             gridControl1.DataSource = ListeleTablolari(connection, "SELECT Kitap.id,Kitap.Barkod,Kitap.ISBN,Kitap.KitapAdi,Kitap.YayinYili," +
                             " Kitap.Tur, Kategori.KategoriAdi As Kategori, Kitap.KayitTarihi, Kitap.Konum, Kitap.SayfaSayisi, Kitap.Stok, " +
                             " CONCAT(Cevirmen.CevirmenAdi,' ', Cevirmen.CevirmenSoyadi) As Cevirmen " +
@@ -232,6 +233,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            // gridcontrol deki verileri textboxlara aktarma
             try
             {
                 //lkpdtKategori.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Kategori").ToString();
@@ -276,6 +278,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
+            // güncelleme işlemi yapma
             try
             {
                 if (rdZimmet.Checked == true)
@@ -350,6 +353,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         }
         private void btnSil_Click(object sender, EventArgs e)
         {
+            // silme işlemi yapma
             try
             {
                 connection.Open();

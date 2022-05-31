@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,16 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         public frmOgrencilistesi()
         {
             InitializeComponent();
+            Rectangle cozunurluk = new Rectangle();
+            cozunurluk = Screen.GetBounds(cozunurluk);
+            float YWidth = ((float)cozunurluk.Width / (float)1942);
+            float YHeight = ((float)cozunurluk.Height / (float)1071);
+            SizeF scale = new SizeF(YWidth, YHeight);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)//panel içindeyse this.Panel1.Controls
+            {
+                control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * YHeight * YWidth);
+            }
         }
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
         int durum = 0;
@@ -77,7 +88,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
 
         }
-
+        MailMessage mail = new MailMessage();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
@@ -115,6 +126,22 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
+                    ///
+                    ///
+                    string alici, konu = "İnif Kütüphane", ad;
+                    ad = txtOgrAd + " " + txtOgrSoyad;
+                    alici = txtOgrEposta.Text;
+                    string body = "Sevgili Öğrencimiz " + ad + "; \nkütüphanemize kayıt olduğunuz için çok teşekkür ederiz.\nhatırlatma olarak kütüphane kurallarımız aşağıdaki gibidir;\n\n\n1-)Elinizde aynı anda 3 kitap bulunabilir.\n2-)Özdünç aldığınız kitapların iade süresi 15 gündür.";
+                    mail.From = new MailAddress("ertas7843@gmail.com");
+                    mail.To.Add(alici);
+                    mail.Subject = konu;
+                    mail.Body = body;
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Credentials = new System.Net.NetworkCredential("ertas7843@gmail.com", "He15280780528");
+                    smtp.Port = 587;
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
                     connection.Open();
                     MySqlCommand command1 = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
                     MySqlDataAdapter da = new MySqlDataAdapter(command1);

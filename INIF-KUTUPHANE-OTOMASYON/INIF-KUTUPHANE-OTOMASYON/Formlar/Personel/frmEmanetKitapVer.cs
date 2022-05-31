@@ -31,6 +31,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             //gridcontrolde veri listeleme
             List();
+            DateTime bugun = System.DateTime.Today.AddDays(15);
+            dateTimePicker2.Value=bugun;
         }
         private void List()
         {

@@ -17,6 +17,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         public frmBölümListesi()
         {
             InitializeComponent();
+            // çözünürlük ayarlama
+            Rectangle cozunurluk = new Rectangle();
+            cozunurluk = Screen.GetBounds(cozunurluk);
+            float YWidth = ((float)cozunurluk.Width / (float)1942);
+            float YHeight = ((float)cozunurluk.Height / (float)1071);
+            SizeF scale = new SizeF(YWidth, YHeight);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)//panel içindeyse this.Panel1.Controls
+            {
+                control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * YHeight * YWidth);
+            }
         }
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
         private void frmBölümListesi_Load(object sender, EventArgs e)
@@ -75,6 +86,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
             }
             connection.Close();
+            // en çok üye olan bölüm
             connection.Open();
             command = new MySqlCommand("SELECT Bölüm.BolumAdi,COUNT(Ogrenci.BolumId) FROM Ogrenci INNER JOIN Bölüm ON Bölüm.id=Ogrenci.BolumId WHERE Ogrenci.OgrenciDurum=1 GROUP BY Bölüm.BolumAdi ORDER BY COUNT(Ogrenci.BolumId) DESC", connection);
             reader = command.ExecuteReader();
@@ -96,6 +108,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
             }
             connection.Close();
+            // en az üye olan bölüm
             connection.Open();
             command = new MySqlCommand("SELECT Bölüm.BolumAdi,COUNT(Ogrenci.BolumId) FROM Ogrenci INNER JOIN Bölüm ON Bölüm.id=Ogrenci.BolumId WHERE Ogrenci.OgrenciDurum=1 GROUP BY Bölüm.BolumAdi ORDER BY COUNT(Ogrenci.BolumId) asc", connection);
             reader = command.ExecuteReader();
@@ -122,6 +135,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void List()
         {
+            // listeleme işlemi
             try
             {
                 connection.Open();
@@ -141,9 +155,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            // ekleme işlemi 
             try
             {
-                if (Sorgulama.KontrolEt("BolumAdi", "Bölüm", "Durum", txtad.Text))
+                if (Sorgulama.KontrolEt("BolumAdi", "Bölüm", "Durum", txtad.Text)) // aynı ada sahip başka bir bölümün olup olmadığını kontrol eder
                 {
                     //aynı ise
                     MessageBox.Show("Girdiğiniz bölüm adı ile eşdeğer başka bir bölüm vardır.\nLütfen tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -173,6 +188,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            // silme işlemi
             try
             {
                 connection.Open();
@@ -193,6 +209,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void btnGüncelle_Click(object sender, EventArgs e)
         {
+            // güncelleme işlemi
             try
             {
                 connection.Open();
@@ -214,6 +231,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            // gridviewdeki verileri textboxlara aktarma
             txtid.Text = gridView1.GetFocusedRowCellValue("id").ToString();
             txtad.Text = gridView1.GetFocusedRowCellValue("BolumAdi").ToString();
         }

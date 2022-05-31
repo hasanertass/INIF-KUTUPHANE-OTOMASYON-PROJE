@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,7 +63,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             }
 
         }
-
+        MailMessage mail = new MailMessage();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
@@ -75,32 +76,46 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 //}
                 //else
                 //{
-                    int emanet = 0, durum = 1;
-                    string cinsiyet = "ERKEK";
-                    if (rdKadın.Checked == true)
-                    {
-                        cinsiyet = "KADIN";
-                    }
-                    else if (rdErkek.Checked == true)
-                    {
-                        cinsiyet = "ERKEK";
-                    }
-                    connection.Open();
-                    MySqlCommand command = new MySqlCommand("insert into Ogrenci (OkulNo,OgrenciAdi,OgrenciSoyadi,OgrenciTelefon,OgrenciEposta,KartId,BolumId,Cinsiyet,EmanetAdeti,OgrenciŞifre,OgrenciDurum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", connection);
-                    command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
-                    command.Parameters.AddWithValue("@p2", txtOgrAd.Text);
-                    command.Parameters.AddWithValue("@p3", txtOgrSoyad.Text);
-                    command.Parameters.AddWithValue("@p4", txtOgrTel.Text);
-                    command.Parameters.AddWithValue("@p5", txtOgrEposta.Text);
-                    command.Parameters.AddWithValue("@p6", txtOgrKartId.Text);
-                    command.Parameters.AddWithValue("@p7", lkpdtBolum.EditValue);
-                    command.Parameters.AddWithValue("@p8", cinsiyet);
-                    command.Parameters.AddWithValue("@p9", emanet);
-                    command.Parameters.AddWithValue("@p10", txtOgrSifre.Text);
-                    command.Parameters.AddWithValue("@p11", durum);
-                    command.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
+                int emanet = 0, durum = 1;
+                string cinsiyet = "ERKEK";
+                if (rdKadın.Checked == true)
+                {
+                    cinsiyet = "KADIN";
+                }
+                else if (rdErkek.Checked == true)
+                {
+                    cinsiyet = "ERKEK";
+                }
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("insert into Ogrenci (OkulNo,OgrenciAdi,OgrenciSoyadi,OgrenciTelefon,OgrenciEposta,KartId,BolumId,Cinsiyet,EmanetAdeti,OgrenciŞifre,OgrenciDurum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11)", connection);
+                command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
+                command.Parameters.AddWithValue("@p2", txtOgrAd.Text);
+                command.Parameters.AddWithValue("@p3", txtOgrSoyad.Text);
+                command.Parameters.AddWithValue("@p4", txtOgrTel.Text);
+                command.Parameters.AddWithValue("@p5", txtOgrEposta.Text);
+                command.Parameters.AddWithValue("@p6", txtOgrKartId.Text);
+                command.Parameters.AddWithValue("@p7", lkpdtBolum.EditValue);
+                command.Parameters.AddWithValue("@p8", cinsiyet);
+                command.Parameters.AddWithValue("@p9", emanet);
+                command.Parameters.AddWithValue("@p10", txtOgrSifre.Text);
+                command.Parameters.AddWithValue("@p11", durum);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
+                string alici, konu = "İnif Kütüphane", ad;
+                ad = txtOgrAd + " " + txtOgrSoyad;
+                alici = txtOgrEposta.Text;
+                string body = "Sevgili Öğrencimiz " + ad + "; \nkütüphanemize kayıt olduğunuz için çok teşekkür ederiz.\nhatırlatma olarak kütüphane kurallarımız aşağıdaki gibidir;\n\n\n1-)Elinizde aynı anda 3 kitap bulunabilir.\n2-)Özdünç aldığınız kitapların iade süresi 15 gündür.";
+                mail.From = new MailAddress("ertas7843@gmail.com");
+                mail.To.Add(alici);
+                mail.Subject = konu;
+                mail.Body = body;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Credentials = new System.Net.NetworkCredential("ertas7843@gmail.com", "He15280780528");
+                smtp.Port = 587;
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
                 //}
             }
             catch (Exception)

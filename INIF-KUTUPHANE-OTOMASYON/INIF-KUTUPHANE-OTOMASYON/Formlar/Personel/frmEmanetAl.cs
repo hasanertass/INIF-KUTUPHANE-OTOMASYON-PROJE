@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
     {
         public frmEmanetAl()
         {
+            //çözünürlük ayarlama
             InitializeComponent();
+            Rectangle cozunurluk = new Rectangle();
+            cozunurluk = Screen.GetBounds(cozunurluk);
+            float YWidth = ((float)cozunurluk.Width / (float)1942);
+            float YHeight = ((float)cozunurluk.Height / (float)1071);
+            SizeF scale = new SizeF(YWidth, YHeight);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)//panel içindeyse this.Panel1.Controls
+            {
+                control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * YHeight * YWidth);
+            }
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -36,7 +48,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private void frmEmanetAl_Load(object sender, EventArgs e)
         {
             List();
-
+            dateTimePicker2.Value = System.DateTime.Now;
         }
 
         private void List()
@@ -58,7 +70,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 return;
             }
         }
-
+        MailMessage mail = new MailMessage();
         int durum = 0;
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -66,7 +78,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 if (txtDogrulama.Text == txtKartId.Text)
                 {
-                    connection.Open();
+                    connection.Open();//emanet alınacak kitabın stoğu kontrol ediliyor
                     MySqlCommand command1 = new MySqlCommand("select Stok from Kitap where Barkod=@p1", connection);
                     command1.Parameters.AddWithValue("@p1", txtKitapBarkod.Text);
                     MySqlDataReader reader = command1.ExecuteReader();
@@ -78,7 +90,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     int stok = Convert.ToInt32(labelControl8.Text);
                     if (stok == 0)
                     {
-                        connection.Open();
+                        connection.Open(); // stok sıfıra eşitse hem stok 1 artırılıyor hemde durumu 1e dönüştürüloyor.
                         MySqlCommand command2 = new MySqlCommand("Update Kitap Set durum=1,stok=@p2 where Barkod=@p1", connection);
                         command2.Parameters.AddWithValue("@p1", txtKitapBarkod.Text);
                         command2.Parameters.AddWithValue("@p2", stok + 1);
@@ -88,7 +100,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     if (stok >= 1)
                     {
                         stok++;
-                        connection.Open();
+                        connection.Open(); // stok 1 ve 1den fazlaysa sadece stok 1 artırılıyor
                         MySqlCommand command3 = new MySqlCommand("Update Kitap Set stok=@p1 where Barkod=@p2", connection);
                         command3.Parameters.AddWithValue("@p1", stok);
                         command3.Parameters.AddWithValue("@p2", txtKitapBarkod.Text);
@@ -99,7 +111,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     DateTime date1 = Convert.ToDateTime(dateTimePicker2.Text);
                     connection.Open();
                     int durum = 0;
-                    MySqlCommand command = new MySqlCommand("update Odünç set Barkod=@u1,KartId=@u2,AlisTarihi=@u3,TeslimTarihi=@u4,OduncDurum=@u5 where OduncId=@u6", connection);
+                    MySqlCommand command = new MySqlCommand("update Odünç set Barkod=@u1,KartId=@u2,AlisTarihi=@u3,TeslimTarihi=@u4,OduncDurum=@u5 where OduncId=@u6", connection); // ödünç alınan kitabn ödünç tablosundaki durumu 0 yapılıyor
                     command.Parameters.AddWithValue("@u1", txtKitapBarkod.Text);
                     command.Parameters.AddWithValue("@u2", txtKartId.Text);
                     command.Parameters.AddWithValue("@u3", date.ToString("yyyy-MM-dd"));
@@ -122,10 +134,37 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     connection.Open();
                     emanet = Convert.ToInt32(labelControl9.Text);
                     emanet--;
-                    MySqlCommand command5 = new MySqlCommand("update Ogrenci set EmanetAdeti=@p1 where KartId=@p2", connection);
+                    MySqlCommand command5 = new MySqlCommand("update Ogrenci set EmanetAdeti=@p1 where KartId=@p2", connection); // öğrencinin emanet miktarı bi azaltılıyor.
                     command5.Parameters.AddWithValue("@p1", emanet);
                     command5.Parameters.AddWithValue("@p2", txtKartId.Text);
                     command5.ExecuteNonQuery();
+                    connection.Close();
+                    string alici, konu = "İnif Kütüphane", ad;
+                    DateTime dateTime = DateTime.Now;
+                    connection.Open();// teşekkür maili atma
+                    command = new MySqlCommand("select Concat(Ogrenci.OgrenciAdi,' ', Ogrenci.OgrenciSoyadi) as Ad ,Odünç.KartId,Ogrenci.OgrenciEposta,Odünç.AlisTarihi from Odünç INNER JOIN Ogrenci on Ogrenci.KartId = Odünç.KartId where Odünç.KartId=@p1", connection);
+                    command.Parameters.AddWithValue("@p1", txtKartId.Text);
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        ad = reader[0].ToString();
+                        alici = reader[2].ToString();
+                        dateTime = Convert.ToDateTime(reader[3].ToString());
+                        string body = "Sevgili Öğrencimiz " + ad + "; \n" + dateTime.ToString("dd-MMMM-yyyy-ddddd") + " günü kütüphanemizden almış olduğunuz kitabı teslim ettiğiniz için teşekkür ederiz.";
+
+
+                        mail.From = new MailAddress("ertas7843@gmail.com");
+                        mail.To.Add(alici);
+                        mail.Subject = konu;
+                        mail.Body = body;
+                        SmtpClient smtp = new SmtpClient();
+                        smtp.Credentials = new System.Net.NetworkCredential("ertas7843@gmail.com", "He15280780528");
+                        smtp.Port = 587;
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+
+                    }
                     connection.Close();
                     MessageBox.Show("Emanet Kitap Alınmıştır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -146,31 +185,36 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+            // gridviewdeki veriler textboxlara aktarılıyor
             try
             {
-                txtEmanetId.Text = gridView1.GetFocusedRowCellValue("OduncId").ToString();
-                txtKitapBarkod.Text = gridView1.GetFocusedRowCellValue("Barkod").ToString();
-                txtKartId.Text = gridView1.GetFocusedRowCellValue("KartId").ToString();
-                dateTimePicker1.Text = gridView1.GetFocusedRowCellValue("AlisTarihi").ToString();
-                dateTimePicker2.Text = gridView1.GetFocusedRowCellValue("TeslimTarihi").ToString();
-                if (gridView1.GetFocusedRowCellValue("OduncDurum").ToString() == "True")
+                if (gridView1.GetFocusedRowCellValue("OduncId").ToString() == "")
                 {
-                    rdEmanet.Checked = true;
-                }
-                else
-                {
-                    rdZimmet.Checked = true;
+                    txtEmanetId.Text = gridView1.GetFocusedRowCellValue("OduncId").ToString();
+                    txtKitapBarkod.Text = gridView1.GetFocusedRowCellValue("Barkod").ToString();
+                    txtKartId.Text = gridView1.GetFocusedRowCellValue("KartId").ToString();
+                    dateTimePicker1.Text = gridView1.GetFocusedRowCellValue("AlisTarihi").ToString();
+                    dateTimePicker2.Text = gridView1.GetFocusedRowCellValue("TeslimTarihi").ToString();
+                    if (gridView1.GetFocusedRowCellValue("OduncDurum").ToString() == "True")
+                    {
+                        rdEmanet.Checked = true;
+                    }
+                    else
+                    {
+                        rdZimmet.Checked = true;
+                    }
                 }
             }
             catch (Exception)
             {
-
+                return;
             }
 
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            // Silme işlemi
             try
             {
                 DateTime date = Convert.ToDateTime(dateTimePicker1.Text);
@@ -201,6 +245,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void txtKitapBarkod_EditValueChanged(object sender, EventArgs e)
         {
+            // barkod textboxının değeri değiştiğinde girilen veriye göre ödünç tablsoundaki veriyi bulma
             try
             {
                 if (txtKitapBarkod.Text.Length == 13)
