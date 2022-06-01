@@ -48,6 +48,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     connection.Close();
                     MessageBox.Show("Yeni Bölüm Eklenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                this.Close();
             }
             catch (Exception)
             {

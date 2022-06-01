@@ -45,6 +45,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     connection.Close();
                     MessageBox.Show("Kategori Kaydedilmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                this.Close();
             }
             catch (Exception)
             {

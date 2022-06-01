@@ -51,6 +51,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Yeni Personel Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             catch (Exception)

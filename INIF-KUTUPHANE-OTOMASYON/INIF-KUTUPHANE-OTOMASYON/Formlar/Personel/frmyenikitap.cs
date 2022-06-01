@@ -157,12 +157,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 komut.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Ekleme İşlemi Gerçekleşmiştir");
+                this.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
             }
+            
         }
     }
 }

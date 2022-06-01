@@ -20,7 +20,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Ogrenci
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         MySqlConnection connection = new MySqlConnection(@"Server=172.21.54.3; uid=yazilim16; pwd=Yazılım.16;database=yazilim16");
         private void panel1_Paint(object sender, PaintEventArgs e)

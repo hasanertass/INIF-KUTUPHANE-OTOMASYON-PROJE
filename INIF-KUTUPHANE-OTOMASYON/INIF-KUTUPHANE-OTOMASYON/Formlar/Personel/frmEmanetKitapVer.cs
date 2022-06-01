@@ -25,7 +25,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         MailMessage mail = new MailMessage();
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         private void frmEmanetKitapVer_Load(object sender, EventArgs e)
         {

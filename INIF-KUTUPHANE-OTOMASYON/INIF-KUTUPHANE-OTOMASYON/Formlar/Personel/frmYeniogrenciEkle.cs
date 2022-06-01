@@ -119,7 +119,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 //}
-                this.Hide();
+                this.Close();
             }
             catch (Exception)
             {
