@@ -60,7 +60,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 else
                 {
-                    labelControl15.Text = "yönetim Bilişim\nSistemleri";
+                    labelControl15.Text = "Yönetim Bilişim\nSistemleri";
                 }
             }
             connection.Close();
@@ -82,7 +82,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 else
                 {
-                    labelControl17.Text = "yönetim Bilişim\nSistemleri";
+                    labelControl17.Text = "Yönetim Bilişim\nSistemleri";
                 }
             }
             connection.Close();
@@ -97,14 +97,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             if (labelControl19.Text.Length > 7)
             {
                 Font font = labelControl15.Font;
-                labelControl19.Font = new Font(font.FontFamily, font.Size - 16, font.Style);
+                labelControl19.Font = new Font(font.FontFamily, font.Size - 0, font.Style);
                 if (labelControl19.Text == "Uluslararası Ticaret Ve İşletmecilik")
                 {
                     labelControl19.Text = "Uluslararası Ticaret\n Ve İşletmecilik";
                 }
                 else
                 {
-                    labelControl19.Text = "yönetim Bilişim\nSistemleri";
+                    labelControl19.Text = "Yönetim Bilişim\nSistemleri";
                 }
             }
             connection.Close();
@@ -119,20 +119,18 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             if (labelControl21.Text.Length > 7)
             {
                 Font font = labelControl15.Font;
-                labelControl21.Font = new Font(font.FontFamily, font.Size - 16, font.Style);
+                labelControl21.Font = new Font(font.FontFamily, font.Size - 0, font.Style);
                 if (labelControl21.Text == "Uluslararası Ticaret Ve İşletmecilik")
                 {
                     labelControl21.Text = "Uluslararası Ticaret\n Ve İşletmecilik";
                 }
                 else
                 {
-                    labelControl21.Text = "yönetim Bilişim\nSistemleri";
+                    labelControl21.Text = "Yönetim Bilişim\nSistemleri";
                 }
             }
             connection.Close();
-
         }
-
         private void List()
         {
             // listeleme işlemi
@@ -151,7 +149,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 return;
                 connection.Close();
             }
-
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -176,28 +173,32 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     MessageBox.Show("Yeni Bölüm Eklenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     List();
                 }
-
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
             }
-
         }
-
         private void btnSil_Click(object sender, EventArgs e)
         {
             // silme işlemi
             try
-            {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("Update Bölüm Set Durum=0 where id=@p1", connection);
-                command.Parameters.AddWithValue("@p1", txtid.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Geçerli Bölüm Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                List();
+            {       
+                if (SilmeSorgu.Kontrol("Select BolumId from Ogrenci where OgrenciDurum=1",txtid.Text))
+                {
+                    MessageBox.Show("Geçerli bölüme ait öğrenci olduğu için silinemez.\nLütfen önce o bölümdeki öğrencileri siliniz.","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("Update Bölüm Set Durum=0 where id=@p1", connection);
+                    command.Parameters.AddWithValue("@p1", txtid.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Geçerli Bölüm Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    List();
+                }
             }
             catch (Exception)
             {

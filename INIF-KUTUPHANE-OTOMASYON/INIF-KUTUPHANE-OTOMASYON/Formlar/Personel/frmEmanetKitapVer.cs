@@ -68,7 +68,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     adet = Convert.ToInt32(reader1[1].ToString());
                 }
                 connection.Close();
-                if (adet < 3)
+                if (adet <= 3)
                 {
                     connection.Open();
                     MySqlCommand command1 = new MySqlCommand("select stok from Kitap Where Barkod=@p1", connection);

@@ -35,7 +35,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             {
                 //gridcontrolde veri listeleme
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("select * from Odünç where OduncDurum=1", connection);
+                MySqlCommand command = new MySqlCommand("SELECT Odünç.Barkod,Kitap.KitapAdi,Kitap.SayfaSayisi,Kitap.YayinEvi,Kategori.KategoriAdi,Concat(Yazar.YazarAdi,' ',Yazar.YazarSoyadi) as Yazar,Concat(Cevirmen.CevirmenAdi,' ',Cevirmen.CevirmenSoyadi) as Cevirmen,Ogrenci.OkulNo,Concat(Ogrenci.OgrenciAdi,' ',Ogrenci.OgrenciSoyadi) AS Ogrenci,Odünç.AlisTarihi,Odünç.TeslimTarihi,Odünç.OduncDurum FROM Odünç INNER JOIN Kitap on Kitap.Barkod=Odünç.Barkod INNER JOIN Kategori ON Kategori.id=Kitap.Kategori INNER JOIN Yazar ON Yazar.id=Kitap.Yazar INNER JOIN Cevirmen on Cevirmen.id=Kitap.Cevirmen INNER JOIN Ogrenci ON Ogrenci.KartId=Odünç.KartId", connection);
                 MySqlDataAdapter da = new MySqlDataAdapter(command);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

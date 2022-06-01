@@ -88,12 +88,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("update Kategori set durum=0 where id=@p2", connection);
-                command.Parameters.AddWithValue("@p2", txtKtgrid.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Kategori Silinmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (SilmeSorgu.Kontrol("Select Kategori from Kitap Where Durum2=1", txtKtgrid.Text))
+                {
+                    MessageBox.Show("Geçerli kategoriye ait kitap olduğu için silinemez.\nLütfen önce o kategoriye ait kitapları siliniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("update Kategori set durum=0 where id=@p2", connection);
+                    command.Parameters.AddWithValue("@p2", txtKtgrid.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Kategori Silinmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception)
             {

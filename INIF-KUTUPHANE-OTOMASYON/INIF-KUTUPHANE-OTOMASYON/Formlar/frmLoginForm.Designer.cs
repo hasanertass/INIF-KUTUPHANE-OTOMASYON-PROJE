@@ -31,8 +31,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginForm));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,12 +40,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtKullaniciAdi = new DevExpress.XtraEditors.TextEdit();
             this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,6 +102,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(153, 20);
             this.txtSifre.TabIndex = 1;
+            this.txtSifre.UseSystemPasswordChar = true;
             this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
             // 
             // labelControl2
@@ -146,19 +144,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.label2.TabIndex = 16;
             this.label2.Text = "Not : Sisteme kayıtlı bilgileriniz ile giriş yapın";
             // 
-            // txtKullaniciAdi
-            // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(125, 203);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(151, 20);
-            toolTipItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem2.Text = "Personel girişi için TC kimlik numaralarını öğrenci girişi için okul numaralarını" +
-    " girmeleri gerekir.";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.txtKullaniciAdi.SuperTip = superToolTip2;
-            this.txtKullaniciAdi.TabIndex = 0;
-            this.txtKullaniciAdi.EditValueChanged += new System.EventHandler(this.txtKullaniciAdi_EditValueChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -170,6 +155,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.label3.Text = "*** Kullanıcı adı veya şifre hatalıdır !";
             this.label3.Visible = false;
             // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(123, 202);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(153, 20);
+            this.txtKullaniciAdi.TabIndex = 0;
+            // 
             // frmLoginForm
             // 
             this.AcceptButton = this.simpleButton1;
@@ -177,8 +169,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(587, 330);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -196,7 +188,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Load += new System.EventHandler(this.frmLoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,8 +204,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit txtKullaniciAdi;
         private DevExpress.Utils.ToolTipController toolTipController1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
     }
 }

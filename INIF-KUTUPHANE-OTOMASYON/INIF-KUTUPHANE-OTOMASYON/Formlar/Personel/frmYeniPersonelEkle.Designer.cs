@@ -43,11 +43,16 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.rdErkek = new System.Windows.Forms.RadioButton();
             this.rdKadın = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdKütüphane = new System.Windows.Forms.RadioButton();
+            this.rdOgrenciIşleri = new System.Windows.Forms.RadioButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsifre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtadi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttc.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -76,7 +81,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnKaydet.Size = new System.Drawing.Size(62, 49);
-            this.btnKaydet.TabIndex = 7;
+            this.btnKaydet.TabIndex = 6;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -85,7 +90,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtsifre.Location = new System.Drawing.Point(152, 199);
             this.txtsifre.Name = "txtsifre";
             this.txtsifre.Size = new System.Drawing.Size(198, 20);
-            this.txtsifre.TabIndex = 5;
+            this.txtsifre.TabIndex = 3;
             // 
             // labelControl8
             // 
@@ -93,7 +98,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(83, 203);
+            this.labelControl8.Location = new System.Drawing.Point(106, 203);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(43, 16);
             this.labelControl8.TabIndex = 196;
@@ -105,7 +110,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(78, 236);
+            this.labelControl5.Location = new System.Drawing.Point(86, 236);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(63, 16);
             this.labelControl5.TabIndex = 190;
@@ -143,7 +148,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(57, 140);
+            this.labelControl3.Location = new System.Drawing.Point(60, 140);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(89, 16);
             this.labelControl3.TabIndex = 188;
@@ -162,7 +167,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(57, 108);
+            this.labelControl2.Location = new System.Drawing.Point(60, 108);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(89, 16);
             this.labelControl2.TabIndex = 187;
@@ -173,10 +178,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdErkek.AutoSize = true;
             this.rdErkek.BackColor = System.Drawing.Color.Transparent;
             this.rdErkek.ForeColor = System.Drawing.Color.White;
-            this.rdErkek.Location = new System.Drawing.Point(165, 235);
+            this.rdErkek.Location = new System.Drawing.Point(158, 235);
             this.rdErkek.Name = "rdErkek";
             this.rdErkek.Size = new System.Drawing.Size(61, 17);
-            this.rdErkek.TabIndex = 203;
+            this.rdErkek.TabIndex = 4;
             this.rdErkek.TabStop = true;
             this.rdErkek.Text = "ERKEK";
             this.rdErkek.UseVisualStyleBackColor = false;
@@ -186,13 +191,57 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdKadın.AutoSize = true;
             this.rdKadın.BackColor = System.Drawing.Color.Transparent;
             this.rdKadın.ForeColor = System.Drawing.Color.White;
-            this.rdKadın.Location = new System.Drawing.Point(272, 234);
+            this.rdKadın.Location = new System.Drawing.Point(267, 234);
             this.rdKadın.Name = "rdKadın";
             this.rdKadın.Size = new System.Drawing.Size(58, 17);
-            this.rdKadın.TabIndex = 204;
+            this.rdKadın.TabIndex = 5;
             this.rdKadın.TabStop = true;
             this.rdKadın.Text = "KADIN";
             this.rdKadın.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.rdKütüphane);
+            this.panel1.Controls.Add(this.rdOgrenciIşleri);
+            this.panel1.Location = new System.Drawing.Point(155, 255);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(198, 26);
+            this.panel1.TabIndex = 206;
+            // 
+            // rdKütüphane
+            // 
+            this.rdKütüphane.AutoSize = true;
+            this.rdKütüphane.ForeColor = System.Drawing.Color.White;
+            this.rdKütüphane.Location = new System.Drawing.Point(111, 3);
+            this.rdKütüphane.Name = "rdKütüphane";
+            this.rdKütüphane.Size = new System.Drawing.Size(92, 17);
+            this.rdKütüphane.TabIndex = 1;
+            this.rdKütüphane.Text = "KÜTÜPHANE";
+            this.rdKütüphane.UseVisualStyleBackColor = true;
+            // 
+            // rdOgrenciIşleri
+            // 
+            this.rdOgrenciIşleri.AutoSize = true;
+            this.rdOgrenciIşleri.ForeColor = System.Drawing.Color.White;
+            this.rdOgrenciIşleri.Location = new System.Drawing.Point(3, 3);
+            this.rdOgrenciIşleri.Name = "rdOgrenciIşleri";
+            this.rdOgrenciIşleri.Size = new System.Drawing.Size(111, 17);
+            this.rdOgrenciIşleri.TabIndex = 0;
+            this.rdOgrenciIşleri.Text = "ÖĞRENCİ İŞLERİ";
+            this.rdOgrenciIşleri.UseVisualStyleBackColor = true;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(44, 258);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(105, 16);
+            this.labelControl1.TabIndex = 205;
+            this.labelControl1.Text = "PERSONEL TÜRÜ :";
             // 
             // frmYeniPersonelEkle
             // 
@@ -201,6 +250,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(465, 310);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.rdKadın);
             this.Controls.Add(this.rdErkek);
             this.Controls.Add(this.pictureBox1);
@@ -224,6 +275,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.txtsoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtadi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttc.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +297,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.RadioButton rdErkek;
         private System.Windows.Forms.RadioButton rdKadın;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton rdKütüphane;
+        private System.Windows.Forms.RadioButton rdOgrenciIşleri;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

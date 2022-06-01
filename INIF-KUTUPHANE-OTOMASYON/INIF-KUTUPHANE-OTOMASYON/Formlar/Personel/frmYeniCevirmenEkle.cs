@@ -23,7 +23,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                if (Sorgulama.KontrolEt("CevirmenAdi", "Cevrimen", "CevirmenDurum", txtCvrmnAd.Text))
+                if (Sorgulama.KontrolEt("CevirmenAdi", "Cevirmen", "CevirmenDurum", txtCvrmnAd.Text))
                 {
                     // aynı ise
                     MessageBox.Show("Girdiğiniz çevirmen adı ile eşdeğer başka bir çevirmen vardır.\nLütfen tekrar deneyiniz.");

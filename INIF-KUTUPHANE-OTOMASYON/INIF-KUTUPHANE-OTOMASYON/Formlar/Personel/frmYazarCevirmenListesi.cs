@@ -59,7 +59,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             try
             {
                 string text = txtYazarAdı + " " + txtYazarSoyad;
-                if (Sorgulama.KontrolEt("Concat(YazarAdi,' ',YazarSoyadi)", "Yazar", "Durum",text))
+                if (Sorgulama.KontrolEt("Concat(YazarAdi,' ',YazarSoyadi)", "Yazar", "Durum", text))
                 {
                     // aynı ise 
                     MessageBox.Show("Girdiğiniz yazar adı ile eşdeğer başka bir yazar vardır.\nLütfen tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -93,7 +93,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 if (Sorgulama.KontrolEt("Concat(CevirmenAdi,' ',CevirmenSoyadi)", "Cevirmen", "CevirmenDurum", text))
                 {
                     // aynı ise
-                    MessageBox.Show("Girdiğiniz çevirmen adı ile eşdeğer başka bir çevirmen vardır.\nLütfen tekrar deneyiniz.","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Girdiğiniz çevirmen adı ile eşdeğer başka bir çevirmen vardır.\nLütfen tekrar deneyiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -155,12 +155,19 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("Update Yazar set durum=0 where id=@p1", connection);
-                command.Parameters.AddWithValue("@p1", txtYazarid.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Geçerli Yazar Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (SilmeSorgu.Kontrol("Select Yazar from Kitap where Durum2=1", txtYazarid.Text))
+                {
+                    MessageBox.Show("Geçerli yazarın ait kütüphanede kitapları bulunduğu için silinemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("Update Yazar set durum=0 where id=@p1", connection);
+                    command.Parameters.AddWithValue("@p1", txtYazarid.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Geçerli Yazar Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception)
             {
@@ -174,12 +181,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         {
             try
             {
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("Update Cevirmen set CevirmenDurum=0 where id=@p1", connection);
-                command.Parameters.AddWithValue("@p1", txtCvrmnid.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Geçerli Çevirmen Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (SilmeSorgu.Kontrol("Select Cevirmen from Kitap where Durum2=1", txtCvrmnid.Text))
+                {
+                    MessageBox.Show("Kütüphanede Geçerli çevirmene ait  kitapları bulunduğu için silinemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("Update Cevirmen set CevirmenDurum=0 where id=@p1", connection);
+                    command.Parameters.AddWithValue("@p1", txtCvrmnid.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Geçerli Çevirmen Silinmiştir", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
             catch (Exception)
             {

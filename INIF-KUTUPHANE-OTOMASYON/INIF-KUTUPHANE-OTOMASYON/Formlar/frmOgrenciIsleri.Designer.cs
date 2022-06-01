@@ -29,7 +29,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOgrenciIsleri));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
@@ -38,6 +37,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.txtOkulNo = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.lblEmanet = new System.Windows.Forms.Label();
             this.lblCinsiyet = new System.Windows.Forms.Label();
             this.lblBölüm = new System.Windows.Forms.Label();
@@ -54,12 +54,15 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.pdfViewer1 = new DevExpress.XtraPdfViewer.PdfViewer();
+            this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -126,6 +129,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textEdit1);
             this.groupBox1.Controls.Add(this.lblEmanet);
             this.groupBox1.Controls.Add(this.lblCinsiyet);
             this.groupBox1.Controls.Add(this.lblBölüm);
@@ -148,6 +152,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Bilgileri";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(10, 157);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(167, 20);
+            this.textEdit1.TabIndex = 9;
+            this.textEdit1.Visible = false;
             // 
             // lblEmanet
             // 
@@ -172,20 +184,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // lblBölüm
             // 
             this.lblBölüm.AutoSize = true;
-            this.lblBölüm.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBölüm.Location = new System.Drawing.Point(78, 305);
+            this.lblBölüm.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBölüm.Location = new System.Drawing.Point(71, 305);
             this.lblBölüm.Name = "lblBölüm";
-            this.lblBölüm.Size = new System.Drawing.Size(84, 23);
+            this.lblBölüm.Size = new System.Drawing.Size(70, 19);
             this.lblBölüm.TabIndex = 38;
             this.lblBölüm.Text = "Okul No :";
             // 
             // lblPosta
             // 
             this.lblPosta.AutoSize = true;
-            this.lblPosta.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPosta.Location = new System.Drawing.Point(86, 245);
+            this.lblPosta.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPosta.Location = new System.Drawing.Point(84, 248);
             this.lblPosta.Name = "lblPosta";
-            this.lblPosta.Size = new System.Drawing.Size(84, 23);
+            this.lblPosta.Size = new System.Drawing.Size(70, 19);
             this.lblPosta.TabIndex = 20;
             this.lblPosta.Text = "Okul No :";
             // 
@@ -203,7 +215,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTel.Location = new System.Drawing.Point(86, 181);
+            this.lblTel.Location = new System.Drawing.Point(84, 191);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(84, 23);
             this.lblTel.TabIndex = 19;
@@ -223,7 +235,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.lblSoyadi.AutoSize = true;
             this.lblSoyadi.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyadi.Location = new System.Drawing.Point(86, 122);
+            this.lblSoyadi.Location = new System.Drawing.Point(77, 129);
             this.lblSoyadi.Name = "lblSoyadi";
             this.lblSoyadi.Size = new System.Drawing.Size(84, 23);
             this.lblSoyadi.TabIndex = 18;
@@ -233,7 +245,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(21, 308);
+            this.labelControl12.Location = new System.Drawing.Point(10, 308);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(63, 19);
             this.labelControl12.TabIndex = 33;
@@ -243,7 +255,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.lblAdi.AutoSize = true;
             this.lblAdi.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdi.Location = new System.Drawing.Point(86, 68);
+            this.lblAdi.Location = new System.Drawing.Point(50, 74);
             this.lblAdi.Name = "lblAdi";
             this.lblAdi.Size = new System.Drawing.Size(84, 23);
             this.lblAdi.TabIndex = 17;
@@ -253,7 +265,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(13, 248);
+            this.labelControl6.Location = new System.Drawing.Point(10, 248);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(71, 19);
             this.labelControl6.TabIndex = 32;
@@ -263,7 +275,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.lblOkulno.AutoSize = true;
             this.lblOkulno.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOkulno.Location = new System.Drawing.Point(86, 21);
+            this.lblOkulno.Location = new System.Drawing.Point(86, 26);
             this.lblOkulno.Name = "lblOkulno";
             this.lblOkulno.Size = new System.Drawing.Size(84, 23);
             this.lblOkulno.TabIndex = 16;
@@ -273,7 +285,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(8, 184);
+            this.labelControl5.Location = new System.Drawing.Point(10, 194);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(76, 19);
             this.labelControl5.TabIndex = 31;
@@ -283,7 +295,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(7, 24);
+            this.labelControl2.Location = new System.Drawing.Point(10, 29);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(77, 19);
             this.labelControl2.TabIndex = 28;
@@ -293,7 +305,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(19, 125);
+            this.labelControl4.Location = new System.Drawing.Point(10, 132);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(65, 19);
             this.labelControl4.TabIndex = 30;
@@ -303,26 +315,28 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(50, 71);
+            this.labelControl3.Location = new System.Drawing.Point(10, 77);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(34, 19);
             this.labelControl3.TabIndex = 29;
             this.labelControl3.Text = "ADI :";
             // 
-            // pdfViewer1
+            // axAcroPDF1
             // 
-            this.pdfViewer1.Location = new System.Drawing.Point(273, 138);
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(804, 455);
-            this.pdfViewer1.TabIndex = 7;
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(273, 112);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(810, 476);
+            this.axAcroPDF1.TabIndex = 8;
             // 
             // frmOgrenciIsleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1089, 600);
-            this.Controls.Add(this.pdfViewer1);
+            this.ClientSize = new System.Drawing.Size(1089, 597);
+            this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtOkulNo);
@@ -330,15 +344,17 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmOgrenciIsleri";
             this.Text = "Öğrenci İşleri";
-            this.Load += new System.EventHandler(this.frmOgrenciIsleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,6 +385,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraPdfViewer.PdfViewer pdfViewer1;
+        private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

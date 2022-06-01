@@ -30,7 +30,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // öğrencinin bilgilerini labellara aktarma
-            string kart=" ";
+            string kart = " ";
             connection.Open();
             MySqlCommand command = new MySqlCommand("SELECT Ogrenci.OkulNo,Ogrenci.OgrenciAdi,Ogrenci.OgrenciSoyadi,Ogrenci.OgrenciTelefon,Ogrenci.OgrenciEposta,Bölüm.BolumAdi,Ogrenci.Cinsiyet,Ogrenci.EmanetAdeti,Ogrenci.KartId FROM Ogrenci INNER JOIN Bölüm on Ogrenci.BolumId=Bölüm.İd where Ogrenci.OkulNo=@p1", connection);
             command.Parameters.AddWithValue("@p1", txtOkulNo.Text);
@@ -45,14 +45,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 lblBölüm.Text = reader[5].ToString();
                 lblCinsiyet.Text = reader[6].ToString();
                 lblEmanet.Text = reader[7].ToString();
-                kart= reader[8].ToString();
+                kart = reader[8].ToString();
             }
             connection.Close();
             //bilgileri içeren bir pdf yapacaksın 
             //sonra bu pdfyi yanda açacaksın
             ////////pdf oluşturma ve içini doldurma
             iTextSharp.text.Document document = new iTextSharp.text.Document();
-            PdfWriter.GetInstance(document, new FileStream("C:"+lblOkulno.Text+" "+lblAdi.Text+" "+lblSoyadi.Text+".Pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream("C:" + lblOkulno.Text + " " + lblAdi.Text + " " + lblSoyadi.Text + ".Pdf", FileMode.Create));
             iTextSharp.text.Font corbel = iTextSharp.text.FontFactory.GetFont("Arial", 20, color: BaseColor.BLACK);
             iTextSharp.text.pdf.BaseFont STF_Helvetica_Turkish = iTextSharp.text.pdf.BaseFont.CreateFont("Helvetica", "CP1254", iTextSharp.text.pdf.BaseFont.NOT_EMBEDDED);
 
@@ -68,14 +68,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 document.Open();
             }
             document.Add(new Paragraph("\n\n\n      Uludağ Üniversitesi Kütüphanesi Öğrenci Bilgileri Dosyası", fontNormal));
-            if (lblEmanet.Text=="0")
+            if (lblEmanet.Text == "0")
             {
-                string two = "\n\n\n    " +lblOkulno.Text + " no'lu " + lblAdi.Text + " " + lblSoyadi.Text + " adllı öğrencinin zimmetin de Uludağ Üniversitesi İnegöl İşletme Fakültesi Kütüphanesine ait kitap bulunmamaktadır.";
+                string two = "\n\n\n    " + lblOkulno.Text + " no'lu " + lblAdi.Text + " " + lblSoyadi.Text + " adllı öğrencinin zimmetin de Uludağ Üniversitesi İnegöl İşletme Fakültesi Kütüphanesine ait kitap bulunmamaktadır.";
                 document.Add(new Paragraph(two, fontNormal1));
             }
             else
             {
-                string theree = "\n\n\n    " + lblOkulno.Text + " no'lu " + lblAdi.Text + " " + lblSoyadi.Text + " adlı öğrencinin zimmetin de Uludağ Üniversitesi İnegöl İşletme Fakültesi Kütüphanesine ait toplam "+lblEmanet.Text+" adet kitap bulunmamaktadır. \n Kitap bilgileri aşağıda belirtildiği gibidir;\n\n\n\n\n";
+                string theree = "\n\n\n    " + lblOkulno.Text + " no'lu " + lblAdi.Text + " " + lblSoyadi.Text + " adlı öğrencinin zimmetin de Uludağ Üniversitesi İnegöl İşletme Fakültesi Kütüphanesine ait toplam " + lblEmanet.Text + " adet kitap bulunmamaktadır. \n Kitap bilgileri aşağıda belirtildiği gibidir;\n\n\n\n\n";
                 document.Add(new Paragraph(theree, fontNormal1));
                 PdfPTable table1 = new PdfPTable(1);
                 PdfPCell cell = new PdfPCell(new Phrase(" -------- Eksik Kitaplar ----------"));
@@ -91,8 +91,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 cell.Colspan = 6;
                 connection.Open();
                 // pdf e veri tabanından tablo ekleme
-                command = new MySqlCommand("SELECT Odünç.Barkod,Kitap.KitapAdi,Kategori.KategoriAdi,Kitap.SayfaSayisi,Concat(Yazar.YazarAdi,' ',YazarSoyadi) as Yazar,Kitap.YayinEvi FROM Ogrenci INNER JOIN Odünç ON Odünç.KartId=Ogrenci.KartId INNER JOIN Kitap on Kitap.Barkod=Odünç.Barkod INNER JOIN Kategori on Kategori.id=Kitap.Kategori inner joın Yazar on Yazar.id=Kitap.Yazar WHERE Ogrenci.KartId=@p1",connection);
-                command.Parameters.AddWithValue("@p1",kart);
+                command = new MySqlCommand("SELECT Odünç.Barkod,Kitap.KitapAdi,Kategori.KategoriAdi,Kitap.SayfaSayisi,Concat(Yazar.YazarAdi,' ',YazarSoyadi) as Yazar,Kitap.YayinEvi FROM Ogrenci INNER JOIN Odünç ON Odünç.KartId=Ogrenci.KartId INNER JOIN Kitap on Kitap.Barkod=Odünç.Barkod INNER JOIN Kategori on Kategori.id=Kitap.Kategori inner joın Yazar on Yazar.id=Kitap.Yazar WHERE Ogrenci.KartId=@p1 and Odünç.OduncDurum=1", connection);
+                command.Parameters.AddWithValue("@p1", kart);
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -106,13 +106,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 document.Add(table1);
                 document.Add(table);
             }
+            string pdfyol = lblOkulno.Text + " " + lblAdi.Text + " " + lblSoyadi.Text + ".Pdf";
             document.Close();
-
-        }
-
-        private void frmOgrenciIsleri_Load(object sender, EventArgs e)
-        {
-            
+            OpenFileDialog open = new OpenFileDialog();
+            textEdit1.Text = @"C:\Users\Hasan\Documents\GitHub\INIF-KUTUPHANE-OTOMASYON-PROJE\INIF-KUTUPHANE-OTOMASYON\INIF-KUTUPHANE-OTOMASYON\bin\Debug\" + pdfyol;
+            open.FileName = textEdit1.Text;
+            axAcroPDF1.LoadFile(open.FileName);
+            //C:\Users\Hasan\Documents\GitHub\INIF-KUTUPHANE-OTOMASYON-PROJE\INIF-KUTUPHANE-OTOMASYON\INIF-KUTUPHANE-OTOMASYON\bin\Debug
         }
     }
 }

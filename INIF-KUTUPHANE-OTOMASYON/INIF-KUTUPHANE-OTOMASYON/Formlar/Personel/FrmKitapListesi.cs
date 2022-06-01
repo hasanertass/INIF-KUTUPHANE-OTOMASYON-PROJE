@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
 using GridView = DevExpress.XtraGrid.Views.Grid.GridView;
+using INIF_KUTUPHANE_OTOMASYON.Formlar.Personel;
 
 namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 {
@@ -233,7 +234,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            // gridcontrol deki verileri textboxlara aktarma
+            // gridcontroldeki verileri textboxlara aktarma
             try
             {
                 //lkpdtKategori.Properties.ValueMember = gridView1.GetFocusedRowCellValue("Kategori").ToString();
@@ -356,12 +357,20 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // silme işlemi yapma
             try
             {
-                connection.Open();
-                MySqlCommand komut = new MySqlCommand("Update Kitap set Durum2=0,Durum=0 where id=@p1", connection);
-                komut.Parameters.AddWithValue("@p1", txtKitapid.Text);
-                komut.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Silme İşlemi gerçekleşmiştir");
+                if (SilmeSorgu.Kontrol("Select Barkod from Odünç where OduncDurum=1", txtBarkod.Text))
+                {
+                    MessageBox.Show("Geçerli kitap şuanda emanetde olduğu için silinemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    connection.Open();
+                    MySqlCommand komut = new MySqlCommand("Update Kitap set Durum2=0,Durum=0 where id=@p1", connection);
+                    komut.Parameters.AddWithValue("@p1", txtKitapid.Text);
+                    komut.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Silme İşlemi gerçekleşmiştir");
+                }
+
             }
             catch (Exception)
             {

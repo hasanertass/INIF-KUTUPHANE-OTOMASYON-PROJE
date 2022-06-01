@@ -128,10 +128,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
                     ///
                     ///
+
+
                     string alici, konu = "İnif Kütüphane", ad;
-                    ad = txtOgrAd + " " + txtOgrSoyad;
+                    ad = txtOgrAd.Text + " " + txtOgrSoyad.Text;
                     alici = txtOgrEposta.Text;
-                    string body = "Sevgili Öğrencimiz " + ad + "; \nkütüphanemize kayıt olduğunuz için çok teşekkür ederiz.\nhatırlatma olarak kütüphane kurallarımız aşağıdaki gibidir;\n\n\n1-)Elinizde aynı anda 3 kitap bulunabilir.\n2-)Özdünç aldığınız kitapların iade süresi 15 gündür.";
+                    string body = "Sevgili Öğrencimiz " + ad + "; \nKütüphanemize kayıt olduğunuz için teşekkür ederiz.\nHatırlatma olarak kütüphane kurallarımız aşağıdaki gibidir;\n\n\n1-)Elinizde aynı anda en fazla 3 adet kitap bulunabilir.\n2-)Ödünç aldığınız kitapların iade süresi 15 gündür.";
                     mail.From = new MailAddress("ertas7843@gmail.com");
                     mail.To.Add(alici);
                     mail.Subject = konu;
@@ -142,6 +144,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     smtp.Host = "smtp.gmail.com";
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
+
+
+
                     connection.Open();
                     MySqlCommand command1 = new MySqlCommand("SELECT o.id,o.OkulNo,o.OgrenciAdi,o.OgrenciSoyadi,o.OgrenciTelefon,o.OgrenciEposta,o.KartId,b.BolumAdi,o.Cinsiyet,o.EmanetAdeti,o.OgrenciSifre,o.OgrenciDurum FROM Ogrenci as o INNER JOIN Bölüm as b ON o.BolumId=b.id WHERE o.OgrenciDurum=1", connection);
                     MySqlDataAdapter da = new MySqlDataAdapter(command1);
@@ -220,7 +225,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 else if (rdErkek.Checked == true)
                 {
-                    cinsiyet = "Erkek";
+                    cinsiyet = "ERKEK";
                 }
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("update Ogrenci set Okulno=@p1,OgrenciAdi=@p2,OgrenciSoyadi=@p3,OgrenciTelefon=@p4,OgrenciEposta=@p5,KartId=@p6,BolumId=@p7,Cinsiyet=@p8,EmanetAdeti=@p9,OgrenciSifre=@p10 where id=@p11", connection);

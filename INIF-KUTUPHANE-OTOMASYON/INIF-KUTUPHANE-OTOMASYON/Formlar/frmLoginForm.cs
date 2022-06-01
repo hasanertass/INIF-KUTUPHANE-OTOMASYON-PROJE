@@ -34,19 +34,32 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             if (txtKullaniciAdi.Text.Length == 11)
             {
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("select * from Personel where PersonelTc=@p1 and Sifre=@p2", connection);
+                MySqlCommand command = new MySqlCommand("select PersonelTuru from Personel where PersonelTc=@p1 and Sifre=@p2", connection);
                 command.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
                 command.Parameters.AddWithValue("@p2", txtSifre.Text);
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    Form1 fr = new Form1();
-                    fr.Show();
-                    this.Hide();
+                    if (reader[0].ToString() == "Kütüphane")
+                    {
+                        Form1 fr = new Form1();
+                        fr.Show();
+                        this.Hide();
+                        connection.Close();
+                    }
+                    else
+                    {
+                        frmOgrenciIsleri ogrenciIsleri = new frmOgrenciIsleri();
+                        ogrenciIsleri.Show();
+                        this.Hide();
+                        connection.Close();
+                    }
+
                 }
                 else
                 {
                     label3.Visible = true;
+                    connection.Close();
                 }
                 //else
                 //{

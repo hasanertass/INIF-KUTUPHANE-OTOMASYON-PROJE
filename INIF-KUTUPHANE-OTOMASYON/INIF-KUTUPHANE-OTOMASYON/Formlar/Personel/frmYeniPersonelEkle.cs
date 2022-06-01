@@ -31,18 +31,23 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 else
                 {
                     // aynı değil ise
-                    string ciniyet = "Erkek";
+                    string ciniyet = "Erkek",tür="Kütüphane";
                     if (rdKadın.Checked == true)
                     {
                         ciniyet = "Kadın";
                     }
+                    if (rdOgrenciIşleri.Checked == true)
+                    {
+                        tür = "Öğrenci İşleri";
+                    }
                     connection.Open();
-                    MySqlCommand command = new MySqlCommand("insert into Personel (PersonelTc,PersonelAdi,PersonelSoyadi,Cinsiyet,Sifre,PersonelDurum) Values (@p1,@p2,@p3,@p4,@p5,1)", connection);
+                    MySqlCommand command = new MySqlCommand("insert into Personel (PersonelTc,PersonelAdi,PersonelSoyadi,Cinsiyet,Sifre,PersonelDurum,PersonelTuru) Values (@p1,@p2,@p3,@p4,@p5,1,@p6)", connection);
                     command.Parameters.AddWithValue("@p1", txttc.Text);
                     command.Parameters.AddWithValue("@p2", txtadi.Text);
                     command.Parameters.AddWithValue("@p3", txtsoyad.Text);
                     command.Parameters.AddWithValue("@p4", ciniyet);
                     command.Parameters.AddWithValue("@p5", txtsifre.Text);
+                    command.Parameters.AddWithValue("@p6", tür);
                     command.ExecuteNonQuery();
                     connection.Close();
                     MessageBox.Show("Yeni Personel Eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

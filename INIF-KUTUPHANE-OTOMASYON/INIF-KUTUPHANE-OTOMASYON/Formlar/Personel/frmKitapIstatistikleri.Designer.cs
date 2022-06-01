@@ -80,6 +80,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -102,10 +104,14 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // chart1
             // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -124,6 +130,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             // chart2
             // 
+            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -145,7 +153,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel3.Controls.Add(this.pictureEdit3);
             this.panel3.Controls.Add(this.labelControl17);
             this.panel3.Controls.Add(this.labelControl20);
-            this.panel3.Location = new System.Drawing.Point(758, 0);
+            this.panel3.Location = new System.Drawing.Point(0, 17);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(386, 217);
             this.panel3.TabIndex = 20;
@@ -193,7 +201,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel1.Controls.Add(this.pictureEdit1);
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Controls.Add(this.labelControl14);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Location = new System.Drawing.Point(6, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 217);
             this.panel1.TabIndex = 19;
@@ -241,7 +249,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel2.Controls.Add(this.pictureEdit2);
             this.panel2.Controls.Add(this.labelControl15);
             this.panel2.Controls.Add(this.labelControl16);
-            this.panel2.Location = new System.Drawing.Point(379, 0);
+            this.panel2.Location = new System.Drawing.Point(379, 16);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(374, 217);
             this.panel2.TabIndex = 21;
@@ -289,7 +297,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel4.Controls.Add(this.pictureEdit4);
             this.panel4.Controls.Add(this.labelControl2);
             this.panel4.Controls.Add(this.labelControl3);
-            this.panel4.Location = new System.Drawing.Point(758, 220);
+            this.panel4.Location = new System.Drawing.Point(0, 237);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(386, 217);
             this.panel4.TabIndex = 20;
@@ -337,7 +345,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel5.Controls.Add(this.pictureEdit5);
             this.panel5.Controls.Add(this.labelControl4);
             this.panel5.Controls.Add(this.labelControl5);
-            this.panel5.Location = new System.Drawing.Point(1, 220);
+            this.panel5.Location = new System.Drawing.Point(6, 233);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(374, 217);
             this.panel5.TabIndex = 19;
@@ -385,7 +393,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel6.Controls.Add(this.pictureEdit6);
             this.panel6.Controls.Add(this.labelControl6);
             this.panel6.Controls.Add(this.labelControl7);
-            this.panel6.Location = new System.Drawing.Point(379, 220);
+            this.panel6.Location = new System.Drawing.Point(379, 233);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(374, 217);
             this.panel6.TabIndex = 21;
@@ -433,7 +441,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel7.Controls.Add(this.labelControl11);
             this.panel7.Controls.Add(this.pictureEdit7);
             this.panel7.Controls.Add(this.labelControl8);
-            this.panel7.Location = new System.Drawing.Point(1535, 220);
+            this.panel7.Location = new System.Drawing.Point(773, 239);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(388, 217);
             this.panel7.TabIndex = 23;
@@ -481,7 +489,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel8.Controls.Add(this.labelControl21);
             this.panel8.Controls.Add(this.pictureEdit8);
             this.panel8.Controls.Add(this.labelControl10);
-            this.panel8.Location = new System.Drawing.Point(1535, 0);
+            this.panel8.Location = new System.Drawing.Point(773, 19);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(388, 217);
             this.panel8.TabIndex = 24;
@@ -529,7 +537,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel9.Controls.Add(this.pictureEdit9);
             this.panel9.Controls.Add(this.labelControl12);
             this.panel9.Controls.Add(this.labelControl13);
-            this.panel9.Location = new System.Drawing.Point(1150, 220);
+            this.panel9.Location = new System.Drawing.Point(392, 237);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(379, 217);
             this.panel9.TabIndex = 25;
@@ -577,7 +585,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel10.Controls.Add(this.pictureEdit10);
             this.panel10.Controls.Add(this.labelControl18);
             this.panel10.Controls.Add(this.labelControl19);
-            this.panel10.Location = new System.Drawing.Point(1150, 0);
+            this.panel10.Location = new System.Drawing.Point(392, 17);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(379, 217);
             this.panel10.TabIndex = 26;
@@ -639,23 +647,44 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.label2.TabIndex = 28;
             this.label2.Text = "KATEGORİLERİN OKUNMA MİKTARLARI";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.panel6);
+            this.groupBox1.Controls.Add(this.panel5);
+            this.groupBox1.Location = new System.Drawing.Point(5, -15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(749, 452);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.panel3);
+            this.groupBox2.Controls.Add(this.panel4);
+            this.groupBox2.Controls.Add(this.panel10);
+            this.groupBox2.Controls.Add(this.panel8);
+            this.groupBox2.Controls.Add(this.panel7);
+            this.groupBox2.Controls.Add(this.panel9);
+            this.groupBox2.Location = new System.Drawing.Point(756, -17);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1167, 456);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // frmKitapIstatistikleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 832);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Name = "frmKitapIstatistikleri";
@@ -693,6 +722,8 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,5 +775,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

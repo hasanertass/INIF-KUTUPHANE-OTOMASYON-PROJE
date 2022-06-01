@@ -29,11 +29,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar.Personel
                 ad = reader[0].ToString();
                 if (ad==text)
                 {
-                    return false;
+                    return true;
                 }
                 else
                 {
-                    return true;
+                    return false;
                 }
                
             }

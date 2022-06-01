@@ -102,10 +102,12 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Öğrenci Ekleme İşlemi Gerçekleşmiştir");
+
+
                 string alici, konu = "İnif Kütüphane", ad;
-                ad = txtOgrAd + " " + txtOgrSoyad;
+                ad = txtOgrAd.Text + " " + txtOgrSoyad.Text;
                 alici = txtOgrEposta.Text;
-                string body = "Sevgili Öğrencimiz " + ad + "; \nkütüphanemize kayıt olduğunuz için çok teşekkür ederiz.\nhatırlatma olarak kütüphane kurallarımız aşağıdaki gibidir;\n\n\n1-)Elinizde aynı anda 3 kitap bulunabilir.\n2-)Özdünç aldığınız kitapların iade süresi 15 gündür.";
+                string body = "Sevgili Öğrencimiz " + ad + "; \n kütüphanemize kayıt olduğunuz için çok teşekkür ederiz.\n Hatırlatma olarak kütüphane kurallarımız aşağıdaki gibidir; \n\n\n 1-)Elinizde aynı anda 3 kitap bulunabilir. \n 2-)Ödünç aldığınız kitapların iade süresi 15 gündür.";
                 mail.From = new MailAddress("ertas7843@gmail.com");
                 mail.To.Add(alici);
                 mail.Subject = konu;
@@ -117,11 +119,13 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 //}
+                this.Hide();
             }
             catch (Exception)
             {
                 MessageBox.Show("Hatalı İşlem !!!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
+                this.Hide();
             }
         }
 
