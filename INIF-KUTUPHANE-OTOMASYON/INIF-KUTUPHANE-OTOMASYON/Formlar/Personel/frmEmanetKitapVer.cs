@@ -83,7 +83,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     if (stok == 1)
                     {
                         connection.Open();
-                        MySqlCommand command2 = new MySqlCommand("Update Kitap Set Durum=0,Stok=@p2 where Barkod=@p1", connection);
+                        MySqlCommand command2 = new MySqlCommand("Update Kitap Set Durum = 0,Stok=@p2 where Barkod=@p1", connection);
                         command2.Parameters.AddWithValue("@p1", txtBarkod.Text);
                         command2.Parameters.AddWithValue("@p2", stok - 1);
                         command2.ExecuteNonQuery();

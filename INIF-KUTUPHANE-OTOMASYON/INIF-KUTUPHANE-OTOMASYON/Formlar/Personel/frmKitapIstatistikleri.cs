@@ -65,11 +65,11 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 }
                 connection.Close();
                 connection.Open(); 
-                command = new MySqlCommand("select Kategori.KategoriAdi,COUNT(Kategori) from Kitap INNER JOIN Kategori ON Kategori.id=Kitap.Kategori where Durum2=1 GROUP by Kategori ", connection);
+                command = new MySqlCommand("select Kategori.KategoriAdi,COUNT(Kategori) from Odünç INNER JOIN Kitap ON Kitap.Barkod = Odünç.Barkod INNER JOIN Kategori ON Kategori.id = Kitap.Kategori where Durum2 = 1 GROUP by Kategori", connection);
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    chart1.Series["Series1"].Points.AddXY(reader[0].ToString(),Convert.ToInt32(reader[1].ToString()));
+                    chart2.Series["Series1"].Points.AddXY(reader[0].ToString(),Convert.ToInt32(reader[1].ToString()));
                 }
                 connection.Close();
                 connection.Open();
@@ -77,7 +77,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    chart2.Series["Series1"].Points.AddXY(reader[0].ToString(), Convert.ToInt32(reader[1].ToString()));
+                    chart1.Series["Series1"].Points.AddXY(reader[0].ToString(), Convert.ToInt32(reader[1].ToString()));
                 }
                 connection.Close();
                 connection.Open();
