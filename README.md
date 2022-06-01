@@ -48,12 +48,12 @@ Proje Tanıtımı
 
 Proje Ekibi
 
-     Hasan Ertaş (Ekip Başkanı) => https://github.com/hasanertass
+Hasan Ertaş (Ekip Başkanı) => https://github.com/hasanertass
 
-     Emre Aydemir =>  https://github.com/emreaydemir132030041
+Emre Aydemir =>  https://github.com/emreaydemir132030041
 
-     Emir Faruk Çelik =>  https://github.com/tsemir
+Emir Faruk Çelik =>  https://github.com/tsemir
 
-     Mustafa Kahraman =>  https://github.com/mustafakahramann
+Mustafa Kahraman =>  https://github.com/mustafakahramann
 
 
