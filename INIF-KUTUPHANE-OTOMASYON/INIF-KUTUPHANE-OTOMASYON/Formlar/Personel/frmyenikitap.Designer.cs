@@ -397,10 +397,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdZimmet.ForeColor = System.Drawing.Color.White;
             this.rdZimmet.Location = new System.Drawing.Point(831, 260);
             this.rdZimmet.Name = "rdZimmet";
-            this.rdZimmet.Size = new System.Drawing.Size(74, 17);
+            this.rdZimmet.Size = new System.Drawing.Size(68, 17);
             this.rdZimmet.TabIndex = 16;
             this.rdZimmet.TabStop = true;
-            this.rdZimmet.Text = "Zimmet de";
+            this.rdZimmet.Text = "Zimmette";
             this.rdZimmet.UseVisualStyleBackColor = false;
             // 
             // rdEmanet
@@ -410,10 +410,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdEmanet.ForeColor = System.Drawing.Color.White;
             this.rdEmanet.Location = new System.Drawing.Point(738, 260);
             this.rdEmanet.Name = "rdEmanet";
-            this.rdEmanet.Size = new System.Drawing.Size(76, 17);
+            this.rdEmanet.Size = new System.Drawing.Size(70, 17);
             this.rdEmanet.TabIndex = 15;
             this.rdEmanet.TabStop = true;
-            this.rdEmanet.Text = "Emanet de";
+            this.rdEmanet.Text = "Emanette";
             this.rdEmanet.UseVisualStyleBackColor = false;
             // 
             // labelControl18

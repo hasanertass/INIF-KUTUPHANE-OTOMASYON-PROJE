@@ -185,7 +185,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.lblBölüm.AutoSize = true;
             this.lblBölüm.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBölüm.Location = new System.Drawing.Point(71, 305);
+            this.lblBölüm.Location = new System.Drawing.Point(21, 315);
             this.lblBölüm.Name = "lblBölüm";
             this.lblBölüm.Size = new System.Drawing.Size(70, 19);
             this.lblBölüm.TabIndex = 38;
@@ -195,7 +195,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.lblPosta.AutoSize = true;
             this.lblPosta.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPosta.Location = new System.Drawing.Point(84, 248);
+            this.lblPosta.Location = new System.Drawing.Point(21, 255);
             this.lblPosta.Name = "lblPosta";
             this.lblPosta.Size = new System.Drawing.Size(70, 19);
             this.lblPosta.TabIndex = 20;
@@ -245,7 +245,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(10, 308);
+            this.labelControl12.Location = new System.Drawing.Point(6, 293);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(63, 19);
             this.labelControl12.TabIndex = 33;
@@ -265,7 +265,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(10, 248);
+            this.labelControl6.Location = new System.Drawing.Point(10, 233);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(71, 19);
             this.labelControl6.TabIndex = 32;
@@ -297,9 +297,9 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(10, 29);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 19);
+            this.labelControl2.Size = new System.Drawing.Size(72, 19);
             this.labelControl2.TabIndex = 28;
-            this.labelControl2.Text = "OKUL NO :";
+            this.labelControl2.Text = "OKUL NO ";
             // 
             // labelControl4
             // 
@@ -346,6 +346,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "frmOgrenciIsleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Öğrenci İşleri";
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();

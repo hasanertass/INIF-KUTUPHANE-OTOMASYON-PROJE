@@ -85,6 +85,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                     table.AddCell("YAZAR ADI");
                     table.AddCell("YAYIN EVI");
                     cell.Colspan = 6;
+                    connection.Close();
                     connection.Open();
                     // pdf e veri tabanından tablo ekleme
                     command = new MySqlCommand("SELECT Odünç.Barkod,Kitap.KitapAdi,Kategori.KategoriAdi,Kitap.SayfaSayisi,Concat(Yazar.YazarAdi,' ',YazarSoyadi) as Yazar,Kitap.YayinEvi FROM Ogrenci INNER JOIN Odünç ON Odünç.KartId=Ogrenci.KartId INNER JOIN Kitap on Kitap.Barkod=Odünç.Barkod INNER JOIN Kategori on Kategori.id=Kitap.Kategori inner joın Yazar on Yazar.id=Kitap.Yazar WHERE Ogrenci.KartId=@p1 and Odünç.OduncDurum=1", connection);
@@ -108,6 +109,7 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
                 textEdit1.Text = @"C:\Users\Hasan\Documents\GitHub\INIF-KUTUPHANE-OTOMASYON-PROJE\INIF-KUTUPHANE-OTOMASYON\INIF-KUTUPHANE-OTOMASYON\bin\Debug\" + pdfyol;
                 open.FileName = textEdit1.Text;
                 axAcroPDF1.LoadFile(open.FileName);
+                connection.Close();
             }
             else
             {

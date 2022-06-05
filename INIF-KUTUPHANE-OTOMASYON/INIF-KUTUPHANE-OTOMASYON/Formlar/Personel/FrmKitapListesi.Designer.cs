@@ -232,10 +232,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdZimmet.AutoSize = true;
             this.rdZimmet.Location = new System.Drawing.Point(110, 463);
             this.rdZimmet.Name = "rdZimmet";
-            this.rdZimmet.Size = new System.Drawing.Size(74, 17);
+            this.rdZimmet.Size = new System.Drawing.Size(69, 17);
             this.rdZimmet.TabIndex = 16;
             this.rdZimmet.TabStop = true;
-            this.rdZimmet.Text = "Zimmet de";
+            this.rdZimmet.Text = "Zimmette";
             this.rdZimmet.UseVisualStyleBackColor = true;
             // 
             // rdEmanet
@@ -243,10 +243,10 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             this.rdEmanet.AutoSize = true;
             this.rdEmanet.Location = new System.Drawing.Point(201, 462);
             this.rdEmanet.Name = "rdEmanet";
-            this.rdEmanet.Size = new System.Drawing.Size(76, 17);
+            this.rdEmanet.Size = new System.Drawing.Size(71, 17);
             this.rdEmanet.TabIndex = 17;
             this.rdEmanet.TabStop = true;
-            this.rdEmanet.Text = "Emanet de";
+            this.rdEmanet.Text = "Emanette";
             this.rdEmanet.UseVisualStyleBackColor = true;
             // 
             // dateEdit2
@@ -566,7 +566,6 @@ namespace INIF_KUTUPHANE_OTOMASYON.Formlar
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-   //         this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // button1

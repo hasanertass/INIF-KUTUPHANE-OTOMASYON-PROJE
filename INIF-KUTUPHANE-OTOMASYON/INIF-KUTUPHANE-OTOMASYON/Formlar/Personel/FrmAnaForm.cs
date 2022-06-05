@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
+using INIF_KUTUPHANE_OTOMASYON.Formlar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -170,7 +171,9 @@ namespace INIF_KUTUPHANE_OTOMASYON
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            FrmKitapListesi form = new FrmKitapListesi();
+            form.MdiParent = this;
+            form.Show();
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
