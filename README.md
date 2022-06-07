@@ -21,7 +21,7 @@ Projenin Amacı
 - Kitap ekleme, silme ve güncelleme işlemleri formdaki sol menüden yapılır.
 - Formun sağ tarafındaki listede mevcut kitaplar listelenmktedir.
 - Güncelleme işlemlerinin daha rahat yapılabilmesi için listeden seçilen satırdaki veriler sol menüdeki araçlara otomatik aktarılır.
-- Listede yer alan veriler tüm sütunlara göre filtreleme yapılabilir.
+- Listede yer alan veriler de tüm sütunlara göre filtreleme yapılabilir.
 - Örnek olarak kitap tablosundaki kitap adı, yazar adı, kategori, stok ve benzeri tüm sütunlarda filtreleme yapılır.
 
 ### Kitap Ekleme Pop-up 
@@ -96,67 +96,85 @@ Projenin Amacı
 
 ![Öğrenci Listesi](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/%C3%96%C4%9FrenciListesi.png)
 
--
+-Öğrenci ekleme, silme ve güncelleme işlemleri yapılır.
+-Güncelleme İşlemlerinin Rahat Yapılabilmesi için listeden seçilen satırdaki veriler sol menüdeki araçlara otomatik aktarılır.
+-Listede yer alan veriler de tüm sütunlara göre filtreleme yapılabilir.
+-Örnek olarak öğrenci adı, okul numarası, bölümü vs.
 
 ### Öğrenci Ekleme
 
 ![Öğrenci Ekleme](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/Yeni%C3%96%C4%9Frenci.JPG)
 
--
+-Öğrenci listesi formundaki sol menüden öğrenci eklenebileceği gibi daha kullanılışlı olması için öğrenci ekleme pop-up'ındanda öğrenci ekleme işlemi yapılabilir.
 
 ### Öğrenci İstatistkleri
 
 ![Öğrenci İstatistikleri](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/%C3%96%C4%9Frenci%C4%B0statistikleri.png)
 
--
+ - Öğrenci istatistikleri formunda görselde görüldüğü üzere belli başlı istatiksel veriler dinamik olarak çekilmiştir.
 
 ### Bölüm Listesi
 
 ![Bölüm Listesi](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/B%C3%B6l%C3%BCmListesi.png)
 
--
+- Bölüm ekleme, silme ve güncelleme işlemleri yapılır.
+- Güncelleme İşlemlerinin Rahat Yapılabilmesi için listeden seçilen satırdaki veriler sol menüdeki araçlara otomatik aktarılır.
+- Listede yer alan veriler de tüm sütunlara göre filtreleme yapılabilir.
 
 ### Bölüm Ekleme
 
 ![Bölüm Ekleme](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/YeniB%C3%B6l%C3%BCm.JPG)
 
--
+- Bölüm listesi formundaki sol menüden bölüm eklenebileceği gibi daha kullanılışlı olması için bölüm ekleme pop-up'ındanda bölüm ekleme işlemi yapılabilir.
 
 ### Personel Listesi
 
 ![Personel Listesi](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/PersonelListesi.png)
 
--
+- Personel ekleme, silme ve güncelleme işlemleri yapılır.
+- Güncelleme İşlemlerinin Rahat Yapılabilmesi için listeden seçilen satırdaki veriler sol menüdeki araçlara otomatik aktarılır.
+- Listede yer alan veriler de tüm sütunlara göre filtreleme yapılabilir.
 
 ### Personel Ekleme
 
 ![Personel Ekleme](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/Ekran%20Al%C4%B1nt%C4%B1s%C4%B1JPG.JPG)
 
--
+- Personel listesi formundaki sol menüden personel eklenebileceği gibi daha kullanılışlı olması için personel ekleme pop-up'ındanda personel ekleme işlemi yapılabilir.
 
+ ## B-)Öğrenci İşleri Modülü
 
- B-)Öğrenci İşleri Modülü
+![Öğrenci İşleri](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/%C3%96%C4%9Frenci%20%C4%B0%C5%9Fleri.JPG)
 
- *Öğrencilerin yıl sonlarında yada mezun olacakları zaman zimmetlerinde kütüphaneye ait kitap olup olmadığı sorgularının yapılması.
+ - Öğrencilerin yıl sonlarında yada mezun olacakları zaman zimmetlerinde kütüphaneye ait kitap olup olmadığı ile ilgili sorgulama yapar ve belge oluşturur.
+ 
+ - Belge örneği aşağıdaki gibidir.
+ 
+ ![Öğrenci İşleri](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/%C3%96%C4%9Frenci%20%C4%B0%C5%9Fleri.JPG)
 
-C-)Öğrenci Modülü 
+## C-)Öğrenci Modülü 
 
-*Her öğrenci kendi sayfasında zimmetindeki kitapları görür.
+![Öğrenci Ekranı](https://github.com/hasanertass/INIF-KUTUPHANE-OTOMASYON-PROJE/blob/main/Proje%20Tan%C4%B1t%C4%B1m%20G%C3%B6rselleri/%C3%96%C4%9Frenci%20Ekran%C4%B1.JPG)
 
- *Her öğrenci kendi sayfasında kütüphaneden emanet alabileceği kitapları görür.
+- Her öğrenci kendi sayfasında zimmetindeki kitapları görebilir.
 
-2-)Projede MySql kullanılmıştır.
+- Her öğrenci kendi sayfasında kütüphaneden emanet alabileceği kitapları görebilir.
 
- 3-)Projede DevExpress kullanılmıştır.
+## Proje hakkında genel bilgiler
 
-Proje Ekibi
+- Projede MySql ve Devexpres kullanılmıştır.
+- Proje C# dili ile yazılmıştır.
+- Proje daha çok üniversite kütüphanelerine yönelik hazırlanmıştır.
+- Proje Nesne Yönelimli Programlama ve Veritabanı Yönetim Sistemleri derslerinin ortak dönem ödevidir.
+- Projenin daha rahat kullanımı için barkod okyucu ve RFID sistemleri kullanılması zorunludur.
 
-Hasan Ertaş (Ekip Başkanı) => https://github.com/hasanertass
+## Proje Ekibi
 
-Emre Aydemir =>  https://github.com/emreaydemir132030041
+- Hasan Ertaş (Ekip Başkanı) => https://github.com/hasanertass
 
-Emir Faruk Çelik =>  https://github.com/tsemir
+- Emre Aydemir =>  https://github.com/emreaydemir132030041
 
-Mustafa Kahraman =>  https://github.com/mustafakahramann
+- Emir Faruk Çelik =>  https://github.com/tsemir
+
+- Mustafa Kahraman =>  https://github.com/mustafakahramann
 
 
